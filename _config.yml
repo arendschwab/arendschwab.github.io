@@ -1,7 +1,7 @@
 title: Arend Schwab # name of the site
 author: Arend Schwab # name of site's author
 email: a.l.schwab@tudelft.nl # email of site's author
-url: arendschwab.github.io # root address of the site
+url: arendschwab.com # root address of the site
 baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
 description: > # description of the site (multiple lines allowed)
   Test.
