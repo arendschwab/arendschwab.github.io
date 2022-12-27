@@ -1,0 +1,5 @@
+# edit some local files in ~/Documents/WWW/arendschwab.github.io/....
+git status
+git add .
+git commit -m "changed url"
+git push origin main
