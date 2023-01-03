@@ -4,7 +4,7 @@ title: Seasons's Greetings
 slug: seasons-greetings
 ---
 
-![Season's Greetings](/assets/images/figures/Xmas2022Kaart.jpg)
+![Season's Greetings](/assets/Xmas2022Kaart.jpg)
 The Schwab family wishes you a Merry Christmas and a Happy New Year! Please visit our family [Season's Greetings](https://tinyurl.com/Xmas2022Schwab) and past year in photo's.
 
 <!--- 

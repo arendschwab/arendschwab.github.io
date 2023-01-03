@@ -4,7 +4,7 @@ title: About me
 ---
 
 
-![Arend L. Schwab](/assets/images/figures/ArendSchwabPortraitFoto.jpg)
+![Arend L. Schwab](/assets/ArendSchwabPortraitFoto.jpg)
 
 **Arend L. Schwab**\\
 BioMechanical Engineering \\
