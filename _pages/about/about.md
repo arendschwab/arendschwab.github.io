@@ -4,7 +4,7 @@ title: About me
 ---
 
 
-![Arend L. Schwab](../../assets/images/figures/ArendSchwabPortraitFoto.jpg)
+![Arend L. Schwab](/assets/images/figures/ArendSchwabPortraitFoto.jpg)
 
 **Arend L. Schwab**\\
 BioMechanical Engineering \\
@@ -20,6 +20,10 @@ I'm in  theoretical and applied mechanics and I have been teaching mechanics and
 
 
 I'm now a professor emiritus from Delft University of Technology, department of Mechanical Engineering, Biomechanical Engineering. My main work has been in [bicycle dynamics and control](). I started the TUDelft bicycle lab in 2002, after my return from a sabbatical year at Cornell University with [Andy Ruina](http://ruina.tam.cornell.edu/){:target="_blank"}. Since my official retirment in 2021, the [TUDelft Bicycle Laboratorium](https://mechmotum.github.io/){:target="_blank"} is run by Jason Moore.
+
+### Key talks
+
+My TED talk at TEDxDelft 2012 ["Why bicycles do not fall"](http://www.youtube.com/watch?v=2Y4mbT3ozcA)
 
 ### Key publications
 

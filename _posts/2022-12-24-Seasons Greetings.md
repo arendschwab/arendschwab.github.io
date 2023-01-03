@@ -1,8 +1,13 @@
 ---
 layout: post
-title: The bacterial compass
-slug: the-bacterial-compass
+title: Seasons's Greetings
+slug: seasons-greetings
 ---
+
+![Season's Greetings](/assets/images/figures/Xmas2022Kaart.jpg)
+The Schwab family wishes you a Merry Christmas and a Happy New Year! Please visit our family [Season's Greetings](https://tinyurl.com/Xmas2022Schwab) and past year in photo's.
+
+<!--- 
 
 Ever since the invention of the magnetic compass, we have used the magnetic field to help us find our way around the Earth. However, we are not the first organisms to use the magnetic field to our advantage. Some Proteobacteria mysteriously are always aligned to the Earth's North and South Pole.
 
@@ -57,3 +62,5 @@ Bazylinski D. A. (1999). Synthesis of the bacterial magnetosome: the making of a
 
 [^1]: The needle is not free floating in the cell. MamK needs to transfer the forces from the needle to the cell in some way. It does this by being anchored to the cell membrane through a protein called MamY.
 [^2]: mamM, mamB, mamE, mamZ, mamJ, mamA, mamX, mamL, mamQ, mms6, mamO, mamC, mamF, mamD, mamH, mamT, mamI, mamG, mamY, mamN, mamR, mmsF, mms48, mamS, mms36, mms5, ftsZ-like, mamK, mamP, MamU, FeoA1, FeoB1
+
+-->
