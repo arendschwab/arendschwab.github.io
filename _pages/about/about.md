@@ -8,9 +8,9 @@ title: About me
 
 **Arend L. Schwab**  
 BioMechanical Engineering  
-Delft University of Technology  
+[Delft University of Technology](https://www.tudelft.nl/en/staff/a.l.schwab/?cHash=e0e4c55b3472885c167915f76fe236a5)  
 Mekelweg 2, NL 2628 CD Delft, The Netherlands  
-Office: F-1-140  Phone: +31 15 27 82701  
+Office: F-2-080  Phone: +31 (0)15 27 82701  
 Mobile: +31 (0)6 2852 7539  
 email: [a.l.schwab@tudelft.nl](mailto:a.l.schwab@tudelft.nl) / [arendschwab@gmail.com](mailto:arendschwab@gmail.com)  
 zoom: [https://tudelft.zoom.us/my/arendschwab](https://tudelft.zoom.us/my/arendschwab)  
@@ -20,6 +20,10 @@ I'm in  theoretical and applied mechanics and I have been teaching mechanics and
 
 
 I'm now a professor emiritus from Delft University of Technology, department of Mechanical Engineering, Biomechanical Engineering. My main work has been in [bicycle dynamics and control](). I started the TUDelft bicycle lab in 2002, after my return from a sabbatical year at Cornell University with [Andy Ruina](http://ruina.tam.cornell.edu/){:target="_blank"}. Since my official retirment in 2021, the [TUDelft Bicycle Laboratorium](https://mechmotum.github.io/){:target="_blank"} is run by Jason Moore.
+
+* [Resume CV](/assets/CVArendLSchwab.pdf) 
+
+* Some more [personal information](personalinformation), addresss, relatives, and where we lived, contacts etc. 
 
 ### Key talks
 
