@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Seasons's Greetings
-slug: seasons-greetings
+title: Season's Greetings
 ---
 
 ![Season's Greetings](/assets/Xmas2022Kaart.jpg)
