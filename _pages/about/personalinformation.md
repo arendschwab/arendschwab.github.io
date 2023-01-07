@@ -13,7 +13,11 @@ title: personal information
 
 **WWW page**  
 [http://arendschwab.com](http://arendschwab.com)  
-[http://bicycle.tudelft.nl/schwab/](http://bicycle.tudelft.nl/schwab/)  
+[http://bicycle.tudelft.nl/schwab/](http://bicycle.tudelft.nl/schwab/) 
+
+**Youtube Channel**  
+[https://www.youtube.com/user/arendschwab](https://www.youtube.com/user/arendschwab) 
+ 
 
 
 **Work**  
