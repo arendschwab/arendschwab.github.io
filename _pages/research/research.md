@@ -6,7 +6,7 @@ title: research
 
  * [bicycle dynamics and control](http://bicycle.tudelft.nl/schwab/Bicycle/)
  * sports engineering applications
- * multibody dynamics software SPACAR
+ * [multibody dynamics software SPACAR](spacar)
  * cycling safety
  
 
