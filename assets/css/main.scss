@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
----
-
-@import "no-style-please";
-=======
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
@@ -23,4 +18,3 @@ $max-content-width: {{ site.max_width }};
   "font-awesome/solid",
   "font-awesome/regular"
 ;
->>>>>>> newtheme

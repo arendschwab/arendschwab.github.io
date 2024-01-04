@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-*.gem
-.bundle
-.jekyll-cache
-.sass-cache
-_site
-vendor
-Gemfile.lock
-=======
 _site
 .bundle
 .sass-cache
@@ -17,5 +8,3 @@ _site
 .tweet-cache
 Gemfile.lock
 vendor
-
->>>>>>> newtheme

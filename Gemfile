@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-# frozen_string_literal: true
-
-source "https://rubygems.org"
-
-gem "kramdown-parser-gfm"
-
-gemspec
-gem "webrick", "~> 1.7"
-=======
 source 'https://rubygems.org'
 group :jekyll_plugins do
     gem 'classifier-reborn'
@@ -34,4 +24,3 @@ group :other_plugins do
     gem 'feedjira'
     gem 'httparty'
 end
->>>>>>> newtheme
