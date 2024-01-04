@@ -1,0 +1,12 @@
+# edit some local files in ~/Documents/WWW/arendschwab.github.io/....
+cd Documents/WWW/arendschwab.github.io/
+git status
+git add .
+git commit -m "changed url"
+git push origin main
+
+
+# make local website
+cd Documents/WWW/arendschwab.github.io/
+bundle exec jekyll serve
+# open browser at http://127.0.0.1:4000/. or http://localhost:4000/

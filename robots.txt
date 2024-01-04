@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: arendschwab.com/sitemap.xml
