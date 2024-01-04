@@ -3,6 +3,9 @@ layout: page
 title: publications
 ---
 
+![publications](/assets/Publications002430x259.jpg)
+
+
 List of paper according to [google scholar](https://scholar.google.com/citations?user=BVpKCDwAAAAJ). Preprints available in the list below.
 
 ### Books

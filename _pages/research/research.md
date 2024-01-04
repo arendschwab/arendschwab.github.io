@@ -2,6 +2,9 @@
 layout: page
 title: research
 ---
+
+![research](/assets/research.jpg)
+
 ## topics
 
  * [bicycle dynamics and control](http://bicycle.tudelft.nl/schwab/Bicycle/)

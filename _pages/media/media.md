@@ -3,6 +3,8 @@ layout: page
 title: media
 ---
 
+![media](/assets/media.jpg)
+
 My work, mainly on bicycle dynamics and control and its application to society, got some attention in the public media. Here below is a selection:
 
 - *2019* TU Delft Portrait of Science 2019: ["Bicycle research has overcome sceptism"](https://www.tudelft.nl/en/stories/articles/bicycle-research-has-overcome-scepticism/)

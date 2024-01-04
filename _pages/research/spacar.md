@@ -13,6 +13,5 @@ Many multibody systems have multiple degrees of freedom. The system was designed
 
 The SPACAR software system was initially developed at Delft University of Technology in the 70's and written in FORTRAN. The latest stable Delft FORTRAN77 version is [SPACAR95](http://bicycle.tudelft.nl/schwab/spacar.htm).
 
-After 1995 the developed of the SPACAR system has been continued at University of Twente. A major characteristic of the UTwente developed has been a stable MATLAB interface to the FORTRAN software. A free downloadable version can be found here:  
-[SPACAR 2013 -Software Download & Install](https://www.utwente.nl/en/et/ms3/research-chairs/WAoud_niets_uit_wissen_aub/software/spacar/2013/download/)
+After 1995 the developed of the SPACAR system has been continued at University of Twente. A major characteristic of the UTwente developed has been a stable MATLAB interface to the FORTRAN software. A free downloadable version together with the manual and some examples, can be found at [https://spacar.nl/spacar](https://spacar.nl/spacar). A more "light" version, SPACAR light, can be found at [https://spacar.nl](https://spacar.nl)
 
