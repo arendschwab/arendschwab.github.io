@@ -1,0 +1,5 @@
+{
+    "MD033": false,
+    "MD013": false,   // Disable line length rule (optional)
+    "MD041": false    // Disable rule requiring a first header (optional)
+}

@@ -1,9 +1,17 @@
 ---
 layout: page
-title: spacar
+title: SPACAR
+description: Multibody Dynamics Software
+img: /assets/img/figbicycle1b.png
+related_publications: einstein1956investigations, einstein1950meaning
 ---
 
-![spacar figure](/assets/spacarbicyclefig5.jpg)
+
+<center>
+ <figure>
+  <img src="/assets/spacarbicyclefig5.jpg" alt="SPACAR bicycle model" width="400" />
+ </figure>
+</center>
 
 SPACAR is a programming system for the analyses of motion of spatial multibody systems, including planar systems, with rigid and flexible links. In the development of the SPACAR system the main objective was to make use of finite element techniques. 
 
@@ -11,7 +19,9 @@ It is felt that a consistent description of the kinematics is a good starting po
 
 Many multibody systems have multiple degrees of freedom. The system was designed such that multiple degrees of freedom could easily be treated. The program should serve a large class of users having different problems. All users have in common that they want to know the pure kinematical behaviour of the multibody system. The kinematical properties of the motion are specified by the discrete transfer functions which relate the various position parameters of the multibody system with the input motion.
 
-The SPACAR software system was initially developed at Delft University of Technology in the 70's and written in FORTRAN. The latest stable Delft FORTRAN77 version is [SPACAR95](http://bicycle.tudelft.nl/schwab/spacar.htm).
+The SPACAR software system was initially developed at Delft University of Technology in the 70's and written in FORTRAN IV. The latest stable Delft FORTRAN77 version is SPACAR95 as descibed in this manual: [manualspacar95.pdf](/assets/pdf/manualspacar95.pdf).
 
-After 1995 the developed of the SPACAR system has been continued at University of Twente. A major characteristic of the UTwente developed has been a stable MATLAB interface to the FORTRAN software. A free downloadable version together with the manual and some examples, can be found at [https://spacar.nl/spacar](https://spacar.nl/spacar). A more "light" version, SPACAR light, can be found at [https://spacar.nl](https://spacar.nl)
+After 1995 the developed of the SPACAR system has been continued at University of Twente. A major characteristic of the UTwente developed has been a stable MATLAB interface to the FORTRAN software. A free downloadable version together with the manual and some examples, can be found at [https://spacar.nl/spacar](https://spacar.nl/spacar). A more "light" version, SPACAR light, can be found at [https://www.spacar.nl/wiki/doku.php](https://www.spacar.nl/wiki/doku.php)
+
+---
 

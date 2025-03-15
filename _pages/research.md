@@ -1,19 +1,24 @@
 ---
 layout: page
+permalink: /research/
 title: research
+description: Here you can find the various research topics and my research background
+nav: true
+nav_order: 5
 ---
 
-![research](/assets/research.jpg)
+### topics
 
-## topics
+ * [Benchmark Bicycle](BenchmarkBicycle)
+ * [Multibody Dynamics Software SPACAR](spacar)
+ * A Matlab interface for programming postscript figures: [pshacker](pshacker)
+ * cycling safety
+  * sports engineering applications
 
  * [bicycle dynamics and control](http://bicycle.tudelft.nl/schwab/Bicycle/)
- * sports engineering applications
- * [multibody dynamics software SPACAR](spacar)
- * cycling safety
- 
 
-## background
+
+### research background
 
 During and after my MSc graduation in 1983 at Delft University of Technology I worked on the formulation and implementation of Flexible Multibody Dynamics. This resulted, among other things, in a computer code SPACAR, software for dynamic analysis of flexible multibody systems.
 
