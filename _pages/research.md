@@ -7,7 +7,7 @@ nav: true
 nav_order: 5
 ---
 
-### topics
+### the topics
 
  * [Benchmark Bicycle](BenchmarkBicycle)
  * [Multibody Dynamics Software SPACAR](spacar)
