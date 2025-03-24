@@ -3,7 +3,7 @@ layout: page
 title: Benchmark Bicycle
 description: linearized equations of motion for the Carvallo-Whipple bicycle model
 img: /assets/img/figbicycle1b.png
-related_publications: einstein1956investigations, einstein1950meaning
+related_publications: meijaard2007linearized, kooijman2011bicycle
 ---
 
 

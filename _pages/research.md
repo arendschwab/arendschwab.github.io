@@ -7,11 +7,12 @@ nav: true
 nav_order: 5
 ---
 
-### the topics
+### topics
 
- * [Benchmark Bicycle](BenchmarkBicycle)
- * [Multibody Dynamics Software SPACAR](spacar)
- * A Matlab interface for programming postscript figures: [pshacker](pshacker)
+ * [benchmark bicycle](benchmarkbicycle), the linearized equations of motion for the Carvallo-Whipple bicycle model.
+ * [SPACAR](spacar), multibody dynamics software.
+ * [pshacker](pshacker), a Matlab interface for programming postscript figures.
+ * [TMS bicycle](stablebicycle), the two-mass skate bicycle, stable with gyro and trail. 
  * cycling safety
   * sports engineering applications
 
