@@ -4,15 +4,15 @@ permalink: /teaching/
 title: teaching
 description: Materials for courses you taught. Replace this text with your description.
 nav: true
-nav_order: 6
+nav_order: 2
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
-
-Organize your courses by years, topics, or universities, however you like!
-
-The first course you can see is: [lev0](lev0/level0)
-
-The second course you can see is: [lev1](lev0/lev1/level1)
+Courses etc.
+* ME41055 (spring 2018) Multibody Dynamics B
+* ME41050 (fall 2017) Multibody Dynamics A
+* ME41060 (fall 2017) MATLAB in Engineering Mechanics
+* wb1216-06 (spring 2013) Dynamica 2, "Mechanical Vibrations"
+* TAM 674 (spring 2003) Applied Multibody Dynamics
+* MSc project proposals
 
 
