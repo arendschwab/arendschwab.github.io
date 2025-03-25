@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Delft University of Technolgy, The Netherlands
 
 profile:
   align: right
@@ -17,8 +17,23 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+### contact
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+email: [arendschwab@gmail.com](mailto:arendschwab@gmail.com) / [a.l.schwab@tudelft.nl](mailto:a.l.schwab@tudelft.nl) / [arend.schwab@lut.fi](mailto:arend.schwab@lut.fi)   
+phone: [+31 6 2852 7539](tel:+31 6 2852 7539)    
+zoom: [https://tudelft.zoom.us/my/arendschwab](https://tudelft.zoom.us/my/arendschwab)   
+Youtube channel: [https://www.youtube.com/user/arendschwab](https://www.youtube.com/user/arendschwab) 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+### about
+
+
+[Google Scholar: Arend L. Schwab](https://scholar.google.nl/citations?user=BVpKCDwAAAAJ&hl=en)   
+[Scopus: Schwab, A.L.](https://www.scopus.com/authid/detail.uri?authorId=7101877294)   
+[ORCID: 7101877294](https://orcid.org/0000-0001-5897-9790)
+
+
+
+I'm in  theoretical and applied mechanics and I have been teaching mechanics and multibody dynamics. I am interested in Dynamics of Mechanical Systems, the so-called Multibody Dynamics. In particular the treatment of contact phenomena like in collisions and rolling (non-holonomic constraints) have my special interest. I also know more or less about dynamics of flexible multibody system, finite element method, legged locomotion, speed skating and bicycle dynamics and control. My degrees are from Engineering at Dordrecht (BSc 1979) and Engineering at Delft (MSc 1983, PhD 2002).
+
+During my sabbatical year in 2002/2003 at Cornell University with [Andy Ruina](http://ruina.tam.cornell.edu/), I got interested in bicycle dynamics and control. Back in Delft I started a [lab for bicycle dynamics and control](http://bicycle.tudelft.nl/schwab/). Since my offical retirment in 2021 from TUDelft I have been apointed visiting professor (part-time) at Lappeenranta University of Technolgy, Finland, working with [Aki Mikkola](https://scholar.google.fi/citations?user=712w44QAAAAJ&hl=fi).
+
