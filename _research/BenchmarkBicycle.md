@@ -6,7 +6,7 @@ img: /assets/img/figbicycle1b.png
 related_publications: meijaard2007linearized, kooijman2011bicycle
 ---
 
-
+ 
 
 <center>
  <figure>
