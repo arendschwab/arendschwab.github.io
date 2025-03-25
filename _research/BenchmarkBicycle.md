@@ -15,7 +15,6 @@ related_publications: meijaard2007linearized, kooijman2011bicycle
  </figure>
 </center>
 
-
 > *Even now, after we’ve been building them for 100 years, it’s very difficult to understand just why a bicycle works - it’s even difficult to formulate it as a mathematical problem.*   
 \- Freeman Dyson interviewed by Stewart Brand in Wired News, February 1998.
 
