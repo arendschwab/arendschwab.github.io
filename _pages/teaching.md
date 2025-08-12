@@ -2,12 +2,12 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: Courses I have been teaching and related BSc and MSc stuff.
 nav: true
 nav_order: 2
 ---
 
-Courses etc.
+**Courses etc.**
 * ME41055 (spring 2018) Multibody Dynamics B
 * ME41050 (fall 2017) Multibody Dynamics A
 * ME41060 (fall 2017) MATLAB in Engineering Mechanics
@@ -16,3 +16,5 @@ Courses etc.
 * MSc project proposals
 
 
+**Textbook**.  
+For the BSc level course on *Advanced Dynamics* and the MSc course on *Multibody Dynamics* we, Heike Vallery and I, wrote a textbook: ["Advanced Dynamics"](advdynbook). Why? Because we were not happy with the existing books (as most teachers are, so  everybody writes his own book; we too)  
