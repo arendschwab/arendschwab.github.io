@@ -30,7 +30,7 @@ of Heike Vallery or Arend L. Schwab.
 **Backcover** text:   
 Dynamics of rigid bodies and multibody systems in three- dimensional spaces represents a fundamental pillar for many engineering sciences. This book is aimed at undergraduate and graduate students who already have some background in statics and dynamics of particles and planar systems, but who wish to extend their knowledge towards three-dimensional problems involving one or multiple rigid bodies, and towards variational methods. To facilitate application of this knowledge to real-world problems, the book also treats several methods and examples for the numerical simulation of dynamic systems. For all introduced concepts, practical examples and problems for self-study are included.
 
-**Download** an extended preview of the book: [AdvancedDynamicsVallerySchwab_3ed_ExtendedPreview.pdf](AdvancedDynamicsVallerySchwab_3ed_ExtendedPreview.pdf)   
+**Download** an extended preview of the book: [AdvancedDynamicsVallerySchwab_3ed_ExtendedPreview.pdf](/assets/pdf/AdvancedDynamicsVallerySchwab_3ed_ExtendedPreview.pdf)   
 (the full version will soon be available for free download)
 
 **Questions**, comments, or suggestions? Send us an email. 
