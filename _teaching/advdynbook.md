@@ -34,6 +34,5 @@ Dynamics of rigid bodies and multibody systems in three- dimensional spaces repr
 (the full version will soon be available for free download)
 
 **Questions**, comments, or suggestions? Send us an email. 
-[heike@vallery.org](mailto:heike@vallery.org) &
 [arendschwab@gmail.com](mailto:[arendschwab@gmail.com)
 
