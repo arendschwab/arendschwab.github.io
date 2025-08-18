@@ -33,6 +33,11 @@ Dynamics of rigid bodies and multibody systems in three- dimensional spaces repr
 **Download** an extended preview of the book: [AdvancedDynamicsVallerySchwab_3ed_ExtendedPreview.pdf](/assets/pdf/AdvancedDynamicsVallerySchwab_3ed_ExtendedPreview.pdf)   
 (the full version will soon be available for free download)
 
+**Lectures**:
+For the second part of the book, on Multibody Dynamics, there are  series of lectures available at [my youtube channel](https://youtube.com/@arendschwab?si=NRQGORyxC1uQfBW9). These lectures were recorded at TUDelft for the MSc level course on Multibody Dynamics B, ME41055:
+- [course year 2020-2021](https://www.youtube.com/playlist?list=PLjxrjw-h1jdd9hRTY-9uWhoTyTAy7obd4). (no audience, due to corona restrictions)
+- [course year 2019-2020](https://www.youtube.com/playlist?list=PLjxrjw-h1jdcrJkg6SH_Bbhu_O_3lx7N-). (with audience)
+
 **Questions**, comments, or suggestions? Send us an email. 
 [arendschwab@gmail.com](mailto:[arendschwab@gmail.com)
 
