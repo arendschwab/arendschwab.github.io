@@ -1,10 +1,15 @@
 ---
 layout: page
 title: Multibody Dynamics B
-description: TUDelft course on multibody dyanmics, ME41055
-img: /assets/img/AdvDynCover2021.png
+description: TUDelft course on multibody dynamics, ME41055
+img: /assets/img/fbdmbd.png
 related_publications: 
 ---
+
+
+<figure>
+<img src="/assets/img/fbdmbd.png" width="600"> 
+</figure>
 
 
 **Course Description**  
