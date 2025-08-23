@@ -28,7 +28,7 @@ The paper and supporting material:
     - experimental setup and protocol
     - practical implications of the model
     - recommendations for future work    
-    [SOM_A_model_based_on_cyclist_fall_experiments.pdf](/assets/pdf/SOM_A_model_based_on_cyclist_fall_experiments.pdf)
+    [reijne2025modelSOM.pdf](/assets/pdf/reijne2025modelSOM.pdf)
 
 ### Background   
 
