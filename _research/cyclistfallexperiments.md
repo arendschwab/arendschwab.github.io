@@ -37,7 +37,7 @@ Falls are a significant cause of injury among cyclists, highlighting the need fo
 This study proposes the Maximum Allowable Handlebar Disturbance (MAHD) — the largest external handlebar disturbance a cyclist can recover from — as a performance indicator for evaluating fall prevention interventions. 
 
 We conducted controlled experiments with 24 participants of varying ages and skill levels, exposing them to impulse-like handlebar disturbances that resulted in both recoveries and falls. A total of 928 observations were collected from the 24 participants
-across three forward speeds (6, 12 and 18 km/h). This dataset, which includes recorded cyclist falls (on average 50% all observations), supports future validation of bicycle dynamics and control models in predicting the MAHD. 
+across three forward speeds (6, 12 and 18 km/h). This dataset, which includes recorded cyclist falls (on average 50% of all observations), supports future validation of bicycle dynamics and control models in predicting the MAHD. 
 
 In addition, using Bayesian Model Averaging, we identified key cyclist factors influencing the MAHD, with forward speed and cyclist balancing skill being critical predictors. Incorporating these predictors into cyclist control models can substantially improve their practical application. These insights were then used to develop a Bayesian multilevel logistic regression model to predict the MAHD for different types of cyclists. 
 
