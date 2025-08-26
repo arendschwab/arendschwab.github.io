@@ -15,7 +15,7 @@ related_publications: reijne2025model
  </figure>
 </center>
 
-This study presents the resulst from experiments in which perturbed cyclist fall (for the first time in hoistory!) in order to determine the maximum allowable handlebar disturbance (MAHD) for which a cyclist can keep balance.
+This study presents the results from experiments in which  cyclist were perturbed, resulting in both recoveries and falls (for the first time in history!) in order to determine the maximum allowable handlebar disturbance (MAHD) for which a cyclist can keep balance.
 
 
 Marco M. Reijne, Frank H. van der Meulen, Frans C.T. van der Helm, and Arend L. Schwab, 2025. A model based on cyclist fall experiments which predicts the maximum allowable handlebar disturbance from which a cyclist can recover balance. *Accident Analysis and Prevention*, 221(108159). <https://doi.org/10.1016/j.aap.2025.108159>   
@@ -24,8 +24,8 @@ Marco M. Reijne, Frank H. van der Meulen, Frans C.T. van der Helm, and Arend L. 
 The paper and supporting material:   
 1. Preprint: [reijne2025model.pdf](/assets/pdf/reijne2025model.pdf)
 2. Supplementary online material, containing:
-    - the experimental data and statistical analysis
-    - experimental setup and protocol
+    - the experimental data and R-scripts for the statistical analysis
+    - further details on the experimental setup and protocol
     - practical implications of the model
     - recommendations for future work    
     [reijne2025modelSOM.pdf](/assets/pdf/reijne2025modelSOM.pdf)
