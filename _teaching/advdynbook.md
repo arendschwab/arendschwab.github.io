@@ -42,7 +42,7 @@ Stichting Newton-Euler, Delft, The Netherlands,
 3rd ed., August 2022, 636 pages   
 ISBN: 978-90-8309-060-3
 
-Copyright © Vallery/Schwab 2022, 2021, 2020, 2019, 2018, 2017   
+Copyright © Vallery/Schwab 2024, 2022, 2021, 2020, 2019, 2018, 2017   
 All Rights Reserved.   
 No reproduction of any part may take place without the written permission
 of Heike Vallery or Arend L. Schwab.
