@@ -17,6 +17,16 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SKJYECJLHD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SKJYECJLHD');
+</script>
+
 ### contact
 
 email: [arendschwab@gmail.com](mailto:arendschwab@gmail.com) / [a.l.schwab@tudelft.nl](mailto:a.l.schwab@tudelft.nl) / [arend.schwab@lut.fi](mailto:arend.schwab@lut.fi)   

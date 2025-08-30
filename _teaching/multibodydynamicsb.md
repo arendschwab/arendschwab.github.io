@@ -6,6 +6,16 @@ img: /assets/img/fbdmbd.png
 related_publications: 
 ---
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SKJYECJLHD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SKJYECJLHD');
+</script>
+
 
 <figure>
 <img src="/assets/img/fbdmbd.png" width="600"> 

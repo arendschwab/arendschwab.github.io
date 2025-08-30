@@ -6,6 +6,16 @@ img: /assets/img/figbicycle1b.png
 related_publications: einstein1956investigations, einstein1950meaning
 ---
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SKJYECJLHD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SKJYECJLHD');
+</script>
+
 ### A. L. Schwab and J. P. Meijaard 
 
 PostScript is a graphic programming language developed by Adobe Systems

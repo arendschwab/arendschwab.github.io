@@ -6,6 +6,16 @@ img: /assets/img/figbicycle1b.png
 related_publications: meijaard2007linearized, kooijman2011bicycle
 ---
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SKJYECJLHD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SKJYECJLHD');
+</script>
+
 <center>
  <figure>
   <img src="/assets/img/figbicycle1b.png" alt="fiets" width="300" />

@@ -7,6 +7,16 @@ nav: true
 nav_order: 2
 ---
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SKJYECJLHD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SKJYECJLHD');
+</script>
+
 **Courses etc.**
 * [ME41055 Multibody Dynamics B](multibodydynamicsb)
 * ME41050 (fall 2017) Multibody Dynamics A
