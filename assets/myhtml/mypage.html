@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My page</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1f2933;
+      --muted: #52606d;
+      --link: #0b5cad;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14181d;
+        --text: #e4e7eb;
+        --muted: #9aa5b1;
+        --link: #6cb2f5;
+      }
+    }
+    html { background: var(--bg); }
+    body {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 3rem 1.25rem;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.125rem;
+      line-height: 1.65;
+    }
+    h1 { font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; }
+    p { margin: 0 0 1rem; }
+    .note { color: var(--muted); font-size: 0.95rem; }
+    a { color: var(--link); }
+    a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>My page</h1>
+    <p>This is a simple page with some text. Replace this paragraph with your own content, and add as many paragraphs as you need.</p>
+    <p>The full document is available as a PDF: <a href="mydocument.pdf">Download the PDF</a>.</p>
+    <p class="note">The link works when mydocument.pdf is in the same folder as this page.</p>
+  </main>
+</body>
+</html>
