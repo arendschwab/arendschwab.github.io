@@ -1,0 +1,1552 @@
+<HTML>
+<!-- CREATION DATE: 18/11/2002 -->
+
+<!-- Mirrored from http://bicycle.tudelft.nl/schwab/spacar.htm by HTTrack Website Copier/3.x [XR&CO], Sat, 17 Oct 2026 14:28:40 GMT -->
+<HEAD>
+<TITLE></TITLE>
+<META NAME="Description" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Author" CONTENT="arend schwab">
+<META NAME="Generator" CONTENT="Microsoft FrontPage 6.0">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<style>
+<!--
+ div.p { margin-top: 7pt;} span.roman {font-family: serif; font-style: normal; font-weight: normal;}
+-->
+</style>
+</HEAD>
+<BODY BGCOLOR="#E6F5FF" TEXT="#000000" LINK="#0000FF" VLINK="#800080" ALINK="#FF0000">
+<center>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="70%">
+    <p align="center"><b><font size="4" face="Verdana">SPACAR<br>
+Multibody Dynamics Software</font></b><font style="font-size: 9pt; font-weight: 400" face="Verdana"><br>
+&nbsp;</font></td>
+    <td width="15%">
+    <p align="center">&nbsp;</td>
+    <td width="15%" valign="bottom">
+    <p align="right">
+    <img border="0" src="TUD_01-logo_025.gif" width="146" height="62"></td>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" bgcolor="#3399FF" height="20">
+  <tr>
+    <td width="100%">
+    <p align="right">
+    <font face="Verdana" style="font-weight: 700" size="1" color="#FFFFFF">Delft 
+    University of Technology&nbsp; </font></td>
+  </tr>
+</table>
+</center>
+
+
+<p><font face="Verdana" style="font-size: 9pt">Manual SPACAR95 <a href="umansp95.pdf">
+(pdf 137k)</a></font></p>
+
+
+<HR WIDTH=100% NOSHADE>
+
+
+<h1 align="center"><font face="Verdana" size="4">Manual </font> <tt>
+<font face="Verdana" size="4">SPACAR95</font></tt><font face="Verdana" size="4">,<br>
+software for dynamic analyses of <br>
+multibody systems </font> </h1>
+<div class="p">
+  <font face="Verdana">
+  <!---->
+  </font>
+</div>
+<h3 align="center"><span style="font-weight: 400"><font face="Verdana" size="3">November 2000 </font> 
+</span> </h3>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h3 align="center"><font face="Verdana" style="font-size: 9pt">A.&nbsp;L.&nbsp;Schwab, and J.&nbsp;P.&nbsp;Meijaard<br>
+Laboratory for Engineering Mechanics<br>
+Delft University of Technology<br>
+Mekelweg 2<br>
+NL-2628 CD Delft<br>
+The Netherlands<br>
+<a href="mailto:a.l.schwab@tudelft.nl">a.l.schwab@tudelft.nl</a></font></h3>
+<p align="center"><font face="Verdana" size="2">A free downloadable student 
+version can be obtained from
+<a target="_blank" href="http://www.wa.ctw.utwente.nl/software/spacar/2012/intro/index.html">
+UTwente SPACAR site</a>.</font></p>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h1><font face="Verdana" style="font-size: 9pt">Contents </font> </h1>
+<p><font face="Verdana"><a href="#tth_sEc1"><span style="font-size: 9pt">1&nbsp; Introduction</span></a><span style="font-size: 9pt"><br>
+<a href="#tth_sEc2">2&nbsp; Purpose and objective.</a><br>
+<a href="#tth_sEc3">3&nbsp; Area of application.</a><br>
+<a href="#tth_sEc4">4&nbsp; Characteristics.</a><br>
+</span></font><span style="font-size: 9pt">
+<a href="#tth_sEc5"><font face="Verdana">5&nbsp; Input Specification for </font> <tt>
+<font face="Verdana">SPACAR95</font></tt></a></span><font face="Verdana"><span style="font-size: 9pt"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc5.1">5.1&nbsp; Elements</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc5.2">5.2&nbsp; Nodes</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc5.3">5.3&nbsp; Boundary Conditions</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc5.4">5.4&nbsp; Initial Values</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc5.5">5.5&nbsp; Dynamic Properties</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc5.6">5.6&nbsp; Settings and Controls</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc5.7">5.7&nbsp; Example of an Input File</a><br>
+<a href="#tth_sEc6">6&nbsp; Implementation of a New element Type</a><br>
+<a href="#tth_sEc7">7&nbsp; Credo</a><br>
+<a href="#References">&nbsp;&nbsp;&nbsp; References</a><br>
+</span></font>
+</p>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h2><font face="Verdana" style="font-size: 9pt"><a name="tth_sEc1">Introduction</a>
+</font> </h2>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<p><font face="Verdana"><span style="font-size: 9pt">This is a guide to the software package
+</span></font><span style="font-size: 9pt"> <tt><font face="Verdana">SPACAR95</font></tt><font face="Verdana"> for dynamic and
+kinematic analyses of multibody systems. Companion papers are [<a href="#B63" name="CITEB63">1</a>]
+to [<a href="#H96" name="CITEH96">73</a>] . Earlier versions were described in [<a href="#W83" name="CITEW83">25</a>].
+The software described in this document, </font> <tt><font face="Verdana">SPACAR95</font></tt><font face="Verdana"> , is the sequential
+version of </font> <tt><font face="Verdana">PLANAR</font></tt><font face="Verdana"> [<a href="#W77" name="CITEW77">15</a>] and
+</font> <tt><font face="Verdana">SPACAR</font></tt><font face="Verdana">
+[<a href="#W83" name="CITEW83">25</a>], the first 2 and 3 dimensional kinematic
+analyses programs based on the finite element method. Both were developed in the
+Laboratory for Engineering Mechanics at the Mechanical Engineering department of
+the Delft University of Technology. Compared to previous versions </font> <tt>
+<font face="Verdana">SPACAR95</font></tt></span><font face="Verdana"><span style="font-size: 9pt">
+has significant internal structural changes that are not apparent to the user.
+In addition it is somewhat more convenient to use, and it has a Matlab user
+interface primarily for graphical representation of the results. The first
+author is much indebted to J.P.Meijaard for his inspiration, encouragement and
+support. </span></font> </p>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h2><font face="Verdana" style="font-size: 9pt"><a name="tth_sEc2">Purpose and objective.</a>
+</font> </h2>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<p><tt><font face="Verdana"><span style="font-size: 9pt">SPACAR95</span></font></tt><span style="font-size: 9pt"><font face="Verdana"> is a programming system for the analyses of motion of
+spatial multibody systems, including planar systems, with rigid and flexible
+links. In the development of the </font> <tt><font face="Verdana">SPACAR95</font></tt><font face="Verdana"> system the main objective was
+to make use of finite element techniques. It is felt that a consistent
+description of the kinematics is a good starting point for the development of
+dynamic analyses techniques, for example vibration analyses of multibody
+systems. The finite element method approach satisfies automatically the
+requirement of a maximum of variety of multibody systems to be analyzed,
+provided that suitable finite elements are available. Typical available elements
+are truss, beam and hinge elements. In the case of more specialized analyzes one
+can think of belt and pulley, wheel and contact elements. Many multibody systems
+have multiple degrees of freedom. The system was designed such that multiple
+degrees of freedom could easily be treated. The program should serve a large
+class of users having different problems. All users have in common that they
+want to know the pure kinematical behaviour of the multibody system. The
+kinematical properties of the motion are specified by the discrete transfer
+functions which relate the various position parameters of the multibody system
+with the input motion. The </font> <tt><font face="Verdana">SPACAR95</font></tt></span><font face="Verdana"><span style="font-size: 9pt"> program system provides the
+following steps: </span></font> </p>
+<ol type="1">
+  <li><font face="Verdana" style="font-size: 9pt">Definition of the multibody system (topology and geometry).
+  </font>
+  <div class="p">
+    <font face="Verdana" style="font-size: 9pt">
+    <!---->
+    </font>
+  </div>
+  </li>
+  <li><font face="Verdana" style="font-size: 9pt">System preparation and initialisation.
+  </font>
+  <div class="p">
+    <font face="Verdana" style="font-size: 9pt">
+    <!---->
+    </font>
+  </div>
+  </li>
+  <li><font face="Verdana" style="font-size: 9pt">Numeric integration of the equations of motion.
+  </font>
+  <div class="p">
+    <font face="Verdana" style="font-size: 9pt">
+    <!---->
+    </font>
+  </div>
+  </li>
+</ol>
+<p><tt><font face="Verdana"><span style="font-size: 9pt">SPACAR95</span></font></tt><span style="font-size: 9pt"><font face="Verdana"> contains possibilities for writing calculated results after
+each integration step to user defined ASCII files. The </font> <tt>
+<font face="Verdana">SPACAR95</font></tt></span><font face="Verdana"><span style="font-size: 9pt"> system
+must be seen as a skeleton program forming the basis of the user's application.
+How the subroutines of the skeleton program are called and how the necessary
+input must be prepared is described in this manual. </span></font> </p>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h2><font face="Verdana" style="font-size: 9pt"><a name="tth_sEc3">Area of application.</a>
+</font> </h2>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<p><font face="Verdana"><span style="font-size: 9pt">Multibody systems find their application in numerous fields of engineering.
+In the case of multi degree of freedom systems having all elements rigid, or
+only a few deformable, </span></font><span style="font-size: 9pt"> <tt>
+<font face="Verdana">SPACAR95</font></tt></span><font face="Verdana"><span style="font-size: 9pt"> is at its best.
+</span></font> </p>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h2><font face="Verdana" style="font-size: 9pt"><a name="tth_sEc4">Characteristics.</a>
+</font> </h2>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<p><font face="Verdana"><span style="font-size: 9pt">As it is not possible to predict which questions will be asked about the
+multibody system in specific cases, a programming system, that is a toolbox, was
+developed. Consequently the user must compose his own program using the modules
+of the system. Pre and post-processing is not our cup of tea, the talents of the
+</span></font><span style="font-size: 9pt">
+<tt><font face="Verdana">SPACAR95</font></tt><font face="Verdana"> system are in the field of mechanics. In a computer
+application three aspects can be distinguished: input definition, task
+definition and output definition. The </font> <tt><font face="Verdana">SPACAR95</font></tt><font face="Verdana"> input defines the
+topological and geometrical composition of the multibody system to be analyzed.
+This input can be given in a format free ASCII input file with keywords and
+numbers. The </font> <tt><font face="Verdana">SPACAR95</font></tt><font face="Verdana"> system is able to handle all multibody systems
+composed of truss, beam and hinge elements. The degrees of freedom can be
+rotational or translatory. The system is particularly suited for multidegree of
+freedom multibody systems having few deformable elements. The numeric
+integration of the equations of motion expressed in the degrees of freedom of
+the system is a standard task component. The calculation of the transfer
+function values is a sub task. The transfer function of order zero gives the
+mechanism position. The first and second order derivatives of the transfer
+functions with respect to the degrees of freedom, which are also calculated, are
+required for the determination of the velocities and accelerations. Other task
+components such as equilibrium forces for the nodes and the elements, linearized
+equations of motion etc. can be calculated on request of the user. A few output
+possibilities are incorporated in the system. Before and after having processed
+the input definition some statistics of the </font> <tt><font face="Verdana">SPACAR95</font></tt><font face="Verdana"> system together
+with the given input definition of the to be analyzed multibody system are
+printed on the standard output. The system variables, such as position velocity
+acceleration force etc., can be written to an accordingly named ASCII file where
+each line stands for a discrete moment in time. Most post-processing programs
+such as Matlab or grtool are capable of reading these files. The </font> <tt>
+<font face="Verdana">SPACAR95</font></tt><font face="Verdana">
+system is written in FORTRAN77. We have tried to keep ourselves very strict to
+the standard. For those who want to program in FORTRAN and use </font> <tt>
+<font face="Verdana">SPACAR95</font></tt><font face="Verdana">
+as a toolbox, please read the </font> <tt><font face="Verdana">credo</font></tt><font face="Verdana"> file. The
+</font> <tt><font face="Verdana">SPACAR95</font></tt></span><font face="Verdana"><span style="font-size: 9pt"> system
+does not call routines belonging to other systems, it is selfcontained and in
+that </span></font> </p>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h2><a name="tth_sEc5"><font face="Verdana"><span style="font-size: 9pt">Input Specification for
+</span></font><span style="font-size: 9pt"> <tt><font face="Verdana">SPACAR95</font></tt></span><font face="Verdana"><span style="font-size: 9pt">
+</span></font> </a> </h2>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<p><font face="Verdana"><span style="font-size: 9pt">The input data is given in the form of a keyword with parameters. The keyword
+is a character string starting with an alphabetic character and with a maximum
+length of 8 characters. The parameters can be integer or real numbers and are
+seperated by white spaces. The real numbers can be given in exponent E-format.
+The end of line terminates the parameter list. In the description of the input
+the keywords are written in upper case characters but lower case or a mixture is
+allowed. I there is an asterisk character * on the first position of the line
+then this line will be treated as a comment line. Input can be given in blocks,
+where every block is terminated by the keyword </span></font>
+<span style="font-size: 9pt"> <tt><font face="Verdana">END</font></tt><font face="Verdana">. After this command
+the analysis is started or continued. The total input is delimited by the
+physical end of file or by the end of file keyword </font> <tt>
+<font face="Verdana">EOF</font></tt></span><font face="Verdana"><span style="font-size: 9pt">. The output is
+written to the console and can be captured by redirecting it to a file. After an
+analysis the input data and the current state is written as output. From this
+output a restart can be made. </span></font> </p>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<p><font face="Verdana" style="font-size: 9pt">The keywords of similar kind are listed in groups. Element numbers and node
+numbers are usually denoted by e and n which are integers bounded to the maximum
+number of elements and nodes. The numbering need not be consecutive. Node number
+p1 is an integer referring to the first position node of an element, where o1
+refers to the first orientation node number. </font> </p>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h3><font face="Verdana" style="font-size: 9pt"><a name="tth_sEc5.1">Elements</a>
+</font> </h3>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<table>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">BEAM</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">p1 o1 p2 o2 </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">x y z </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">x y z is the initial direction of the principal y-axes of
+    the cross-section of the beam. </font> </td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">BEAMNL</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">p1 o1 p2 o2 </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">x y z </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">beam with bending corrected elongation, x y z is the initial
+    direction of the principal y-axes of the cross-section of the beam. </font> </td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">TRUSS</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">p1 p2 </font> </td>
+    <td></td>
+    <td width="237"></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">HINGE</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">o1 o2 </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">x y z </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">x y z is the initial axes of rotation.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">BEARING</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">p1 o1 p2 o2 </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">x y z </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">x y z is the initial axes of rotation.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">SURFACE</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">p1 </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">c1..c10 </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">c1..c10 are the coefficients of the quadratic surface.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">L2MIN1</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">o1 </font> </td>
+    <td></td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">the constraint on the Euler parameters, usually
+    automatically created when the first time an Euler parameter is defined.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">PLBEAM</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">p1 o1 p2 o2 </font> </td>
+    <td></td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">planar beam.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">PLBEAMNL</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">p1 o1 p2 o2 </font> </td>
+    <td></td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">planar beam with bending corrected elongation.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">PLHINGE</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">o1 o2 </font> </td>
+    <td></td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">planar hinge.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">PLTRUSS</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">p1 p2 </font> </td>
+    <td></td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">planar truss.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">PLBELT</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">p1 o1 p2 o2 </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">r1 r2 </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">planar belt with radii r1 and r2.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">PLBEAR</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">p1 o1 p2 o2 </font> </td>
+    <td></td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">planar bearing.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">PLWHEEL</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">p1 o1 o2 </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">r x y </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">planar wheel with radius r and initial axis of rotation x y,
+    node o1 is the orientation of this axis and node o2 is the rotation along
+    this axis.</font></td>
+  </tr>
+</table>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<dl compact="compact">
+  <dt><font face="Verdana" style="font-size: 9pt"><b>Note 1:</b></font></dt>
+  <dd><font face="Verdana" style="font-size: 9pt">Nodes are implicitly defined by elements, the coordinate values are set to
+  zero except for a 3-D orientation node where the Euler parameters are set to
+  (1,0,0,0), resembling no rotation.</font></dd>
+</dl>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h3><font face="Verdana" style="font-size: 9pt"><a name="tth_sEc5.2">Nodes </a> 
+</font> </h3>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<table>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">X</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">x1 x2 x3 x4 </font> </td>
+    <td width="296"><font face="Verdana" style="font-size: 9pt">any node n with coordinates x1 x2 x3 x4.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">XY</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">x y </font> </td>
+    <td width="296"><font face="Verdana" style="font-size: 9pt">2D position node n with coordinates x y.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">BETA</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">beta </font> </td>
+    <td width="296"><font face="Verdana" style="font-size: 9pt">2D orientation node n with coordinates beta.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">XYZ</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">x y z </font> </td>
+    <td width="296"><font face="Verdana" style="font-size: 9pt">3D position node n with coordinates x y z.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">LAMBDA</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">l0 l1 l2 l3 </font> </td>
+    <td width="296"><font face="Verdana" style="font-size: 9pt">3D orientation node n with Euler parameters l0 l1 l2 l3.</font></td>
+  </tr>
+</table>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<dl compact="compact">
+  <dt><font face="Verdana" style="font-size: 9pt"><b>Note 1:</b></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">Since nodes are implicitly defined by elements, the non-zero coordinate
+  values are usually specified with the any node keyword </span></font>
+  <span style="font-size: 9pt"> <tt><font face="Verdana">X</font></tt></span><font face="Verdana"><span style="font-size: 9pt">.</span></font></dd>
+</dl>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h3><font face="Verdana" style="font-size: 9pt"><a name="tth_sEc5.3">Boundary Conditions</a>
+</font> </h3>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<table>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">FIX</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">i </font> </td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">node n component i is fixed.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">INPUTX</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">i </font> </td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">node n component i is input motion.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">DYNX</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">i </font> </td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">node n component i is dynamic degree of freedom.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">RLSE</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">i </font> </td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">element e deformation i is released.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">INPUTE</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e</font></td>
+    <td><font face="Verdana" style="font-size: 9pt">i </font> </td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">element e deformation i is input motion.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">DYNE</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">i </font> </td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">element e deformation i is dynamic degree of freedom.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">LINE</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">i </font> </td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">element e deformation i is to be a linearization parameter.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">ENHC</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e1 </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">i1 e2 i2 </font> </td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">element e1 deformation i1 is nonholonomic, the corresponding
+    kinematic coordinate is element e2 deformation i2.</font></td>
+  </tr>
+</table>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<dl compact="compact">
+  <dt><font face="Verdana" style="font-size: 9pt"><b>Note 1:</b></font></dt>
+  <dd><font face="Verdana" style="font-size: 9pt">The implicit boundary condition on a node is a free node, whereas the
+  implicit boundary condition on an element deformation is a fixed deformation.</font></dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><b>Note 2:</b></font></dt>
+  <dd><font face="Verdana" style="font-size: 9pt">The kinematic coordinate must be a fixed deformation parameter.</font></dd>
+</dl>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h3><font face="Verdana" style="font-size: 9pt"><a name="tth_sEc5.4">Initial Values</a>
+</font> </h3>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<table>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">XD</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">i </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">x </font> </td>
+    <td width="296"><font face="Verdana" style="font-size: 9pt">node n component i has velocity x.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">XDD</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">i </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">x </font> </td>
+    <td width="296"><font face="Verdana" style="font-size: 9pt">node n component i has acceleration x.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">E</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">i </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">x </font> </td>
+    <td width="296"><font face="Verdana" style="font-size: 9pt">element e deformation i has value x.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">ED</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">i </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">x </font> </td>
+    <td width="296"><font face="Verdana" style="font-size: 9pt">element e deformation i has rate x.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">EDD</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">i </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">x </font> </td>
+    <td width="296"><font face="Verdana" style="font-size: 9pt">element e deformation i has double rate x.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana" style="font-size: 9pt">TIME</font></tt></td>
+    <td><font face="Verdana" style="font-size: 9pt">t </font> </td>
+    <td></td>
+    <td></td>
+    <td width="296"><font face="Verdana" style="font-size: 9pt">set the current time to t.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">DIR</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">x y z </font> </td>
+    <td width="296"><font face="Verdana" style="font-size: 9pt">the first director of element e is x y z.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">LGEOMY</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">x1..x13 </font> </td>
+    <td width="296"><font face="Verdana" style="font-size: 9pt">element e general geometry values are x1..x13.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">LENGTH0</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">l0 </font> </td>
+    <td width="296"><font face="Verdana" style="font-size: 9pt">element e has initial length l0.</font></td>
+  </tr>
+</table>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h3><font face="Verdana" style="font-size: 9pt"><a name="tth_sEc5.5">Dynamic Properties</a>
+</font> </h3>
+<table>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">MASS</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">m </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">concentrated mass m in XY and XYZ node n.</font></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">Izz </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">moment of inertia Izz in BETA node.</font></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">Ixx Ixy Ixz Iyy Iyz Izz
+    </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">inertia tensor I values for LAMBDA node.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana" style="font-size: 9pt">EMASS</font></tt></td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">rhoA </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">uniformly distributed mass rhoA per length for element e.</font></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">rhoA a1 a2 </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">uniformly distributed mass rhoA per length for PLBELT; in
+    the initial state the amount of belt winded at pulley 1 measured from the
+    contact point, counterclockwise, has a total length of a1*r1 and for pulley
+    2 measured from the contact point, clockwise, a length of a2*r2. </font> </td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">ESTIFF</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">EA GIp EIy EIz </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">stiffness parameters for BEAM element e</font></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">EA </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">TRUSS.</font></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">St </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">torsional stiffness for HINGE element.</font></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">EA EI </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">PLBEAM.</font></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">EA </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">PLTRUSS, PLBELT.</font></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">St </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">PLHINGE.</font></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">Sx Sy St </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">linear and torsional stiffness for PLBEAR element.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">EDAMPP</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">e </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">x1..x4 </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">damping values x1..x4 for element e, for the interpretation
+    for different element types see ESTIFF.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">FORCE</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">x1..x4 </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">prescribed constant force x1..x4 at any node n.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">TORQUEL</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">T </font> </td>
+    <td width="237"><font face="Verdana" style="font-size: 9pt">bodyfixed prescribed constant torque T at LAMBDA node n.</font></td>
+  </tr>
+</table>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h3><font face="Verdana" style="font-size: 9pt"><a name="tth_sEc5.6">Settings and Controls </a> 
+</font> </h3>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<table>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">TIMESTEP</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">Tp </font> </td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">integrate the system with n number of constant output
+    intervals over a time period of Tp.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">HMAX</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">h </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">integrate the system with a maximum stepsize of h.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">MAXITERAT</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">n </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">allow maximum n kinematic iterations per step.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">EPSKIN</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">eps </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">kinematic convergence tolerance eps on the deformations.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">EPSINT</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">eps </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">maximum local integration truncation error eps for the
+    deformations.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">EPSIND</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">eps </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">maximum local integration truncation error eps for the
+    deformation rates.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">FORCEMODE</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">0 </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">no reaction forces, no element forces calculated.</font></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">1 </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">yes reaction forces, no element forces calculated.</font></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">2 </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">yes reaction forces, yes element forces calculated.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">ANIMATE</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">0 </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">graphic animation off.</font></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">1 </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">graphic animation on.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">MATASC</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">0 </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">no of the state in ASCII files.</font></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">1 </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">write at every output interval the state in ASCII formatted
+    files which can be read by MATLAB.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">JOBID</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">id </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">an integer identifier id which can be used in the program
+    for indentification of a specific input file.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">RESTART</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td><font face="Verdana" style="font-size: 9pt">0 </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">continue numeric integrator.</font></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><font face="Verdana" style="font-size: 9pt">1 </font> </td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">restart numeric integration.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">EOF</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td></td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">a logical end of file marker, the input is terminated.</font></td>
+  </tr>
+  <tr>
+    <td><tt><font face="Verdana"><span style="font-size: 9pt">END</span></font></tt><font face="Verdana"><span style="font-size: 9pt">
+    </span></font> </td>
+    <td></td>
+    <td></td>
+    <td width="316"><font face="Verdana" style="font-size: 9pt">the reading of input is stopped and the analysis is
+    continued until the end of the specified time interval is reached after
+    which the program continues reading the input. </font> </td>
+  </tr>
+</table>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h3><font face="Verdana" style="font-size: 9pt"><a name="tth_sEc5.7">Example of an Input File </a> 
+</font> </h3>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<p><font face="Verdana" style="font-size: 9pt">An example of an input file for the dynamic analysis of a slider-crank
+mechanism with an elastic connecting rod is: </font> </p>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<pre><font style="font-size: 9pt" face="Courier New">PLBEAM 1 1 2 3 4
+PLBEAM 2 3 5 6 7
+PLBEAM 3 6 7 8 9
+FIX 1
+FIX 8 2
+X 3 0.15 0.
+X 6 0.30 0.
+X 8 0.45 0.
+INPUTX 2 1
+DYNE 2 2
+DYNE 2 3
+DYNE 3 2
+DYNE 3 3
+TIMESTEP 100 5.0
+MASS 8 0.033375
+EMASS 1 0.2225
+EMASS 2 0.2225
+EMASS 3 0.2225
+ESTIFF 2 0. 0.0012723
+ESTIFF 3 0. 0.0012723
+INPUTX 2 1
+XD 2 1 1.5
+END
+</font><font face="Verdana" style="font-size: 9pt">
+</font></pre>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<p><font face="Verdana" style="font-size: 9pt">And this is what the state should be after 5 seconds as written by the
+program: </font> </p>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<pre><font style="font-size: 9pt" face="Courier New">PLBEAM     1    1    2    3    4
+PLBEAM     2    3    5    6    7
+PLBEAM     3    6    7    8    9
+XY         1   0.000E+00   0.000E+00
+BETA       2   7.500E+00
+XY         3   5.199E-02   1.407E-01
+BETA       4   7.500E+00
+BETA       5  -4.443E-01
+XY         6   1.863E-01   7.383E-02
+BETA       7  -4.903E-01
+XY         8   3.168E-01   0.000E+00
+BETA       9  -5.279E-01
+FIX        1   1
+FIX        1   2
+INPUTX     2   1
+FIX        8   2
+DYNE       2   2
+DYNE       2   3
+DYNE       3   2
+DYNE       3   3
+TIME      5.000E+00
+XD         2   1  1.500E+00
+XDD        2   1  0.000E+00
+E          2   2  2.673E-03
+ED         2   2 -3.049E-03
+EDD        2   2 -6.476E-02
+E          2   3  4.227E-03
+ED         2   3 -5.511E-04
+EDD        2   3 -2.260E-02
+E          3   2  3.644E-03
+ED         3   2 -4.904E-03
+EDD        3   2 -1.124E-01
+E          3   3  1.996E-03
+ED         3   3 -5.660E-04
+EDD        3   3 -1.237E-02
+LENGTH0    1  1.500E-01
+LENGTH0    2  1.500E-01
+LENGTH0    3  1.500E-01
+LGEOMY     1  0.000E+00
+LGEOMY     2  0.000E+00
+LGEOMY     3  0.000E+00
+MASS       8   3.337E-02
+EMASS      1  2.225E-01
+EMASS      2  2.225E-01
+EMASS      3  2.225E-01
+ESTIFF     2  0.000E+00  1.272E-03
+ESTIFF     3  0.000E+00  1.272E-03
+HMAX      9.999E+03
+MAXITERAT  10
+EPSKIN    1.000E-05
+EPSINT    1.000E-03
+EPSIND    1.000E-03
+FORCEMODE   1
+ANIMATE    0
+MATASC     0
+RESTART    0
+TIMESTEP 100  5.000E+00
+END
+</font><font face="Verdana" style="font-size: 9pt">
+</font></pre>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h2><font face="Verdana" style="font-size: 9pt"><a name="tth_sEc6">Implementation of a New element Type</a>
+</font> </h2>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<p><font face="Verdana" style="font-size: 9pt">To implement a new element type there are three distinct things to do.
+</font> </p>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<p><font face="Verdana"><span style="font-size: 9pt">First, write a FORTRAN subroutine which calculates the element specific
+matrices as there are zero, first and second order derivates of the generalized
+deformations, initial geometry values from the current state, generalized
+stresses, mass matrix and convective force vector, third order derivative of the
+deformations, first order derivatives of the mass matrix and convective forces,
+material stiffness and damping matrix. The minimum required implementation is
+the zero, first and second order derivates of the generalized deformations, all
+other jobs may return zero. Work by example. For a 2-D element look at the
+planar beam element as implemented in the </span></font>
+<span style="font-size: 9pt"> <tt><font face="Verdana">PLBEAM</font></tt><font face="Verdana"> subroutine and for a
+new 3-D element type take the spatial beam subroutine </font> <tt>
+<font face="Verdana">BEAM</font></tt><font face="Verdana"> as an
+example. The appropriate </font> <tt><font face="Verdana">JOB</font></tt><font face="Verdana"> identification can be found in the
+subroutine </font> <tt><font face="Verdana">LPROCS</font></tt></span><font face="Verdana"><span style="font-size: 9pt">.
+</span></font> </p>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<p><font face="Verdana"><span style="font-size: 9pt">Second, define the new element type in the subroutine
+</span></font><span style="font-size: 9pt"> <tt><font face="Verdana">NLTDEF</font></tt><font face="Verdana"> by
+adding the element specific lines. If you want to add a 2-D element called
+</font> <tt>
+<font face="Verdana">FOO</font></tt><font face="Verdana"> with 3 nodes, the first a
+</font> <tt><font face="Verdana">XY</font></tt><font face="Verdana"> node, the second a
+</font> <tt><font face="Verdana">BETA</font></tt><font face="Verdana">
+node, and the third a </font> <tt><font face="Verdana">XY</font></tt></span><font face="Verdana"><span style="font-size: 9pt"> node, and 2 deformation parameters and the
+first free element type identifier is 18 then you type: </span></font> </p>
+<pre><font face="Verdana" style="font-size: 9pt">      NTLK(1)=2
+      NTLK(2)=1
+      NTLK(3)=2
+      CALL LTDEFI(18,'FOO',2,3,NTLK,IER)
+
+</font></pre>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<p><font face="Verdana"><span style="font-size: 9pt">Third, make the connection between the subroutine you have written, f.i.
+</span></font><span style="font-size: 9pt"> <tt>
+<font face="Verdana">FOOBAR</font></tt><font face="Verdana">, and the element type identifier, 18, by adding the following line
+in the subroutine </font> <tt><font face="Verdana">LPROCS</font></tt></span><font face="Verdana"><span style="font-size: 9pt">:
+</span></font> </p>
+<pre><font face="Verdana" style="font-size: 9pt">      ELSEIF(LTYPE.EQ.18)THEN
+        CALL FOOBAR(JOB,KEL)
+
+</font></pre>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<p><font face="Verdana"><span style="font-size: 9pt">Check your dimensions with the current maximum implemented as can be found in
+the include file </span></font><span style="font-size: 9pt"> <tt>
+<font face="Verdana">SPPARA</font></tt></span><font face="Verdana"><span style="font-size: 9pt"> which defines all parameters for the
+dimensions. Specific for a new element type are the parameters: </span></font> </p>
+<pre><font face="Verdana" style="font-size: 9pt">* MXLT  :MaXimum number of eLement Types.
+* MXNL  :MaXimum number of Nodes per eLement.
+* MXXL  :MaXimum number of X-components per eLement.
+* MXEL  :MaXimum number of dEformations per eLement.
+* MXML  :MaXimum number of Mass values per eLement.
+* MXSL  :MaXimum number of Stiffness values per eLement.
+
+</font></pre>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h2><font face="Verdana" style="font-size: 9pt"><a name="tth_sEc7">Credo</a>
+</font> </h2>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<pre><font face="Verdana" style="font-size: 9pt">*-purpose---------------------------------------------------------------
+* Het vastleggen van de style van programmeren voor SPACAR95
+*-edit log--------------------------------------------------------------
+* 03-Feb-95 meijaard/schwab created.
+*-----------------------------------------------------------------------
+
+Houd u aan de FORTRAN77 standaard.
+Een goed referentieboek is:
+Metcalf,M.,&quot;Effective Fortran 77&quot;,Oxford University Press,1989.
+bv:     Alle F77 source in HOOFDLETTERS, commentaar strings en
+    formats mogen in kleine letters.
+    Gebruik DOUBLE PRECISION ipv REAL*8.
+    Er bestaat maar een INTEGER type ipv INTEGER*2 of INTEGER*4.
+
+Commentaar regels worden aangegeven met een * op de eerste positie
+van de regel. Gebruik voor oude FORTRANIV source een C op de eerste
+positie om duidelijk het verschil met F77 aan te geven.
+Dit is ondermeer belangrijk bij het gebruik van lokale variabelen.
+In FORTRANIV ging men ervan uit dat bij subsequentie aanroep van
+een subroutine met lokale variabelen, de waarde van deze variabelen
+bewaard zou blijven. In F77 is dit NIET het geval. Wil men dit toch
+dan kan men dit bereiken door het SAVE statement toe te passen. We
+vermelden dit hier zo uitgebreid omdat het in het verleden een bron
+van fouten is geweest!
+
+Houd u aan de impliciete declaratie:
+      REAL (A-H,O-Z)
+      INTEGER (I-N)
+
+Declareer expliciet alle variabelen uit:
+de parameterlijst van een SUBROUTINE of FUNCTION,
+een COMMON block.
+!en houd u aan de impliciete declaraties!.
+Beter:
+Declareer expliciet alle variabelen en compileer uw source met de
+optie IMPLICIT UNDEFINED. Dit voorkomt de beruchte fouten zoals:
+LLX0 ipv LLXO.
+!en houd u aan de impliciete declaraties!.
+
+Spring 2 spaties in bij een DO-loop en een IF-THEN-ELSE block.
+
+Bij ieder DO-loop hoort een afzonderlijk CONTINUE statement.
+
+INTEGER constanten die mbv het PARAMETER statement gedefinieerd
+worden en die de grootte van array's aangeven bij voorkeur laten
+beginnen met de letters MX.
+
+Het karakter voor het vervolgen van een statement op de volgende
+regel is een $ teken op positie 6.
+
+Het label nr om een exceptie aan te geven, spring uit de loop etc,
+is 9999. Gebruik dit getal eventueel ook voor bijzondere INTEGER of
+REAL waarden. Op deze wijze vallen de bijzonderheden in de source
+in een oogopslag op. In de parameter file zijn hiervoor 3 constanten
+gedefinieerd: IUNDEF=9999,RUNDEF=9999.0 en CUNDEF='9999'.
+
+SPACAR is een eindig elementen programma waarbij de begrippen
+node(knoop) en element erg vaak voorkomen.
+Gebruik, bij voorkeur, voor een eLement-eigenschap de afkorting L
+en voor een Node-eigenschap de afkorting N.
+bv: De coordinaten X van een eLement zijn XL(*)
+    De coordinaten X van een Node zijn XN(*)
+
+We gaan proberen SPACAR modulair op te bouwen en voorzien
+vooralsnog 3 modulen:
+1-SPKD: Kinematica + Dynamica.
+2-SPID: Inverse Dynamica.
+3-SPLN: Lineairisatie.
+De basis module is SPKD. Alle andere modulen moeten hierop aansluiten.
+Dus geen wijzigingen in SPKD.
+
+Schrijf het FORMAT statements direct bij het bijbehorende WRITE
+statement. Gebruik afwijkende labelnummers, bv &gt; 1000.
+
+In een COMMON block is geen mix van CHARACTER en andere typen
+toegestaan.
+
+Gebruik kleine letters voor filenamen.
+Gebruik de extensie .f voor een FORTRAN source file.
+Gebruik de extensie .h voor een PARAMETER include file.
+Gebruik de extensie .h voor een COMMON block include file.
+
+Wij ondersteunen het gebruik van het printer control character NIET.
+Laat echter het eerste karakter in iedere regel uitvoer een spatie
+zijn (FORMAT(1X,.....)).
+
+De classificatie van de argumenten voor een SUBROUTINE en FUNCTION
+zijn:
+I(nput): het argument MOET een waarde bij aanroep hebben en deze
+waarde wordt NIET veranderd.
+O(utput): het argument moet een VARIABELE zijn en krijgt zijn waarde
+in de SUBROUTINE/FUNCTION.
+I(nput)/O(utput): spreekt voor zich.
+
+Assumed size array's altijd aangeven met een * (en geen 1 of zo).
+
+Schrijf REAL getallen altijd met een .0 (bv 0 en 2 schrijven als
+0.0 en 2.0).
+
+Indien het nulstellen van een array in de &quot;loop&quot; zit (b.v. voor ieder
+integratiestapje of zo) gebruik dan nooit de routines CLRRA1,2,3
+maar schrijf dit geheel uit mbv DO-loops.
+De routines CLRRA1,2,3 vragen in verhouding erg veel tijd.
+Is het nulstellen incidenteel, gebruik ze dan wel voor duidelijkheid.
+
+
+</font></pre>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<p><tt><font face="Verdana"><span style="font-size: 9pt">A.L.Schwab</span></font><span style="font-size: 9pt"></span></tt><font face="Verdana"><span style="font-size: 9pt">
+</span></font> </p>
+<div class="p">
+  <font face="Verdana" style="font-size: 9pt">
+  <!---->
+  </font>
+</div>
+<h2><font face="Verdana" style="font-size: 9pt"><a name="References">References</a></font></h2>
+<dl compact="compact">
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEB63" name="B63">[1]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.F. B</span><font style="font-size: 9pt">ESSELING</font><span style="font-size: 9pt">, 'The complete analogy between the
+  matrix equations and the continuous field equations of structural analysis',
+  in: <i>International Symposium on Analog and Digital Techniques Applied to
+  Aeronautics, Liege 1963, Actes du colloque</i>, Bruxelles, 1964, pp. 223-242.
+  </span></font>
+  </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEV64" name="V64">[2]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">W. V</span><font style="font-size: 9pt">ISSER</font><span style="font-size: 9pt">, 'Berekening van drie-dimensionale staaf
+  constructies, aangepast aan het gebruik van de electronische rekenmachine',
+  Report LTM 269, Laboratory for Engineering Mechanics, Delft University of
+  Technology, Delft, 1964. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEW68" name="W68">[3]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">K. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> </span> 
+  <font style="font-size: 9pt">DER</font><span style="font-size: 9pt"> W</span><font style="font-size: 9pt">ERFF</font><span style="font-size: 9pt">,
+  'Grote verplaatsingen van vlakke staafconstructies toegepast op een
+  kruisveerscharnier', Report LTM 408, Laboratory for Engineering Mechanics,
+  Delft University of Technology, Delft, 1968. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEV68" name="V68">[4]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">W. V</span><font style="font-size: 9pt">ISSER</font><span style="font-size: 9pt">, 'Algolprogramma voor berekening van
+  grote verplaatsingen bij vlakke staafconstructies', Report LTM 411, Laboratory
+  for Engineering Mechanics, Delft University of Technology, Delft, 1968. </span>
+  </font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEVB68" name="VB68">[5]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">W. V</span><font style="font-size: 9pt">ISSER</font><span style="font-size: 9pt">
+  </span> <font style="font-size: 9pt">AND</font><span style="font-size: 9pt"> J.F. B</span><font style="font-size: 9pt">ESSELING</font><span style="font-size: 9pt">,
+  'Large displacement analysis of beams', Report WTHD 10, Laboratory for
+  Engineering Mechanics, Delft University of Technology, Delft, March 1969.
+  (Compare with Report LTM 414.) </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEW73a" name="W73a">[6]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">K. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> </span> 
+  <font style="font-size: 9pt">DER</font><span style="font-size: 9pt"> W</span><font style="font-size: 9pt">ERFF</font><span style="font-size: 9pt">,
+  'Codelijst en I/O-beschrijving van het programma &quot;geometrie van de beweging
+  van vlakke mechanismen'', Report LTM 513, Laboratory for Engineering
+  Mechanics, Delft University of Technology, Delft, 1973. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEW73b" name="W73b">[7]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">K. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> </span> 
+  <font style="font-size: 9pt">DER</font><span style="font-size: 9pt"> W</span><font style="font-size: 9pt">ERFF</font><span style="font-size: 9pt">,
+  'Numerieke berekening van de beweging van vlakke mechanismen', Report LTM 514,
+  Laboratory for Engineering Mechanics, Delft University of Technology, Delft,
+  1973. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEB74" name="B74">[8]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.F. B</span><font style="font-size: 9pt">ESSELING</font><span style="font-size: 9pt">, 'Non-linear analysis of structures
+  by the finite element method as a supplement to a linear analysis', <i>
+  Computer Methods in Applied Mechnics and Engineering</i> <b>3</b> (1974), pp.
+  173-194. (Also as Report WTHD 51, Laboratory for Engineering Mechanics, Delft
+  University of Technology, Delft, 1973.) </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEB75a" name="B75a">[9]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.F. B</span><font style="font-size: 9pt">ESSELING</font><span style="font-size: 9pt">, 'Post-buckling and non-linear
+  analysis by the finite element method as a supplement to a linear analysis',
+  <i>Zeitschrift für angewandte Mathematik und Mechanik</i> <b>55</b> (1975),
+  pp. T3-T15. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEB75b" name="B75b">[10]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.F. B</span><font style="font-size: 9pt">ESSELING</font><span style="font-size: 9pt">, <i>Stijheid en sterkte 2,
+  Toepassingen</i> (Mechanica 5), Oosthoek, Scheltema &amp; Holkema, Utrecht, 1975.
+  </span></font>
+  </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITESG75" name="SG75">[11]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">L.F. S</span><font style="font-size: 9pt">HAMPINE</font><span style="font-size: 9pt">
+  </span> <font style="font-size: 9pt">AND</font><span style="font-size: 9pt"> M.K. G</span><font style="font-size: 9pt">ORDON</font><span style="font-size: 9pt">,
+  <i>Computer Solution of Ordinary Differential Equations, the Initial Value
+  Problem</i>, W.H. Freeman and Company, San Francisco, 1975. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEW75" name="W75">[12]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">K. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> </span> 
+  <font style="font-size: 9pt">DER</font><span style="font-size: 9pt"> W</span><font style="font-size: 9pt">ERFF</font><span style="font-size: 9pt">,
+  'Kinematics of coplanar mechanisms by digital computation', In <i>Proceedings
+  of the Fourth World Congress on the Theory of Machines and Mechanisms</i>
+  (September 8-13, 1975, Newcastle upon Tyne, England), pp. 685-690. </span>
+  </font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEW76" name="W76">[13]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">K. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> </span> 
+  <font style="font-size: 9pt">DER</font><span style="font-size: 9pt"> W</span><font style="font-size: 9pt">ERFF</font><span style="font-size: 9pt">,
+  'Dynamic analysis of planar mechanisms with rigid links', Report WTHD 85 and
+  LTM 583, Laboratory for Engineering Mechanics, Delft University of Technology,
+  Delft, 1976. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEB77" name="B77">[14]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.F. B</span><font style="font-size: 9pt">ESSELING</font><span style="font-size: 9pt">, 'Derivatives of deformation
+  parameters for bar elements and their use in buckling and postbuckling
+  analysis', <i>Computer Methods in Applied Mechanics and Engineering</i> <b>12</b>
+  (1977), pp. 97-124. (Also as Report WTHD 94 and LTM 595, Laboratory for
+  Engineering Mechanics, Delft University of Technology, Delft, 1977.) </span>
+  </font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEW77" name="W77">[15]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">K. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> </span> 
+  <font style="font-size: 9pt">DER</font><span style="font-size: 9pt"> W</span><font style="font-size: 9pt">ERFF</font><span style="font-size: 9pt">,
+  <i>Kinematic and Dynamic Analysis of Mechanisms, a Finite Element Approach</i>,
+  (Dissertation), Delft University Press, Delft, 1977. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEW78a" name="W78a">[16]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">K. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> </span> 
+  <font style="font-size: 9pt">DER</font><span style="font-size: 9pt"> W</span><font style="font-size: 9pt">ERFF</font><span style="font-size: 9pt">,
+  'Kinematics and dynamics of n degree of freedom mechanisms', Report LTM 633,
+  Laboratory for Engineering Mechanics, Delft University of Technology, Delft,
+  1978. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEW78b" name="W78b">[17]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">K. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> </span> 
+  <font style="font-size: 9pt">DER</font><span style="font-size: 9pt"> W</span><font style="font-size: 9pt">ERFF</font><span style="font-size: 9pt">
+  </span>
+  <font style="font-size: 9pt">AND</font><span style="font-size: 9pt"> H. R</span><font style="font-size: 9pt">ANKERS</font><span style="font-size: 9pt">, 'Getriebetyp-unabhängige
+  Methode der Kinematik und Dynamik der Rader-Kurbelgetriebe', Report LTM 644,
+  Laboratory for Engineering Mechanics, Delft University of Technology, Delft,
+  1978. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEB79a" name="B79a">[18]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.F. B</span><font style="font-size: 9pt">ESSELING</font><span style="font-size: 9pt">, 'Finite element methods', in J.F. B</span><font style="font-size: 9pt">ESSELING</font><span style="font-size: 9pt">
+  </span>
+  <font style="font-size: 9pt">AND</font><span style="font-size: 9pt"> A.M.A.
+  </span> <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt">
+  </span> <font style="font-size: 9pt">
+  DER</font><span style="font-size: 9pt"> H</span><font style="font-size: 9pt">EIJDEN</font><span style="font-size: 9pt"> (eds), <i>Trends in Solid Mechanics</i>,
+  Delft University Press, Delft, 1979, pp. 53-78. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEBEWKR79" name="BEWKR79">[19]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.F. B</span><font style="font-size: 9pt">ESSELING</font><span style="font-size: 9pt">, L.J. E</span><font style="font-size: 9pt">RNST</font><span style="font-size: 9pt">,
+  K. </span> <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt">
+  </span> <font style="font-size: 9pt">DER</font><span style="font-size: 9pt"> W</span><font style="font-size: 9pt">ERFF</font><span style="font-size: 9pt">,
+  A.U. K</span><font style="font-size: 9pt">ONING</font><span style="font-size: 9pt">,
+  </span> <font style="font-size: 9pt">AND</font><span style="font-size: 9pt"> E. R</span><font style="font-size: 9pt">IKS</font><span style="font-size: 9pt">,
+  'Geometrical and physical nonlinearities: some developments in The
+  Netherlands', <i>Computer Methods in Applied Mechanics and Engineering</i> <b>
+  17/18</b> (1979), pp. 131-157. (Also as Report LTM 632, Laboratory for
+  Engineering Mechanics, Delft University of Technology, Delft, 1978.) </span>
+  </font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEW79" name="W79">[20]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">K. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> </span> 
+  <font style="font-size: 9pt">DER</font><span style="font-size: 9pt"> W</span><font style="font-size: 9pt">ERFF</font><span style="font-size: 9pt">,
+  'A finite element approach to kinematics and dynamics of mechanisms', in <i>
+  Proceedings of the Fifth World Congress on the Theory of Machines and
+  Mechanisms</i> (July 8-13, 1979, Montreal, Canada), The American Society of
+  Mechanical Engineers, New York, 1979, pp. 587-590. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITERBDKW79" name="RBDKW79">[21]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">H. R</span><font style="font-size: 9pt">ANKERS</font><span style="font-size: 9pt">, B.
+  </span> <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt">
+  </span>
+  <font style="font-size: 9pt">DEN</font><span style="font-size: 9pt"> B</span><font style="font-size: 9pt">ERG</font><span style="font-size: 9pt">, A.
+  </span> <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt">
+  D</span><font style="font-size: 9pt">IJK</font><span style="font-size: 9pt">, A.J. K</span><font style="font-size: 9pt">LEIN</font><span style="font-size: 9pt"> B</span><font style="font-size: 9pt">RETELER</font><span style="font-size: 9pt">,
+  </span>
+  <font style="font-size: 9pt">AND</font><span style="font-size: 9pt"> K. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> </span> 
+  <font style="font-size: 9pt">DER</font><span style="font-size: 9pt">
+  W</span><font style="font-size: 9pt">ERFF</font><span style="font-size: 9pt">, 'Computer aided design of mechanisms, the CADOM
+  project of the Delft University of Technology', in <i>Proceedings of the Fifth
+  World Congress on the Theory of Machines and Mechanisms</i> (July 8-13, 1979,
+  Montreal, Canada), The American Society of Mechanical Engineers, New York,
+  1979, pp. 667-672. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEB79b" name="B79b">[22]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.F. B</span><font style="font-size: 9pt">ESSELING</font><span style="font-size: 9pt">
+  </span> <font style="font-size: 9pt">ET</font><span style="font-size: 9pt">
+  </span>
+  <font style="font-size: 9pt">AL</font><span style="font-size: 9pt">., 'Applicatiecursus Ëindige Elementen Methode'',
+  Report LTM 681, Laboratory for Engineering Mechanics, Delft University of
+  Technology, Delft, 1979. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEB81" name="B81">[23]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.F. B</span><font style="font-size: 9pt">ESSELING</font><span style="font-size: 9pt">, 'Derivatives of deformation
+  parameters for bar elements and their use in buckling and postbuckling
+  analysis', Report WTHD 94, Corrected version, Laboratory for Engineering
+  Mechanics, Delft University of Technology, Delft, July 1981. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEB82" name="B82">[24]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.F. B</span><font style="font-size: 9pt">ESSELING</font><span style="font-size: 9pt">, 'Non-linear theory for elastic
+  beams and rods and its finite element representation', <i>Computer Methods in
+  Applied Mechanics and Engineering</i> <b>31</b> (1982), pp. 205-220. (Also as
+  Report WTHD 143 and LTM 711, Laboratory for Engineering Mechanics, Delft
+  University of Technology, Delft, 1981.) </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEW83" name="W83">[25]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">K. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> </span> 
+  <font style="font-size: 9pt">DER</font><span style="font-size: 9pt"> W</span><font style="font-size: 9pt">ERFF</font><span style="font-size: 9pt">,
+  'SPACAR, a programme system for the analysis of the motion of spatial
+  mechanisms, user manual', Report LTM 739, Laboratory for Engineering
+  Mechanics, Delft University of Technology, Delft, 1983. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITES83" name="S83">[26]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">A.L. S</span><font style="font-size: 9pt">CHWAB</font><span style="font-size: 9pt">, 'Dynamica van mechanismen met
+  vervormbare schakels' (Master's Thesis), Report LTM 758, Laboratory for
+  Engineering Mechanics, Delft University of Technology, Delft 1983. </span>
+  </font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEK84a" name="K84a">[27]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">A.J. K</span><font style="font-size: 9pt">LEIN</font><span style="font-size: 9pt"> B</span><font style="font-size: 9pt">RETELER</font><span style="font-size: 9pt">, 'Movability
+  and transfer quality of arbitrary mechanisms, an application of the
+  FEM-theory', in J.S. R</span><font style="font-size: 9pt">AO</font><span style="font-size: 9pt">
+  </span> <font style="font-size: 9pt">ABD</font><span style="font-size: 9pt"> K.N.
+  G</span><font style="font-size: 9pt">UPTA</font><span style="font-size: 9pt"> (eds) <i>Proceedings of the Sixth World Congress
+  on the Theory of Machines and Mechanisms</i> (December 15-20, 1983, New Delhi,
+  India), Wiley Eastern Limited, New Delhi, 1984, pp. 199-204. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEK84b" name="K84b">[28]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">A.J. K</span><font style="font-size: 9pt">LEIN</font><span style="font-size: 9pt"> B</span><font style="font-size: 9pt">RETELER</font><span style="font-size: 9pt">, 'The
+  disc cam regarded as a special finite element in kinematics', in J.S. R</span><font style="font-size: 9pt">AO</font><span style="font-size: 9pt">
+  </span>
+  <font style="font-size: 9pt">ABD</font><span style="font-size: 9pt"> K.N. G</span><font style="font-size: 9pt">UPTA</font><span style="font-size: 9pt"> (eds) <i>
+  Proceedings of the Sixth World Congress on the Theory of Machines and
+  Mechanisms</i> (December 15-20, 1983, New Delhi, India), Wiley Eastern
+  Limited, New Delhi, 1984, pp. 1217-1220. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEW84" name="W84">[29]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">K. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> </span> 
+  <font style="font-size: 9pt">DER</font><span style="font-size: 9pt"> W</span><font style="font-size: 9pt">ERFF</font><span style="font-size: 9pt">,
+  'Finite element kinematical analysis of spatial mechanisms', in J.S. R</span><font style="font-size: 9pt">AO</font><span style="font-size: 9pt">
+  </span>
+  <font style="font-size: 9pt">ABD</font><span style="font-size: 9pt"> K.N. G</span><font style="font-size: 9pt">UPTA</font><span style="font-size: 9pt"> (eds) <i>
+  Proceedings of the Sixth World Congress on the Theory of Machines and
+  Mechanisms</i> (December 15-20, 1983, New Delhi, India), Wiley Eastern
+  Limited, New Delhi, 1984, pp. 362-368. (Also Report LTM 737, Laboratory for
+  Engineering Mechanics, Delft University of Technology, Delft, 1983.) </span>
+  </font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEWJ84" name="WJ84">[30]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">K. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> </span> 
+  <font style="font-size: 9pt">DER</font><span style="font-size: 9pt"> W</span><font style="font-size: 9pt">ERFF</font><span style="font-size: 9pt">
+  </span>
+  <font style="font-size: 9pt">AND</font><span style="font-size: 9pt"> J.B. J</span><font style="font-size: 9pt">ONKER</font><span style="font-size: 9pt">, 'Dynamics of
+  flexible mechanisms', in E.J. H</span><font style="font-size: 9pt">AUG</font><span style="font-size: 9pt"> (ed.), <i>Computer
+  Aided Analysis and Optimization of Mechanical System Dynamics</i>, Springer-Verlag,
+  Berlin, 1984, pp. 381-400. (Also as Report LTM 767, Laboratory for Engineering
+  Mechanics, Delft University of Technology, Delft, 1983.) </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEJ84" name="J84">[31]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.B. J</span><font style="font-size: 9pt">ONKER</font><span style="font-size: 9pt">, 'Dynamics of spatial mechanisms with
+  flexible links', Report WTHD 171, Laboratory for Engineering Mechanics, Delft
+  University of Technology, Delft, 1984. (Also as Report LTM 804. Compare with
+  Report LTM 794.) </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEBJS85" name="BJS85">[32]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.F. B</span><font style="font-size: 9pt">ESSELING</font><span style="font-size: 9pt">, J.B. J</span><font style="font-size: 9pt">ONKER</font><span style="font-size: 9pt">,
+  </span>
+  <font style="font-size: 9pt">AND</font><span style="font-size: 9pt"> A.L. S</span><font style="font-size: 9pt">CHWAB</font><span style="font-size: 9pt">, 'Kinematics and
+  dynamics of mechanisms', <i>Delft Progress Report</i> <b>10</b> (1985), pp.
+  160-172. (Also as Report LTM 799, Laboratory for Engineering Mechanics, Delft
+  University of Technology, Delft, 1985.) </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITET85" name="T85">[33]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">B. T</span><font style="font-size: 9pt">ANUWIDJAJA</font><span style="font-size: 9pt">, 'Simulation des dynamischen
+  Verhaltens ebener Mechanismen mit spielbehafteten Drehgelenken mit Hilfe der
+  Finite-elemente-methode', Report WTHD 173, Section Production Automation and
+  Theory of Mechanisms, Delft University of Technology, Delft, 1985. </span>
+  </font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITES85" name="S85">[34]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">A.L. S</span><font style="font-size: 9pt">CHWAB</font><span style="font-size: 9pt">, 'The wheel in 3D and other special
+  finite elements for kinematic and dynamic analyses of multy body systems',
+  Report LTM 820, Laboratory for Engineering Mechanics, Delft University of
+  Technology, Delft, 1985. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEB85" name="B85">[35]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.F. B</span><font style="font-size: 9pt">ESSSELING</font><span style="font-size: 9pt">, 'Large rotations in problems of
+  structural mechanics', in P.G. B</span><font style="font-size: 9pt">ERGAN</font><span style="font-size: 9pt">, K.-J. B</span><font style="font-size: 9pt">ATHE</font><span style="font-size: 9pt">,
+  </span>
+  <font style="font-size: 9pt">AND</font><span style="font-size: 9pt"> W. W</span><font style="font-size: 9pt">UNDERLICH</font><span style="font-size: 9pt"> (eds), <i>
+  Finite Element Methods for Nonlinear Problems</i> (Europe-US Symposium,
+  Trondheim, Norway 1985), Springer-Verlag, Berlin, 1986, pp. 25-39. (Also as
+  Report LTM 810, Laboratory for Engineering Mechanics, Delft University of
+  Technology, Delft, 1985.) </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEJ86a" name="J86a">[36]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.B. J</span><font style="font-size: 9pt">ONKER</font><span style="font-size: 9pt">, 'Dynamics of active mechanisms with
+  flexible links', in G. B</span><font style="font-size: 9pt">IANCHI</font><span style="font-size: 9pt">
+  </span> <font style="font-size: 9pt">AND</font><span style="font-size: 9pt">
+  W.O. S</span><font style="font-size: 9pt">CHIEHLEN</font><span style="font-size: 9pt"> (eds), <i>Dynamics of Multibody Systems</i>,
+  Springer-Verlag, Berlin, 1986, pp. 103-118. (Also as Report LTM 812,
+  Laboratory for Engineering Mechanics, Delft University of Technology, Delft,
+  1985.) </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEJ86b" name="J86b">[37]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.B. J</span><font style="font-size: 9pt">ONKER</font><span style="font-size: 9pt">, 'A computer-oriented method for
+  linearization of the dynamic mechanism equations', Report LTM 822, Laboratory
+  for Engineering Mechanics, Delft University of Technology, Delft, 1986. </span>
+  </font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEW86" name="W86">[38]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">C.M. W</span><font style="font-size: 9pt">OUTERS</font><span style="font-size: 9pt">, 'Verification of simulation models of
+  a hydraulically actuated servomechanism' (Master's Thesis), Report LTM 833,
+  Laboratory for Engineering Mechanics, Delft University of Technology, Delft,
+  1986. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEJ86c" name="J86c">[39]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">J.B. J</span><font style="font-size: 9pt">ONKER</font><span style="font-size: 9pt">, 'Dynamic simulation of of robotic
+  manipilators with flexible links', in H. </span> <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> B</span><font style="font-size: 9pt">RUSSEL</font><span style="font-size: 9pt">
+  (ed.), <i>Proceedings 16th International Symposium on Industrial Robots, 8th
+  International Conference on Industrial Robot Technology</i>, Springer-Verlag,
+  Berlin, 1986, pp. 365-376. (Also as Report LTM 834, Laboratory for Engineering
+  Mechanics, Delft University of Technology, Delft, 1986.) </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITET86a" name="T86a">[40]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">R.A.G. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> T</span><font style="font-size: 9pt">OL</font><span style="font-size: 9pt">, 'Linearisering
+  van de bewegingsvergelijkingen van ruimtelijke mechanismen in een
+  voorgeschreven nominale trajectorie' (Master's Thesis), Report LTM 839,
+  Laboratory for Engineering Mechanics, Delft University of Technology, Delft,
+  1986. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITET86b" name="T86b">[41]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">R.A.G. </span> 
+  <font style="font-size: 9pt">VAN</font><span style="font-size: 9pt"> T</span><font style="font-size: 9pt">OL</font><span style="font-size: 9pt">, 'Robot
+  simulatie met een stuksgewijs gelineariseerde inverse model regeling,
+  simulatie van een Ëxperimenteel Robotachtig Proces&quot; (ERP) bij het volgen van
+  een voorgeschreven baan' (Master's Thesis), Report LTM 841, Laboratory for
+  Engineering Mechanics, Delft University of Technology, Delft, 1986. </span>
+  </font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CITEWb86" name="Wb86">[42]</a></font></dt>
+  <dd><font face="Verdana"><span style="font-size: 9pt">P.M.R. W</span><font style="font-size: 9pt">ORTELBOER</font><span style="font-size: 9pt">, 'Inverse dynamics of
+  manipulators-implementation in the finite element/mechanism package SPACAR'
+  (Master's Thesis), Report LTM 842, Laboratory for Engineering Mechanics, Delft
+  University of Technology, Delft, 1986. </span></font> </dd>
+  <dt><font face="Verdana" style="font-size: 9pt"><a href="#CIT

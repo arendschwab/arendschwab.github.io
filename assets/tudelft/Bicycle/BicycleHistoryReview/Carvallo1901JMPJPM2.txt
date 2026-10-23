@@ -1,0 +1,146 @@
+Jaap meijaard wrote:
+>   To: bikengr@netnet.net
+>       ruina@cornell.edu
+>       a.l.schwab@tudelft.nl
+>   Cc: mcoleman@cems.uvm.edu
+>
+> Nottingham, 23 October 2007
+>
+> Dear Jim, (and other bicycle dynamicists)
+>
+> See my comments to your previous mail. They are indicated by ***(JPM):
+> As to the paper by Tarrant: this does not seem to be a good contribution to the
+literature. I can't understand everything he does. For instance, in Fig.2, the trail
+seems to be negative. Although the paper is full of equations, it seems to be more
+of a qualitative nature.
+>
+> Best regards, Jaap Meijaard.
+>
+>
+> Jaap: Thank you!
+>
+> I am without a full paper copy, so I was unable to make such a comparison. I
+> noticed that the printed ERRATA were unchanged, but this tabular correction
+> is very interesting [of course, in my silly quest to figure out when the
+> book was published]. I also took my original copy of Bourlet, published by
+> the same press, and looked at all the other books advertised in the final
+> pages. Carvallo was not there....
+>
+> The remainder of this email is really to Mike Coleman, but of course I would
+> appreciate if you have anything to add or corrections to make. I helpfully
+> put *** next to two sentences below, in case you care to comment!
+>
+>
+> Mike: Digging around in the University of Michigan pdf, I finally found the
+> Monocycle stability calculation embedded in the Bicycle section.
+>
+> SUMMARY
+> To hint at what you will see below, his equation is correct in form, but I
+> am not clear (I don't even know if Carvallo is clear) whether he neglects
+> the wheel mass or inertia in comparison to rider mass or inertia.
+>
+> ***(JPM): If you take the equations (1), (2) and (3) on pages 39-41, you
+should obtain the correct equations. Some approximations have
+been made in the equations at the bottom of page 41, valid for
+small wheel mass. The inertia quantities should be interpreted
+as for the complete unicycle. The most important term neglected
+is -(B_1 - mu_1*R^2) s n cos(theta) in the equation (p).
+> He does come up with the need for the appropriate inertia asymmetry, and the
+> existence of a critical speed for both eigenvalues to be positive. But
+> possibly he has some sign or coefficient errors in the contribution of the
+> wheel (relative to the more massive rider).
+>
+>
+> DETAILS
+> With reference to the 'printed page numbers' (not the pdf page numbers) this
+> is pages 116 -- 118, namely Section 78. It refers immediately to the
+> equations for p, n, and s of Section 24, which are at the bottom of page 41.
+>
+> These quantities are defined on page 3: p is THETAprime (the lean rate), n
+> is NUprime (rate of change of heading of the ground tangent line), and s is
+> the axial spin rate.
+>
+> I don't pretend to follow exactly what he does on pages 117 and 118 [in
+> part, because the equations of section 24 don't seem to be reproduced
+> exactly in 78?]. But the conclusions are relatively clear, and analogous to
+> our own:
+>
+> ***(JPM): on page 117, the terms with s' are left out, because the axial spin
+rate is assumed to be constant.
+> His equation (1') on page 117 is his eigenvalue equation. It is quadratic in
+> LAMBDA, just like ours when fore/aft rider position is suppressed.
+>
+> At a zero lean angle THETA, in equation 1', the coefficient of LAMBDA^2
+> reduces to AC-L^2, namely the determinant of the moment of inertia matrix
+> with respect to the ground contact, as defined on page 37 with respect to
+> axes given on page 1. [A is roll inertia, C is yaw inertia, and L is product
+> of inertia.] Carvallo is a little casual later on in saying that these
+> quantities include the contributions of the wheel (whereas for the wheel
+> alone (a thin ring) we would see the subscript "1", such as B1, etc.)
+>
+> At any rate, his highest order term perfectly matches our "det(M)", and he
+> notes that it is positive without further discussion.
+>
+> His zero order term is given as (2), and his first order term as (3).
+> Naturally he wants them both to be positive for stability. These equations
+> are simplified and specialized to zero lean and constant heading, in
+> equations (2) and (3) at the top of page 118. Again, I would not be able to
+> validate his steps, but simply take the results as he reports them.
+>
+> ***(JPM): for the more exact equations, an additional term in dP/dn (line 2
+from the bottom) would appear: -(B_1-mu_1*R^2) s . This is the
+moment of inertia of the wheel about the spin axis times the spin
+rate, with a minus sign. For a ring, this is -mu_1 R^2 s .
+>
+> Results
+> His quadratic coefficient is det(inertia matrix about contact)
+> It agrees perfectly with our derivation.
+>
+> His first order coefficient is (product of inertia)(rolling speed)(m1R-mgh)
+> I think the product of inertia is the negative of the tensor component of
+> inertia; and mgh dominates m1*R (it refers either to the overall system
+> mass, or least the rider mass)
+>
+> ***(JPM): L is the negative of the tensor component. Note x-axis is in
+forward direction and z-axis is up. With corrected equations,
+the mu_1 R would disappear. mu is total mass and h height of
+centre of mass of the whole system. There is no sign error.
+> But I think our coefficient p3 is (Ics)(R thetadot)(m1R + m2z)
+> ***** IF I INTERPRET CORRECTLY, HIS PARENTHETICAL (m1R - mgh) SHOULD
+> ACTUALLY BE -(m1R + mgh), IN OTHER WORDS HE MAY HAVE A SIGN ERROR IN THE m1R
+> TERM. Such a sign error, if that is the case, would not alter his result,
+> since the rider is generally far more massive and higher. His final
+> conclusion for this coefficient is "L must be less than or equal to zero".
+> He states this condition "is new and important; it shows that stability
+> depends on the position of the rider on his cycle"
+>
+> Thus, even if he has some error in one sign of a small term, or has a mixup
+> about whether he has already included the wheel mass in the system mass, his
+> expression is very close to ours, and leads to the very same inertia
+> restriction.
+>
+> His zero order coefficient is very similar to our quadratic expression in
+> speed. His speed independent quantity -C MU g h matches ours exactly ***** if MU h
+> represents the total moment of mass; otherwise it matches ours approximately
+> by neglecting the contribution of the wheel.
+>
+> His m m1 R^3 h s^2 is also very close to our expression, but probably not
+> exactly the same. ***** Where he has m*h, we have (2 m1 R + m2 z). He could
+> be neglecting the wheel contribution; but if he includes it he would not
+> have the factor of 2. Qualitatively his form is correct, but he would
+> probably find a slightly different critical speed.
+>
+> ***(JPM): With the correction, a term (mu mu_1 s^2 R^4) should be added.
+Remember, mu h should represent the total moment of mass. 
+> OVERALL: qualitatively in the proper form, with possible differences from
+> occasional neglect of the wheel relative to the rider; and possible errors
+> (sign of the wheel contribution in one case; and neglect of a factor 2 on
+> the wheel contribution in another case).
+>
+> ***(JPM): All differences are due to neglected terms in the equations at
+the bottom of page 41.
+> JMP
+>
+>
+>
+>

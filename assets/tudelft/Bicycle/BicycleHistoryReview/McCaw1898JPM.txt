@@ -1,0 +1,71 @@
+Let me try to explain what I think I have understood from McCaw (1898). 
+
+1. His problem is to determine under what conditions a biycle can make a 
+steady turn with a zero steering torque. We, thanks to Whipple, know that this 
+is at the capsize instability speed, or near this speed in the non-linear 
+case. 
+
+2. Now he does not consider a horizontal flat road, but a road with 
+superelevation, as in an in-door cycle track. This surface is a part of a 
+cone, or a more general surface of revolution. He neglects the curvature of 
+the surface in his kinematic considerations. 
+
+3. It is assumed that the speed is a kind of the equilibrium speed, for which 
+the rear frame is perpendicular to the road surface. For calculating the 
+equilibrium speed, the gyroscopic effect of the wheels are not accounted for. 
+It seems that the centre of mass of the front fork with the frontwheel is on 
+the steering axis, so its relative position does not change if the steering 
+angle is non-zero. 
+
+4. (A) is the equation for zero steering torque; the kinematic relations (B) 
+and (C) seem to be correct, if one neglects any curvature of the road surface. 
+(D) is only correct if the angular velocity of the wheel and the angular 
+velocity of moving around the track are perpendicular. In the present case, a 
+cos(phi) is needed, where phi is the lean angle. For wide curves (R >> b) and 
+low speeds (v^2 << gR), the approximations up to now might be justified. 
+However, the torque K is about the longitudinal axis, so the component along 
+the steering axis should have a factor sin(alpha), where alpha is the rake 
+angle. So in (G), the sin(alpha) should disappear. 
+
+5. For the equilibrium calculation in the linearized case, it does not matter 
+much whether the road is banked or not. So we see that if we correct the 
+error with sin(alpha), put the rear wheel moment of inertia equal to zero, 
+and assume that the centre of mass of the front assembly is on the 
+steering axis (u_A = 0 in our notation), the correct critical velocity for 
+the capsize instability is found from Eq. (G). 
+
+6. So one can argue that the paper considers a special case, nothing is said 
+about stability, and the calculation has an error, and Whipple did not 
+interpret the paper correctly. 
+
+JPM, April 27, 2006
+
+Ik heb net in vol. 86 (1898) van The Engineer zitten lezen. Het fietsartikel 
+is geschreven door G.T. McCaw (er staat echt een C, ik heb het door het 
+vergrootglas gelezen, en geen G zoals Whipple beweert, en anderen het hebben 
+overgetypt). Het is een van de weinige artikelen met formules. Verder staan 
+er in het tijdschrift mooie platen van locomotieven en oorlogsschepen. Zestien 
+jaar voordat het feest zou beginnen was men al druk met de voorbereidingen 
+bezig. Sommige van die platen staan ook in mijn boek over uitvindingen. Daar 
+staat toch ook een heel klein stukje over de fabricage van fietsen in. Ik 
+heb het stuk van McCaw nog niet bestudeert, maar ik kan je nu al zeggen dat 
+er vreemde dingen in staan, zoals ook Whipple al beweerde, en dat niet alles 
+wat Whipple beweerde over dit artikel klopt. Verder commentaar volgt nog. 
+Naast twee kopieen (voor de vouw) stuur ik je de obituary van Koiter van de 
+Royal Society op, als ik tenminste een envelop kan vinden. Hoera, mijn 
+kamergenoot heeft een stapeltje. 
+
+JPM, April 6, 2006
+
+McCaw beschouwt in wezen een ander probleem dan 
+Whipple. Hij beschouwt de 'banking': (superelevation; OED heeft als oudste 
+vindplaats in deze betekenis 1904; het woord bestond toen al meer dan zes 
+jaar, daar McCaw het niet nodig vond het woord te verklaren) de weg is niet 
+vlak, maar een kegel. Toch wordt de weg als vlak, maar niet horizontaal, 
+beschouwd in het artikel. Verder gebeurt er iets heel vreemds met het 
+gyroscopisch effect van het voorwiel. Een kleine fout is dat de cosinus van de 
+leunhoek een genomen wordt. Maar verder moet volgens mij de component van het 
+moment langs de stuuras genomen worden. 
+
+JPM, April 11, 2006
+

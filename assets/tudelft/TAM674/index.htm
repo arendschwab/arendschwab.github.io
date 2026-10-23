@@ -1,0 +1,432 @@
+<HTML>
+<!-- CREATION DATE: 18/11/2002 -->
+
+<!-- Mirrored from http://bicycle.tudelft.nl/schwab/TAM674/index.htm by HTTrack Website Copier/3.x [XR&CO], Sat, 17 Oct 2026 14:45:59 GMT -->
+<HEAD>
+<TITLE></TITLE>
+<META NAME="Description" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Author" CONTENT="arend schwab">
+<META NAME="Generator" CONTENT="Microsoft FrontPage 5.0">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+</HEAD>
+<BODY BGCOLOR="#E7F7FF" TEXT="#000000" LINK="#0000FF" VLINK="#800080" ALINK="#FF0000">
+<center>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="70%">
+<h2 align="center"><font face="Verdana" size="4">TAM 674</font></h2>
+<h2 align="center"><font face="Verdana" size="4">Applied Multibody Dynamics</font></h2>
+    <p align="center">
+<font face="Verdana" size="4">
+<b>(Spring 2003)</b> <br>
+&nbsp;</font></td>
+    <td width="15%">
+    <p align="center">&nbsp;</td>
+    <td width="15%" valign="bottom">
+    <p align="right">
+    <img border="0" src="TUD_01-logo_025.gif" width="146" height="62"></td>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" bgcolor="#3399FF" height="20">
+  <tr>
+    <td width="100%">
+    <p align="right">
+    <font face="Verdana" style="font-weight: 700" size="1" color="#FFFFFF">Delft 
+    University of Technology&nbsp; </font></td>
+  </tr>
+</table>
+</center>
+
+<p width=70%>
+<font face="Verdana" style="font-size: 9pt">
+<b> Description:</b> After the first courses in dynamics a
+student can often deal well with the dynamics of one rigid body.
+In this course we will cover a systematic approach to the
+generation and solution of equations of motion for mechanical
+systems consisting of multiple interconnected rigid bodies, the
+so-called multibody systems. This course differs from ``advanced
+dynamics'', which mostly covers theoretical results about classes
+of idealized systems (e.g. Hamiltonian systems), in that the goal
+here is to find the motions of relatively realistic models of systems (including, for example, motors, dissipation and contact
+constraints). </font>
+</p>
+<p>
+ <font face="Verdana" style="font-size: 9pt">The main approach is the reduction of the constraint
+Newton-Euler equations using the principle of virtual work and the
+principle of D'Alembert. However the relation of this approach to
+Lagrange's equations, Kane's equations, and to the differential
+algebraic equations approach will also be covered. The course will
+start with 2D examples and then move on to 3D  systems. Rotations
+will be represented with matrices, various Euler angles, and Euler
+parameters. Various computer solution techniques for the ODEs or
+DAEs will also be covered. </font>
+</p>
+<p>
+<font face="Verdana" style="font-size: 9pt">
+<b>Goal:</b> By the end of the course students will be
+competent at finding the motions of linked rigid body systems in
+two and three dimensions including systems with various kinematic
+constraints (sliding, hinges and rolling, closed kinematic
+chains). Collisional interactions will be considered in a unified
+manner for all the different ways of formulating the equations of
+motion. </font>
+</p>
+
+
+
+<HR WIDTH=100% NOSHADE>
+<center>
+<h2><font face="Verdana" style="font-size: 9pt">Hand-Outs</font></h2>
+</center>
+<font face="Verdana"><span style="font-size: 9pt">- The course info <a href="TAM674flyer.pdf">flyer</a>.<br>
+
+- The course <a href="Contents.pdf">contents</a>.<br>
+
+- <a href="assign1.pdf">Assignment 1</a>, due 1/27/2003.<br>
+
+- Two Matlab scripts: <a href="daehwa1.m">daehwa1.m</a> and
+<a href="hwa1.m">hwa1.m</a>.<br>
+
+- <a href="assign2.pdf">Assignment 2</a>, due 2/3/2003.<br>
+
+- Reprint from
+  Lanczos, C., <i>The Variational Principles of Mechanics</i>,
+  University of Toronto Press, Toronto, 1949:  Chapter II, Section 5, </span>
+</font><span style="font-size: 9pt">
+<i><font face="Verdana">Auxiliary conditions. The Lagragian l-method</font></i></span><font face="Verdana"><span style="font-size: 9pt">, and
+Chapter III, Section 1, <i>The principle of virtual work for
+reversible displacements</i>.<br>
+
+- <a href="assign3.pdf">Assignment 3</a>, due 2/10/2003.<br>
+
+- <a href="assign4.pdf">Assignment 4</a>, due 2/17/2003.<br>
+
+- Matlab script for Lagrange eqn's of a double pendulum: <a href="ex5.m">ex5.m</a><br>
+
+- <a href="assign5.pdf">Assignment 5</a>, due 2/24/2003.<br>
+
+- <a href="assign6.pdf">Assignment 6</a>, due 3/3/2003.<br>
+
+- Two Matlab scripts: <a href="odehwa6.m">odehwa6.m</a> and
+<a href="hwa6sym.m">hwa6sym.m</a>.<br>
+
+- <a href="assign7.pdf">Assignment 7</a>, due 3/24/2003.<br>
+
+- <a href="SR97.pdf">"The Matlab ODE Suite"</a>, by L.F.Shampine and M.W.Reichelt.<br>
+
+- <a href="assign8.pdf">Assignment 8</a>, due 4/7/2003.<br>
+
+- <a href="assign9.pdf">Assignment 9</a>, due 5/5/2003.<br>
+
+- <a href="assign10.pdf">Assignment 10</a>, due 5/5/2003.<br>
+
+- My notes on <a href="quaternion.pdf">Quaternions, Finite Rotation, and Euler Parameters</a><a>.<br>
+
+- </a> <a href="assign11.pdf">Assignment 11</a>, due 5/5/2003.<br>
+
+- <a href="finalproj.pdf">Final Project</a>, <FONT COLOR="#FF0000">due 5/26/2003 <b>at the latest</b></FONT>.<br>
+
+- My <a href="TAM674notbp.pdf">notes on the bicycle project</a>, a guide for the final project.<br>
+
+- <a href="errata.pdf">Errata</a> on the final project (notes & assignment), updated
+June 20, 2003. </span></font>
+
+<HR WIDTH=100% NOSHADE>
+<center>
+<h2><font face="Verdana" style="font-size: 9pt">Log</font></h2>
+</center>
+<H3>
+<font face="Verdana" style="font-size: 9pt">Week 1</font></H3>
+<font face="Verdana" style="font-size: 9pt">
+<b>Monday, Jan 20, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<UL>
+<LI>
+<font face="Verdana" style="font-size: 9pt">Newton-Euler equations of motion for a simple planar system,
+free body diagrams, constraint equations and constraint forces,
+uniqueness of the solution.</font></LI>
+</UL>
+<font face="Verdana" style="font-size: 9pt">Short introduction to Multibody Dynamics. I have discussed the <a href="Contents.pdf">contents</a> of the course together with the literature list. Talked about Newton and Euler, and the rigid body concept. Posed the equations of motion for a rigid body in 2D, the so-called Newton-Euler equations. Started deriving the equations of motion for a simple double pendulum. Stopped at the second time derivatives of the constraint equations. Handed out <a href="assign1.pdf">assignment 1</a>, this homework is due next monday.
+<br><br>
+<b>Wednesday, Jan 22, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<p>
+<font face="Verdana" style="font-size: 9pt">Derived the complete Differential and Algebraic Equations for the double pendulum motion. Solved them for the upright configuration at zero speed. Did two Euler numerical integration steps to find the motion in time. Showed this <a href="opg1a.gif">motion</a> and discussed the matlab function to calculate the accelerations and the constraint forces <a href="daehwa1.m">daehwa1.m</a> and the script to integrate the eqns of motion and show it <a href="hwa1.m">hwa1.m</a>.
+</font> </p>
+
+<H3>
+<font face="Verdana" style="font-size: 9pt">Week 2</font></H3>
+<font face="Verdana" style="font-size: 9pt">
+<b>Monday, Jan 27, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<UL>
+<LI>
+<font face="Verdana" style="font-size: 9pt">Systematic approach for a system of interconnected rigid bodies,
+virtual power method and Lagrangian multipliers.</font></LI>
+</UL>
+<font face="Verdana" style="font-size: 9pt">Started with the systematic approach for deriving the equations of motion for a system of rigid bodies with constraints. Applied the principle of virtual power and included the D'Alembert forces to come to the equations of motion instead of static equilibrium. Talked about virtual velocities which fulfill the constraints. Introduced the Langrange multipliers lambda to include the constraints on the virtual velocities. Derived the equations of motion f-M*xdd=D'*lambda. Showed that they express external force equilibrium by setting xdd to zero and looking at f=D'*lambda. Interpreted lambda as the constraint forces by drawing for the double pendulum in the upright position the four equilibrium force vectors. Everybody looked confused, more on this coming Wednesday. Handed out <a href="assign2.pdf">assignment 2</a>, this homework is due next monday.
+<br><br>
+<b>Wednesday, Jan 29, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<p>
+<font face="Verdana" style="font-size: 9pt">Recapitulation of mondays lecture. Added the constraints and ended up with the set of Differential and Algebraic Equations (DAE) describing the constraint motion. Solved for the unknown accelerations of the cm's of the bodies together with the Lagrangian multipliers by differentiating the constraints twice with respect to time and add these eqns to the eqns of motion. Showed the similarity to the independently derived eqns from Week 1. Described the method of adding a sliding constraint to the system. Interpreted the corresponding Lagrangian multiplier \lamba_5 in two ways: trying to reason from the virtual power expression or substitute zero acceleration and zero lambda's except for lambda_5=1 in the eqns of motion and interpret the applied forces coming out. Handed out a reprint from Lanczos together with <a href="assign3.pdf">assignment 3</a>.
+</font>
+</p>
+<H3>
+<font face="Verdana" style="font-size: 9pt">Week 3</font></H3>
+<font face="Verdana" style="font-size: 9pt">
+<b>Monday, Feb 3, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<p>
+<font face="Verdana" style="font-size: 9pt">Added Passive and Active elements to system by adding the virtual power term of these elements to the virtual power expression. Derived the equations of motion with the inclusion of these elements. As an example I have added a spring to body one of the double pendulum and considered the effect on the equations of motion. Showed an example of an active element, a asynchronous 3phase squirrel cage electric motor. GAve the Torque-speed diagram for `steady state', the so-called Klosz formula. Talked the inclusion of a general prescribed motion as being a time dependent constraint.
+</font>
+</p>
+<font face="Verdana" style="font-size: 9pt">
+<b>Wednesday, Feb 5, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<p>
+ <font face="Verdana" style="font-size: 9pt">Started with the example of two point masses impacting. Discussed the limit case where the speeds change step-wise and introduced the impulse als the limit case of a finite force-time integral. Discussed Newton's impact law from the source, The Principia (1686) and talked about the coefficient of restitution e. Introduced the contact conditions and formulated Newton's impact law in terms of the relative contact velocities. Introduced the applied impulses and the constraint and contact impulses and finally derived the impact equations for a constrainted multibody system. Handed out <a href="assign4.pdf">assignment 4</a>.
+ </font>
+</p>
+<H3>
+<font face="Verdana" style="font-size: 9pt">Week 4</font></H3>
+<font face="Verdana" style="font-size: 9pt">
+<b>Monday, Feb 10, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<UL>
+<LI>
+<font face="Verdana" style="font-size: 9pt">Transformation of the equations of motion in terms of generalized
+independent coordinates, and Lagrange equations.</font></LI>
+</UL>
+<p>
+<font face="Verdana" style="font-size: 9pt">In the case of many rigid bodies n>>1 and many constraints m>>1 we have few degrees of freedom dof=n-m. To reduce the number of equations n+m and to eliminate the m constraint forces we want to write our eqn's of motion in terms of these degrees of freedom. For the degrees of freedom we will use Generalized Coordinates. I gave some examples. Joseph-Louis Lagrange [Turin 1736-Paris 1813] was the first to derive the eqn's of motion in terms of these Generalized Coordinates and he wrote it all down in his monumental book <i>Mecanique analitique</i> (1788) by which he became the founder of Multibody System Dynamics. There is a very good English translation of this work from 1997 with a wonderfully introduction, look under Lagrange. Lagrange's own introduction is also very noteworthy, read the part about <i>no figures will be found in this work</i>. Introduced the concept of Energy by integration of Power with respect to time. Used Newton to come to the definition of Kinetic Energy T and Work done by the applied forces. Introduced the potential energy V as work done by conservative forces, dV/dx=-f. Showed that for these forces we have Energy conservation, T+V=constant. Showed how to derive Newton from  T+V=constant (1). Introduced the generalized coordinates q_j, j=1..dof and described the coordinates of the cm of the rigid bodies x_i, i=1..n as functions of these Generalized Coordinates. Showed that the velocities of the cm of the bodies xdot_i are a function of both q_j and qdot_j! Introduced the Generalized forces Q_j by means of power and showed how the applied forces transform to the Generalized forces (2). Combined (1) and (2) and derived the equations of motion in terms of the generalized coordinates, the so-called Langrange Equations (of motion!). <br>
+Wednesday we will start with an example: to derive the eqn's of motion of a simple model of a container crane in terms of generalized coordinates by means of the Lagrange Equations.
+</font>
+</p>
+<font face="Verdana" style="font-size: 9pt">
+<b>Wednesday, Feb 12, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<p>
+<font face="Verdana" style="font-size: 9pt">As an example of the application of the Lagrange equations I derived the equations of motion for a simple 2D model of an overhead container crane in terms of independent generalized coordinates. Discussed the resulting eqn's and pointed out the flaws in the model. Lagrange eqn's are very apt to use in a computer algebra environment like MATLAB/MAPLE. As an example I showed a MATLAB implementation of the Lagrange eqn's for a double pendulum, <a href="ex5.m">ex5.m</a>. Pointed out the do's, like taking time derivatives by means of partial derivatives, and the dont's, like inverting a symbolic matrix!
+</font>
+</p>
+<H3>
+<font face="Verdana" style="font-size: 9pt">Week 5</font></H3>
+<font face="Verdana" style="font-size: 9pt">
+<b>Monday, Feb 17, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<p>
+<font face="Verdana" style="font-size: 9pt">I showed how to add passive or active elements to the Lagrange eqn's of motion. Talked about the applied generalized forces being either in Q_i or the potential function V. Talked a little bit about potential functions. I showed how to add a constraint to the system and the extensions to the Lagrange eqn's of motion. I talked about the kinetic energy T being bilinear in the velocities of the cm's x_i at constant mass matrix M. If we transform into generalized coordinates q_j then the kinetic energy is still bilinear, now in the velocities of the generalized coordinates, but the mass matrix now dependents upon the configuration described by q_j. I showed that the inertia forces can be written as this mass matrix times the accelerations of the generalized coordinates q_j plus some convective terms h_i. I derived the impact eqn's in terms of independent generalized coordinates from the constraint Lagrange eqn's of motion. Handed out <a href="assign5.pdf">assignment 5</a>.
+</font>
+</p>
+<font face="Verdana" style="font-size: 9pt">
+<b>Wednesday, Feb 19, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<p>
+<font face="Verdana" style="font-size: 9pt">In correcting the assignments I noticed that some of you are behind on schedule and some of you are still in the mist on Langrange multipliers and constraint forces. Therefore today I talked about Lagrange Multipliers, Constraint Forces and Power Consumption.<br>
+As an extra assignment (no hand in) I asked you to show that<br>
+D_{k,i} F_{i,j} = 0_{kj}, i=1..n, j=1..dof and k=1..m,
+where D_k(x_i)=0 are the constraints and x_i=F_i(q_j) are the coordinates of the cm of the bodies expressed in terms of the generalized coordinates q_j.<br>
+Finally I asked you to look at your assignment results also from a physical point of view. For instance, if the velocities before impact are order 1 then you can not have most velocities after impact being of the order 10. Impacts are no energy sources! As a bonus I explained how freight trains start moving from stand-still.
+</font>
+</p>
+<H3>
+<font face="Verdana" style="font-size: 9pt">Week 6</font></H3>
+<font face="Verdana" style="font-size: 9pt">
+<b>Monday, Feb 24, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<UL>
+<LI>
+<font face="Verdana" style="font-size: 9pt">Transformation of the equations of motion in terms of generalized
+independent coordinates.</font></LI>
+</UL>
+<p>
+<font face="Verdana" style="font-size: 9pt">I derived the eqn's of motion for the constraint system by using the principle of virtual power, D'Alembert forces, and transformtion of the coordinates of the cm's of the bodies x_i in terms of the generalized coordinates q_j as in x_i=F_i(q_j). I introduced the applied generalized forces Q_j which are dual to qd_j by the Power=Q_j qd_j, as an extra source of Power to the system. I extended the virtual power with this term and derived the equations of motions in terms of the independant coordinates q_j. They read:<br>
+</font>
+<HR WIDTH=100% NOSHADE>
+<font face="Verdana" style="font-size: 9pt">F_i,j M_ik F_k,l qdd_l = Q_j + F_i,j(f_i-M_ik F_k,lm qd_l qd_m).
+</font>
+<HR WIDTH=100% NOSHADE>
+<font face="Verdana" style="font-size: 9pt">We discussed where to put the applied forces, in f_i or in Q_j. As an example I derived the equations of motion for the simple 2D model of an overhead container crane from week 4. <i>Please compare this approach with the Lagrange eqn's approach from last week and find out the differences.</i> Handed out <a href="assign6.pdf">assignment 6</a>.
+<b>Wednesday, Feb 26, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<p>
+<font face="Verdana" style="font-size: 9pt">Today I showed how to add active and passive elements to the eqns of motion from last week, as derived by the principle of virtual power  together with the transformation to independent generalized coordinates. Next I added constraints to this system and derived the constrained equations of motion and showed how to solve for the accelerations and the constraint forces. Then I used these eqns to derive the impact eqns in term sof generalized independent coordinates. Finally, I showed to Matlab files, <a href="odehwa6.m">odehwa6.m</a> and <a href="hwa6sym.m">hwa6sym.m</a>,which demonstrate the elegance of the method. <b>The handed-out files talk about assignment 5, this is incorrect, this must be assignment 6!</b>
+</font>
+</p>
+<H3><font face="Verdana" style="font-size: 9pt">Week 6</font></H3>
+<font face="Verdana" style="font-size: 9pt">
+<b>Monday, March 3, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<UL>
+<LI>
+<font face="Verdana" style="font-size: 9pt">Numerical integration of the equations of motion, stability and accuracy of
+the applied methods.</font></LI>
+</UL>
+<p>
+<font face="Verdana" style="font-size: 9pt">Up until now we solved for the accelerations. What we really want to know is the positions and velocities of the system as a function of time. You could try to solve the equations of motion, being a set of second order differential equation, algebraicaly but alas. Most systems are complicated and can not be solved in terms of elementary functions. We therefore turn to numerical integration. A natural (but as will turn out naive) way would be the method as demonstrated at the second lecture of the first week, the Euler method. I showed a more refined method, Heun's method. Discussed the accuracy of the methods and introduced the local truncation error e, for Euler e=O(h^2) and for Heun e=O(h^3). I introduced the global truncation error E, being the cumulated error over a fixed timespan t=0..T, and consequently E=(T/h)*e, so for Euler: E=O(h) and for Heun E=O(h^2). In practice the global error E can be estimated from two integrations from t=0..T. First pick a step size h then integrate the diff eqn's with the result at t=T: y_h=Y+C*h^p, where Y is the true answer, C is a constant and p the order of the method. Now half the step size and integrate again over the timespan 0..T this result is: y_h/2=Y+C*(h/2)^p. From these two equations we can solve the unknown Y and C and give a global error estimate on y_h/2: Y = y_h/2 +/- 1/(2^p-1)*(y_h/2-y_h).<br>
+Next I addressed the problem of stability of the method, or in other words, how do previous made errors propagate? To investigate the stability of the method we will use a test equation of the form ydot = lambda * y. The solution to this diff eqn is the exponential function, y = exp(lambda*t) and with complex lambda = a + b*i this shows an oscillatory growing or decaying behavior in time y=exp(a*t)*[cos(b*t)+i*sin(b*t)]. As an example of the relation of the test equation with a mechanical system I derived the equations of motion of a single mass-spring-damper system, rewritten them in first order form, substituted the exponential function for a solution and derived the eigenvalue problem. I wrote down the characteristic equation and showed the similarity with the original second order diff eqn of motion. Showed the roots lambda_1,2 and discussed the behavior of the system from these roots. Wednesday we are  going to pick-up on the stability analysis of the different methods.
+</font>
+</p>
+<font face="Verdana" style="font-size: 9pt">
+<b>Wednesday, March 5, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<p>
+<font face="Verdana" style="font-size: 9pt">With the test eqn I derived, for the Euler method, the amplification factor C(h*lambda), which is the factor by which truncation errors get propagated. The stability condition |C(h*lambda)|<1 for complex lambda is a unit circle in the complex plane centered at (-1,0). Conclusion: the Euler method is  unstable for pure oscilatory systems, and the maximal step size for pure damped systems is h<2/|lambda|. Andy gave a very nice graphical explanation of these two conclusions. For pure damped systems he illustrated this on the timeseries and for the oscilatory system he showed an euler step in the phase plane. For Heun's method I showed the stability region, an ellipse which semi axis 1 and sqrt(3) centered at (-1,0). From a stability point of view Heun's method behavious the same as Euler's method. Next I showed the famous
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Runge.html">Runge</a>-
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Kutta.html">Kutta</a> 4-stage method (RK4) from 1901. The one step or local truncation error is e=O(h^5) and the stability region encloses part of the imaginary axis, from 0 to 2.8, whereas the real axis is inlcuded from -3 to 0. Conclusion: RK4 is stable for pure oscilatory systems and the restriction on the stepsize for stable integration is h<2.5/|lambda|. Next week more on numerical integration.
+</font>
+</p>
+
+<H3><font face="Verdana" style="font-size: 9pt">Week 7</font></H3>
+<font face="Verdana" style="font-size: 9pt">
+<b>Monday, March 10, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<p>
+<font face="Verdana" style="font-size: 9pt">I showed a numerical integration scheme for second order diff eqn's, Euler2. This method uses only one function evaluation per step, at the predicted midpoint, and has a local truncation error O(h^2) but if the system is weak in the velocity this is O(h^3). If we investigate the stability of the method by using as test eqn a linear damped oscillator we see that part of the Imaginary axis (-2..2) is included in the stable region for h*lambda. This means we can integrate pure oscillatory systems in a stable manner, quit contrary to the normal Euler method. I revisited global error estimates. I included the local round off error e=O(1). The global round off error is the sum or E=(T/h)*e=O(1/h). In refining our step size we hit this barrier. The total global error estimate is now
+E = C1*h^p + c2*1/h. In practice we estimate the global error by taking a number of successive integrations from t_start to t_end with step sizes h_n=T/(2^n) and calculate the difference between two successive solutions at t_end, D_n=|y_n-y_n-1|. The estimated error in the method truncation error  region is approximate E_n=1/(2^p-1)*D_n whereas in the round off region we have E_n = D_n. We know that this latter error is the increasing thing at very small h so just plot log(1/(2^p-1)*D_n) versus log(h) and watch were the error goes up. This is the minimal step size h_min with maximal accuracy. Check the slopes of the graph, they should be p right from h_min and -1 left from h_min. Finally I showed an implicit method, backward Euler being y_n+1 = y_n +h*f(t_n+1,y_n+1). The accuracy of this method is the same as the normal or forward Euler method but the stability region of this implicit method turns out to be the whole complex h*lambda besides a circle of radius 1 centered at (1,0). This means that pure oscillatory systems can be integrated in a stable manner by this implicit method. A disadvantage is the implicitness, we need to solve a usually nonlinear set of equations at each time step. Handed out <a href="assign7.pdf">assignment 7</a> and discussed briefly the reference list at the end of the assignment. This list is the top 9 books that I have used to study numerical integration as applied to dynamics of mutlibody systems.
+</font>
+</p>
+<font face="Verdana" style="font-size: 9pt">
+<b>Wednesday, March 12, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<p>
+<font face="Verdana" style="font-size: 9pt">I demonstrated graphically a-la Andy why an implicit Euler step works on stiff equations, opposed to an explicit Euler step. Introduced the Linear Multistep Methods LMM. Showed how a Lagrange polynomial p(t) in the derivatives of the past can be used to extrapolate these derivatives to the future and integrate this to obtain an estimate of y_n+1 = y_n + integral(p(t))dt -> Y_n+1 = y_n + b_i * f_i, i=n..n-k. This is the Adams-Bashfort method of order k. If you include the future derivative the method becomes implicit, i=n+1..n+1-k, this is called the Adams-Moulton method of order k. A very popular scheme is described in Shampine (1975) the so-called PECE method, being a Predictor of k-order Adams-Bashfort the an Evaluation of the diff eqn at this predicted value followed by an Adams-Bashfort k+1-order corrector followed by an Evaluation of the differential equation at this corrected value. This scheme only uses 2 function evaluation per step independent of the order used, compare this with Runge-Kutta s-stage methods which use s function evaluations per step. The stability decreases dramatically with increasing order, so the maximum order is about 12 and the method usually performs best on a smooth function at order of 6 to 8. A second disadvantage is the problem to start the code.  To create accurate past information you have to start with very small Euler or higher order rk-method steps. This scheme is coded in the Matlab Odesuite as ode113. Use this scheme when evaluation the differential equation is costly. Then I talked shortly about Backward Differentiating methods BDF made popular by C.W.Gear by his fortran code DIFSUB (1971). In essence BDF methods use an interpolation polynomial p(t) for y(t) using past steps and the future step. By differentiating the polynomial  with respect to time and equating to the differential equation we get an implicit numerical integration scheme. The methods are unconditionally stale up to the order 6. These methods are coded in the Matlab Odesuite as ode15s, beware to set the option 'BDF' to 'on'. Use this method for stiff problems. L.F.Shampine and M.W.Reichelt implemented all the above and more methods in Matlab under the umbrella of the Odesuite. If you are going to be a serious Matlab ode* user please read their paper entitled <a href="SR97.pdf">"The Matlab ODE Suite"</a>, SIAM J. Sci. Compt., <b>18</b>(1):1-22, 1997. (Note the options have changed in the course of time). Finally I want to talk about methods most of you have been using in Matlab, ode23 and ode45. I introduced the Butcher array (J.C.Butcher, Auckland, New Zealand) which is a nice notation for s-stage Runge-Kutta methods. At the first lecture after the spring (Monday March 24) I will finish this numerical integration subject.
+</font>
+</p>
+<H3><font face="Verdana" style="font-size: 9pt">Week 8, SPRING BREAK</font></H3>
+<H3><font face="Verdana" style="font-size: 9pt">Week 9</font></H3>
+<font face="Verdana" style="font-size: 9pt">
+<b>Monday, March 24, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<p>
+<font face="Verdana" style="font-size: 9pt">Today I talked about the s-stage Runge-Kutta methods. Showed the general scheme and the corresponding Butcher array. Showed the Butcher array for the classical Runge-Kutta 4 method. Classified the methods as explicit, diagonal implicit and implicit sensu stricto. Showed the Butcher array for Explicit Euler and Implicit Euler. Derived the family of 2-stage methods by comparing the Taylor expansion of the solution with the expansion of the method in powers of the stepsize h. For the 2-stage methods there is a 0ne parameter family of schemes. Showed the result for 3-stage methods. Here we have a 2 parameter family of solutions with local truncation error Order(h^4). The RK3 scheme which I send you all is one, but ode23 from the Matlab ODE Suite is another. By example of parts of the ode23 Matlab file I showed the relation with the Butcher array for this method, the local error control by means of an extra function evaluation at the endpoint and the interpolation method (which is in the Matlab file ntrp23) used to obtain accurate intermediate results. By using the First Same As Last method we get two extra things: Local error control and accurate interpolation.
+</font>
+</p>
+<font face="Verdana" style="font-size: 9pt">
+<b>Wednesday, March 26, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<UL>
+<LI>
+<font face="Verdana" style="font-size: 9pt">Transformation of the equations of motion in terms of generalized
+independent coordinates for complex closed-loop systems.</font></LI>
+</UL>
+<p>
+<font face="Verdana" style="font-size: 9pt">Finding the coordinates of center of mass for all bodies as a function of the degrees of freedom, x_i=F_i(q_j), is not easy for closed-loop systems. Even for a four-bar mechanism this is not trivial, and to be honest I do not know where to start. I showed a copy from a 1941 paper entitled "Part I - Analysis of Single 4-Bar Linkage" by Guy J. Talbourdet which appeared in Machine Design (May 1941). I will come back to this work. Contrary to this ingenious math work our strategy will be: divide and conquer. By making appropriate cuts in the system we can come up with an open loop system at the cost of more degrees of freedom. Next we write down the constraint equations on the new set of degrees of freedom to close the cut joints. With these we can write down the DAE and solve for the new set of degrees of freedom together with the Lagrange multipliers. Next we do a numerical integration step only on the original degrees of freedom, the original generalized independent coordinates for the problem. The extra degrees of freedom, which we introduced to facilitate writing down x_i=F_i(q_j), can, given the value of the original degrees of freedom, for instance be determined from a Newton-<a href="raphson.pdf">Raphson</a> scheme on the non-linear constraint equations. The initial value for the dependent degrees of freedom are the values from the previous step which are usually a pretty good initial guess. The velocities of the dependent degrees of freedom can be solved in one iteration step from the constraint equations on the velocity level since these are linear in the velocities. As an example I used a four-bar mechanism with the dimensions: a=1, b=5, c=5 and d=7, where a is the driving crank with degree of freedom alpha, b is the connecting link, c is the driven crank, and d is the base length. Next we cut the joint between the driven crank c en the base. We now have a triple pendulum where the extended set of degrees of freedom is alpha, beta being the angle of the connecting link with the horizontal base, and gamma which is the angle of the driven link with the horizontal base. Writing down the coordinates of the center of mass of the bodies in terms of alpha, beta and gamma, x_i=F_i(q_j), is now easy. The two constraint equations are that driven crank center must be located at (d,0), our original cut joint glued together. In the initial configuration where alpha=90 degrees I  derived  the constraints on the angular velocities by differentiation of the constraint equations. Given alpha_dot (1) I solved for beta_dot and gamma_dot (-3/25, 4/25). I checked this result by graphical construction of the speeds on the mechanism. In solving we ran into the determinant of some matrix we had the invert. The value of this determinant is b*c*sin(gamma-beta), so if Det=0 corresponds to gamma=beta+k*pi. I discussed the physical meaning of this and emphasized that these singular configuration with bifurcation points can be investigated by looking at the original constraint, the one on the coordinate level!
+</font>
+</p>
+<H3><font face="Verdana" style="font-size: 9pt">Week 10</font></H3>
+<font face="Verdana" style="font-size: 9pt">
+<b>Monday, March 31, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<UL>
+<LI>
+<font face="Verdana" style="font-size: 9pt">Transformation of the equations of motion in terms of generalized
+independent coordinates by generalised coordinate partitioning.</font></LI>
+</UL>
+<p>
+<font face="Verdana" style="font-size: 9pt">The method from last week, making an open-loop structure by cutting joints is not so easy to automate. A more general approach to transform the equations of motion in terms of generalized independent coordinates is the method of coordinate partitioning as proposed by R. A. Wehage, "Generalized Coordinate Partitioning in Dynamic Analysis of Mechanical Systems", Ph.D. Thesis, University of Iowa, December 1980. He divides the coordinates of the bodies in two sets, the dependent ones p and the independent ones q, like in x=(p,q). From the constraint equations e=D(x)=D(p,q)=0 we could solve in principle p as a function of q. In general we can not find these expressions explicitly so we use a step by step approach. I explained this incremental approach, derived the equations of motion in terms of the independent coordinates q and qdot, and illustrated the process of finding the dependent velocities as a function of the independant velocities on a four-bar mechanism example. I completed the method by giving the Newton-Raphson procedure for solving the dependent coordinates p from the constraint equations D(p,q)=0 given the q's. Handed out <a href="assign8.pdf">assignment 8</a>. Wednesday I will discuss an even more computational friendly approach.
+</font>
+</p>
+<font face="Verdana" style="font-size: 9pt">
+<b>Wednesday, April 2, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<p>
+<font face="Verdana" style="font-size: 9pt">Picked up and summarized the coordinate partitioning method from Monday and showed that the constrainted forces vanish from the transformed equations of motion. Looked at assignment 8e, the four-bar mechanism, where you have to determine for one revolution of the crank the normal force and the shear force as exerted by the connecting bar on the crank, as a function of time. Since we have eliminated the constraint forces from the equations of motion we have to setup the constrained equations of motion again, or do some other smart thing. I showed a method which is far more efficient in these cases then the the method of transforming the equations of motion in terms of independent coordinates.<br> You start with the full p[roblem, the constrained equations of motion togehetr with the constraint equations on the acceleration level, the big but sparse DAE, and solve for xddot and lambda, being the constraint forces. Next you do one numerical integration step on all x and xdot. The new state (x,xdot)_n+1 is in general not on the constraint surface define by the constraints D(x)=0. Now in the back of our mind we still have partitioned the coordinates according to dependent coordinates p and independent ones q as in x=(p,q). Use a Newton-Raphson scheme to iterate to the correct coordinates p_n+1 given q_n+1 from the numerical integration. The numerical integrated result p_n+1 is in general allready very close, so you will probably need only a few iterations. Finally determine the dependent speed pdot_n+1 in one step like pdot_n+1=-(D,p^)^-1*D,q*qdot_n+1. Now you are done, go back to setting up the DAE for the next step etc.<br>
+As a last topic I discussed writing the constraint equations for a hinged joint between two bodies in a body fixed frame of one of the bodies. The corresponding constraint forces are now also expressed in this body fixed frame and can be interpreted as the normal force and the shear force of that body. Another advantage is that from this it's easy to formulate a sliding joint between to bodies.<br>
+Next week two new topics: coordinate projection as being an efficient way of solving your constraint equations and how to add non-holonomic constraints to the mechanical system.
+</font>
+</p>
+<H3><font face="Verdana" style="font-size: 9pt">Week 11</font></H3>
+<font face="Verdana" style="font-size: 9pt">
+<b>Monday, April 7, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<UL>
+<LI>
+<font face="Verdana" style="font-size: 9pt">Constraint Stabilization and The Coordinate Projection Method.</font></LI>
+</UL>
+<font face="Verdana" style="font-size: 9pt">For complex systems it is sometimes hard to pick the set of independent coordinates. As an example think of a chain drive with sprocket wheels, where every link is modelled as a rigid body and the constraints are all these little hinges. Moreover we have to deal with unilateral constraints, as in the contact conditions between the chain and the sprocket wheels. The method of coordinate projection goes as follows.<br>
+Start with the constraint equations of motion and add the constraints on the level of the accelerations this gives you the full sparse DAE from which you can solve the accelerations of the cm of the bodies together with the constraint forces. Next do a numerical integration step, the approximate values of the coordinates at this next time step will in general not fulfill the constraints. We have to change the coordinates such that the constraints are fulfilled but since we have less constraints then coordinates, we have this Cole Porter problem or in other words "Anything Goes". If we say we want the smallest change in the coordinates we have to come up which a way to measure, for instance the sum of the squares of the coordinates. Now we want to minimize this distance where the new coordinates must fulfill the constraints. This is a nonlinear constraint  least square problem. We solve this by a Gauss-Newton method. First linearize the constraints e(x) around the coordinates x and try to solve for this increment dx in the coordinates. We now have a linear least square problem:<br>
+||dx||=min<br>
+e(x)+D(x)*dx=0<br>
+where D(x) is the Jacobian matrix of the constraints according to D(x)=de(x)/dx. This linear constraint least square problem can be solved the introduction of the Lagrange multipliers mu as many as we have constraints, resulting in the linear set of equations:<br>
+|I D^T||dx|=| 0|<br>
+|D  0 ||mu| |-e|<br>
+Note the resemblance with our DAE of motion, these equations have the same structure. You can found out more about this when you read on Gauss's principle of the least constraint, for instance in Lanczos. Solving for dx gives us<br>
+dx=-D^T*(D*D^T)^-1*e<br>
+The matrix<br>
+D^+=D^T*(D*D^T)^-1<br>
+is called the Moore-Penrose pseudo-inverse and gives us the least square solution of the underdetermined linear system of equations with full rank matrix D, according to D*dx=-e. I made a simple example in class with D=[-1 1 0;0 -1 1] and x=[0.9;1;1] resulting in dx=[0.0666;0-0.0333;-0.0333] and consequently x=[0.9666;0.9666;0.9666]. Note the minimal change in x, f.i. dx=[0.1;0;0] would also do but is larger. In Matlab there is a pseudo inverse command pinv, but this uses singular value decomposition to solve the more general problem where D can have dependent rows.<br>
+Finally we have to solve for the velocities of the cm which fulfill the constraints. Again we use the least square solution method but since the velocity constraints are linear in the velocities this linear least square problem can be solved in one step:<br>
+xdot=xdot-D^T*(D*D^T)^-1*edot<br>
+By the way, getting rid of the constraint errors is (strangely enough) called Constraint Stabilization.
+</font>
+<p>
+<font face="Verdana" style="font-size: 9pt">
+<b>Wednesday, April 9, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<p>
+<font face="Verdana" style="font-size: 9pt">Today we discussed your questions about the ongoing homework assignments.
+</font>
+</p>
+<H3><font face="Verdana" style="font-size: 9pt">Week 12</font></H3>
+<font face="Verdana" style="font-size: 9pt">
+<b>Monday, April 14, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<UL>
+<LI>
+<font face="Verdana" style="font-size: 9pt">Newton-Euler equations of motion for a 3D rigid body.</font></LI>
+</UL>
+<p>
+<font face="Verdana" style="font-size: 9pt">Today I presented the Newton-Euler equations of motion for a 3D rigid body. Talked about the changing inertia matrix Jc in the space fixed coordinate system C-xyz. The inertia matrix Jc' is constant in the body fixed coordinate system C-x'y'z'. Talked about the eigenvalues of Jc' and the principal axis of inertia for a rigid body. Gave the Newton-Euler equations of motion for a 3D rigid body expressed in the body fixed coordinate system C-x'y'z'. As an example I derived about which axis a torque-free body shows unstable rotary motion and demonstrated this phenomena by flipping the blackboard eraser. The same problem arises in the rotary motion of a satellite, a tennis racket, and a remote control.
+</font>
+</p>
+<font face="Verdana" style="font-size: 9pt">
+<b>Wednesday, April 16, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<UL>
+<LI>
+<font face="Verdana" style="font-size: 9pt">Rotation Matrices & Euler Angles.</font></LI>
+</UL>
+<p>
+<font face="Verdana" style="font-size: 9pt">In the displacement of a rigid body B in space we can discriminated between translation and rotation. Translation is easy, just x, y, and z of for instance the centre of mass C. Therfore today I focus on the rotation part. I showed how, after a finite rotation, you can express the position of an arbitrary point p of body B in terms of either the space fixed coordinate system xyz or the body fixed coordinate system x'y'z'. The algebraic components p_i' of the verctor p in the body fixed coord sys are constant since B is a rigid body. I derived the rotationmatrix R_ij as being the transformation of p_j' into p_i as in p_i = R_ij p_j' and showed that this matrix is made out of the dot products of the 6 base vector e_i and e_j' as in R_ij = e_i * e_j'. I showed that the inverse of R is just the transpose, R^-1=R^T, or R is an orthogonal matrix as expressed by R R^T = I. Now R has 9 components and the orthogonality conditions are 6 independant ones (the upper triangle of R R^T = I holds the same equations as the lower triangle). We conclude that we can paramterize the 3D rotationmatrix by 3 independent parameters. As an example I derived R and R^-1 in 2D were R only depends on 1 parameter, the angle phi about the z-axis. One way of parameterizing the rotationmatrix is by using the Euler angles: phi, theta, and psi, also known as zxz or 313 angles. These angles are also known as the precession angle, the nutation angle, and the spin angle. The recipe for Euler angles is: Start with the body fixed coordinate system aligned to the space fixed coordinate system. First rotate an angle phi about the z-axis, second rotate an angle theta about the rotated x-axis, third rotate and angle psi about he rotated z-axis. You can materialize the Euler angles by three hinges in series. Draw the hinges as "cans" in series and do not be fussy about the location of the cans which in principal are the same but in practice fan out. First draw a hinge from the fixed space with the rotation axis along the z-axis, second draw at the end of the first hinge a second hinge with the rotation axis along the x-axis, and finally draw at the end of the second hinge a third hinge with the rotation axis along the z-axis. The body fixed coordinate system x'y'z' is located at the end of this third hinge. By considering the intermediate coordinate systems between the three hinges you can derive the rotation matrix R as a composition of three single rotation matrices about principal axis as in x = R x', with R = R(phi) R(theta) R(psi). Note that these Euler angles are no vectors since clearly the matrix multiplication is order dependent, or in other words the individual Euler angles is noncommutative. By the way, Andy showed me that there are only 12 meaningfully ways of putting three orthogonal hinges in series, so apart from the zxz Euler angles there are these 11 other ways of paremeterizing R. <br>Handed out <a href="assign9.pdf">assignment 9</a>. This homework is due in two weeks since I still have to teach the Euler parameters and quaternion calculus.
+</font>
+</p>
+<H3><font face="Verdana" style="font-size: 9pt">Week 13</font></H3>
+<font face="Verdana" style="font-size: 9pt">
+<b>Monday, April 21, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<UL>
+<LI>
+<font face="Verdana" style="font-size: 9pt">Angular velocities and Euler angles.</font></LI>
+</UL>
+<p>
+<font face="Verdana" style="font-size: 9pt">Today I derived the expressions for the angular velocities omega in terms of the Euler angles and the time derivatives of these angles. I showed the formal way to derive omega from Rdot*R^T but followed the intuitive way, by adding up the transformed angular velocities of the hinges or "cans".  This results in omega,w, in terms of the Euler angles, e, and it's time derivatives edot as in w=A(e)*edot. The rotational state of the system is defined by the Euler angles e and the angular velocities w. The state equitation are the time derivatives of these, so we need edot in terms of e and w. It turns out that the inverse of A is singular at the Euler angle theta=0+k*pi. Which, looking at the cans in this configuration, is obvious since the two rotation axis phi and psi are aligned! One way to circumvent this problem is by redefining theta as theta=theta+pi/2, now the phi and the psi axis are not anymore aligned. A major disadvantage of this method is that the problem now is non-smooth in the state variables and we have to restart our numerical integration procedure. Handed out <a href="assign10.pdf">assignment 10</a> which you should be able to finish now.
+</font>
+</p>
+<font face="Verdana" style="font-size: 9pt">
+<b>Wednesday, April 23, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<UL>
+<LI>
+<font face="Verdana" style="font-size: 9pt">Finite Rotation and Euler parameters.</font></LI>
+</UL>
+<p>
+<font face="Verdana"><span style="font-size: 9pt">From Euler's theorem on Rotation, "Any rotation in space can be represented as a rotation about a fixed axis at a given angle", I derived the rotation matrix R in terms of the Euler parameters lambda_0=cos(u/2) and lambda=sin(u/2)*h, where h is the axis of rotation with unit length and u the angle of rotation. It turns out that R is bilinear in lambda which is computational advantages. Think of the derivatives dR/dlambda=linear in lambda and d2R/dlambda^2=constant! In one of the previous lectures we showed that R can be represented by 3 independent parameters. The dependency on the 4 Euler parameters is that the norm must be one: |lambda|=1. They live on this 4 dimensional sphere. As an example I looked at  the Rotation matrix for a rotation about the z-axis over an angle phi. The Euler parameters are lamda_0=cos(phi/2) and lambda=sin(phi/2)*(0,0,1). This results in a  Rotation matrix R=(c -s 0;s c 0;0 0 1) with c=cos(phi) and s=sin(phi). In order to derive the expressions for the angular velocities in terms of the Euler parameters and its time derivatives we start again from Rdot*R^T=tilde(omega) or.... we use quaternion algebra. Euler parameters are unit quaternions. In his pursued to multiply triplets
+<A HREF="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Hamilton.html" TITLE="Hamilton" TARGET="Hamilton">Hamilton</A>
+ "invented" the quaternion algebra. I started a short introduction in Quaternion algebra and handed out my notes entitled <a href="quaternion.pdf">Quaternions, Finite Rotation, and Euler Parameters</span></font><a><font face="Verdana"><span style="font-size: 9pt">.
+</span></font>
+</p>
+<H3><font face="Verdana" style="font-size: 9pt">Week 13</font></H3>
+<font face="Verdana" style="font-size: 9pt">
+<b>Monday, April 28, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<UL>
+<LI>
+<font face="Verdana" style="font-size: 9pt">Quaternion algebra and Euler parameters.</font></LI>
+</UL>
+<p>
+<font face="Verdana"><span style="font-size: 9pt">I discussed the contents of the handed out notes on Quaternion algebra. Summarized the operations on quaternions and showed a nice matrix vector representatiuon of the quaternion  product. This notation comes in handy when you have to code your quaternion algebra problem in f.i. Matlab. I used thsi matrix vector representation to derive the rotationmatrix R in terms of the unit quaternions q and showed that these unit quaternions are in fact Euler parameters. Next Is showed how two succesive rotations `add' to one rotation by the quaternion product of teh individula rotations. I derived the angular velocity in terms of the Euler parameters and its time derivatives by using quaternion algebra. I discusssed the tranformation of the Euler equation for rotational motion for a single rigid body in terms of Euler pararmeters and its time derivatives. Due to the constraint on the Euler parameters we end up with a set of constrained equations of motion in the DAE form (eqn. 23). I pointed out that you can easily solve for the Lagrange multiplier lambda which turns out to be two times the rotational kinetic energy of the body (eqn. 24). Now think about this: until now all Langrange multipliers could be interpreted as forces or moments in the constraint joint, why do we now have kinetic energy as a multiplier and how does this energy get into the constrained equation of motion? <br>
+You should be able to finish assignment 9 by now. I handed out </span></font>
+<font face="Verdana"><span style="font-size: 9pt"> <a href="assign11.pdf">assignment 11</a> and briefly discussed the strategy to set up the equations of motion. If you have missed this part, please contact me. This wednesday is the last lecture, and I will be discussing some material for the final project: the dynamic analysis of a bicycle.
+</span></font>
+</p>
+<font face="Verdana" style="font-size: 9pt">
+<b>Wednesday, April 30, 2003, 10:10-11:00 u, 202 Thurston Hall.</b> </font>
+<UL>
+<LI>
+<font face="Verdana" style="font-size: 9pt">Final Project.</font></LI>
+</UL>
+<p>
+<font face="Verdana" style="font-size: 9pt">I handed out the <a href="finalproj.pdf">Final Project</a>, the dynamic analysis of a bicycle. Together with this final project I handed out some <a href="TAM674notbp.pdf">notes on the bicycle project</a> which guide you through the project. I discussed the contents of these notes in class today.<br> With all the material that I presented in this course you should be able to do this project successfully. I advice you to cooperate and work together with a colleague on this project. Then if you get stuck on the way, you can consult one another. If your colleague can not help, ask me. Do not wait to long!
+</font>
+</p>
+<center>
+<h2><font face="Verdana" style="font-size: 9pt">Final Exam</font></h2>
+</center>
+<font face="Verdana" style="font-size: 9pt">The final exam is an oral exam for about one hour on the final project and a little bit on the homework assignments. You have to make an appointment with me (look at my schedule). Hand in your report on the final project the day before the oral exam and take all your assignments with you on the day of the exam. Note that in order to get your grading in time the exam should be scheduled <B>before</B> May 26, 2003.
+</font>
+
+
+<HR WIDTH=100% NOSHADE>
+
+
+</BODY>
+
+<!-- Mirrored from http://bicycle.tudelft.nl/schwab/TAM674/index.htm by HTTrack Website Copier/3.x [XR&CO], Sat, 17 Oct 2026 14:46:22 GMT -->
+</HTML>
+<comment>

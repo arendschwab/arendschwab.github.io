@@ -1,0 +1,2232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  
+<!-- Mirrored from http://bicycle.tudelft.nl/schwab/Bicycle/ by HTTrack Website Copier/3.x [XR&CO], Sat, 17 Oct 2026 13:57:44 GMT -->
+<head>
+    <meta content="text/html; charset=windows-1252"
+      http-equiv="content-type">
+    <!-- CREATION DATE: 18/11/2002 -->
+    <title>Bicycle Dynamics</title>
+    <meta name="Description" content="">
+    <meta name="Keywords" content="">
+    <meta name="Author" content="arend schwab">
+    <meta name="Generator" content="Microsoft FrontPage 6.0">
+    <style>
+body {
+/* font-size: 62.5%; /* Resets 1em to 10px */
+font-family: Verdana, Arial, Sans-Serif;
+text-align: center;
+min-width: 760px;
+}
+#main {
+width: 720px;
+margin: 0 auto;
+padding: 0 6px 0 6px;
+font-size: 9pt;
+text-align: left;
+background-color: rgb(230, 245, 255);
+}
+</style><base target="_blank">
+  </head>
+  <body link="#0000FF" vlink="#800080" text="#000000" bgcolor="#FFFFFF"
+    alink="#FF0000">
+    <div id="main">
+      <table style="border-collapse: collapse" id="AutoNumber1"
+        width="100%" border="0" cellspacing="0" cellpadding="0"
+        bordercolor="#111111">
+        <tbody>
+          <tr>
+            <td width="72%">
+              <p align="center"><b><font face="Verdana" size="5">Bicycle
+                    Dynamics</font></b><font style="font-size: 9pt"
+                  face="Verdana"><br>
+                  &nbsp;</font></p>
+            </td>
+            <td width="13%">
+              <p align="center"> <a target="_blank"
+                  href="Fietsonderzoek_4261.jpg"> <img
+                    src="Fietsonderzoek_4261small.jpg" width="270"
+                    border="0" height="180"></a></p>
+            </td>
+            <td width="15%" valign="bottom">
+              <p align="right"> <img src="TUD_01-logo_025.gif"
+                  width="146" border="0" height="62"></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="border-collapse: collapse" id="AutoNumber2"
+        width="100%" border="0" cellspacing="0" cellpadding="0"
+        bordercolor="#111111" bgcolor="#3399FF" height="20">
+        <tbody>
+          <tr>
+            <td width="100%">
+              <p align="right"> <font style="font-weight: 700"
+                  face="Verdana" size="1" color="#FFFFFF">Delft
+                  University of Technology&nbsp; </font></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="left"> <font style="font-size: 9pt" face="Verdana"> <b>
+          </b></font></p>
+      <table width="100%" border="0" cellspacing="2" cellpadding="2">
+        <tbody>
+          <tr>
+            <td valign="top"><font style="font-size: 9pt" face="Verdana"><b><u>INTRO<br>
+                    <br>
+                  </u></b>This work started in the Fall of 2002 when I
+                came to Cornell to have my sabbatical leave with <a
+                  target="_blank" href="http://ruina.tam.cornell.edu/">Andy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  Ruina</a>. His line of research began in 1985 when Jim
+                Papadopoulos came to Cornell to work with him (or visa
+                versa). Take a look at this TEDxDelft talk for an intro
+                on our work:</font></td>
+            <td valign="top">
+              <p align="left"><font style="font-size: 9pt;"
+                  face="Verdana"><b><a target="_blank"
+                      href="http://www.youtube.com/watch?v=2Y4mbT3ozcA"><img
+                        alt="TEDxDelft talk" src="tedxdelft2012.PNG"
+                        width="245" border="0" align="right"
+                        height="148"></a></b></font></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <hr noshade="noshade" width="100%">
+      <p width="70%"> <font style="font-size: 9pt" face="Verdana">First
+          take a look at the <a target="_blank"
+            href="http://bicycle.tudelft.nl/yellowbicycle/">Cornell
+            Yellow Bicycle Demo website</a> to see what is so special
+          about uncontrolled bicycles. Highly unstable at rest but <i>very</i>
+          stable at moderate forward speed!&nbsp; <strong
+            style="font-weight: 400">Or look at this <a target="_blank"
+              href="http://www.youtube.com/watch?v=PXRQdWG9FuM"> VIDEO:</a></strong><a
+            target="_blank"
+            href="http://www.youtube.com/watch?v=PXRQdWG9FuM"> Bicycle
+            Stability Demonstration (MP4) (3 MB)</a>.</font></p>
+      <table width="100%" border="0">
+        <tbody>
+          <tr>
+            <td><a target="_blank" href="IMG_1285.JPG"> <img
+                  src="IMG_1285small.jpg" width="300" border="0"
+                  height="225"></a></td>
+            <td valign="top">
+              <p align="left"><font style="font-size: 9pt"
+                  face="Verdana"><b>We would like to think that this is
+                    the definitive review paper on the linearized
+                    equations of the motion for a bicycle:</b></font></p>
+              <p align="left"><font style="font-size: 9pt"
+                  face="Verdana">J. P. Meijaard, Jim M. Papadopoulos,
+                  Andy Ruina, A. L. Schwab, 2007 ``Linearized dynamics
+                  equations for the balance and steer of a bicycle: a
+                  benchmark and review,''<i> Proceedings of the Royal
+                    Society A</i> <b>463</b>:1955-1982. <a
+                    target="_blank"
+                    href="http://dx.doi.org/doi:10.1098/rspa.2007.1857">
+                    doi:10.1098/rspa.2007.1857</a>,&nbsp; or&nbsp; <a
+                    href="../Publications/06PA0459BicyclePaperv45.pdf">preprint+ESM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    pdf(578k)</a>. </font></p>
+              <p align="left"> <font style="font-size: 9pt"
+                  face="Verdana">Please take a look at the <a
+                    href="http://bicycle.tudelft.nl/benchmarkbicycle/">Benchmark
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    Bicycle website</a>.</font></p>
+              <p align="left"> <font style="font-size: 9pt"
+                  face="Verdana"><u><b> <a target="_blank"
+                        href="mediacoverage.htm">Media Coverage:</a></b></u>
+                  This paper has drawn some attention in the media. Here
+                  you will find some of the <a target="_blank"
+                    href="mediacoverage.htm">media coverage</a>.</font></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="justify"> <font style="font-size: 9pt" face="Verdana">A
+          Matlab Graphical User Interface (GUI) to the calculation of
+          the stability of a bicycle, the implementation of the
+          linearized equations of motion from the 2007 PRS-A paper, is <b>
+            <a
+href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/JBike6_web_folder/index.htm">JBike6</a></b>,
+          free <a
+href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/JBike6_web_folder/JBike6_registration.htm">download
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            here</a>.</font></p>
+      <hr noshade="noshade" width="100%">
+      <table width="100%" border="0">
+        <tbody>
+          <tr>
+            <td valign="top"><font style="font-size: 9pt" face="Verdana"><b>And
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  in this paper we show that neither front-wheel spin
+                  angular momentum nor trail are necessary for
+                  self-stability of an uncontrolled bicycle:</b></font>
+              <p> <font style="font-size: 9pt" face="Verdana">J. D. G.
+                  Kooijman, J. P. Meijaard, Jim M. Papadopoulos, Andy
+                  Ruina, and A. L. Schwab, "A bicycle can be self-stable
+                  without gyroscopic or caster effects", Science 15
+                  April 2011: <b>332</b>(6027), 339-342. [<a
+                    target="_blank"
+                    href="http://dx.doi.org/10.1126/science.1201959">DOI:10.1126/science.1201959</a>]</font></p>
+              <p><font style="font-size: 9pt" face="Verdana">Preprint,
+                  supplementary text, videos and photos are available at
+                  the <a target="_blank"
+                    href="http://bicycle.tudelft.nl/stablebicycle/">TMS
+                    Bicycle website.</a></font></p>
+            </td>
+            <td width="202" valign="top"> <a target="_blank"
+                href="fig2cStableBicycleExperimentLarge.jpg"> <img
+                  src="fig2cStableBicycleExperiment.jpg" width="200"
+                  border="0" height="133"></a></td>
+          </tr>
+        </tbody>
+      </table>
+      <hr noshade="noshade" width="100%">
+      <p align="center"> <a href="http://bicycle.tudelft.nl/bmd2010/">
+          <img src="logo2longv4.jpg" width="360" border="0" height="90"></a></p>
+      <p align="justify"> <font style="font-size: 9pt" face="Verdana">An
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          international three-day <b>symposium</b> on <a
+            href="http://bicycle.tudelft.nl/bmd2010/">Bicycle and
+            Motorcycle Dynamics, BMD2010</a>, has been held at Delft
+          University of Technology, Delft, The Netherlands, October
+          20-22, 2010. The aim of this symposium is to bring together
+          leading scientists and researchers in the field of bicycle and
+          motorcycle dynamics and control, in a broad sense.</font></p>
+      <hr noshade="noshade" width="100%">
+      <p align="justify"> <font style="font-size: 9pt;
+          text-decoration:underline" face="Verdana"><b> <a
+              target="_blank" href="BicycleHistoryReview/index.htm">History
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              of bicycle steer and dynamics equations.</a></b></font></p>
+      <font style="font-size: 9pt" face="Verdana">
+        <blockquote>
+          <p align="LEFT">“<i>Even now, after we’ve been building them
+              for 100 years, it’s very difficult to understand just why
+              a bicycle works - it’s even difficult to formulate it as a
+              mathematical problem.</i>” — Freeman Dyson interviewed by
+            Stewart Brand in Wired News, February 1998.</p>
+        </blockquote>
+      </font>
+      <p align="justify"><font style="font-size: 9pt" face="Verdana">
+          Over the past 140 years, scores of other people have studied
+          bicycle dynamics, either for a dissertation, a hobby or
+          sometimes as part of a life’s work on vehicles. This sparse
+          and varied research on the dynamics of bicycles modelled as
+          linked rigid bodies was initially reviewed in Hand (1988). A </font><font
+          style="FONT-SIZE: 9pt" face="Verdana"> <a target="_blank"
+            href="BicycleHistoryReview/index.htm">detailed history of
+            bicycle dynamics studies</a> with a large bibliography,
+          which we update as we go along, can be found <a
+            target="_blank" href="BicycleHistoryReview/index.htm">here</a>.</font></p>
+      <p align="justify"><font face="Verdana" size="1">&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Hand, R. S. 1988 ''Comparisons and stability analysis of
+          linearized equations of motion for a basic bicycle model.''
+          MSc thesis, Cornell University, Ithaca, NY.</font></p>
+      <p align="justify"> <font style="font-size: 9pt; font-weight:
+          700" face="Verdana"> <a name="hfp" href="#hfp"></a>Some hard
+          to find papers:<br>
+        </font><font style="font-size: 9pt" face="Verdana">- B. D.
+          Herfkens. <a target="_blank"
+            href="Herfkens1949DutchplusEnglish.pdf">De stabiliteit van
+            het rijwiel </a>(”The Stability of the bicycle”). Technical
+          Report S-98-247-50-10-’49, Instituut voor rijwielontwikkeling,
+          ’sGravenhage, September 1949. (Translated by J.D.G. Kooijman
+          2006).<br>
+          - A. J. R. Doyle, <a target="_blank"
+            href="doyle1987skill.pdf">The skill of bicycle riding</a>,
+          PhD thesis, University of Sheffield, UK, 1987.<br>
+          - A. J. R. Doyle, <a target="_blank"
+            href="doyle1988essential.pdf">The essential contribution to
+            bicycle riding</a>, in J. Patrick and K. Duncan eds., <i>
+            Training, human decision making, and control, </i>Elsevier
+          Science Publisher BV North Holland,&nbsp; pp.351-370, 1988.</font></p>
+      <hr noshade="noshade" width="100%">
+      <p align="left"> <font style="font-size: 9pt" face="Verdana"> <b><u>BLOG</u>:<br>
+          </b></font></p>
+      <p align="left"><a name="Mar_7_2019"></a><a href="#Mar_7_2019">Mar
+          7, 2019</a>: Project Tokyo; the new track bicycle for the
+        Dutch Olympic Track cycling team has been presented. This new
+        track bicycle, the <a
+          href="https://www.koga.com/nl/baanfiets/over-de-koga-kinsei.htm"
+          target="_blank">KOGA KINSEI</a>, has been designed and build
+        by a multidisplinary team, <a
+          href="https://www.projecttokyo.nl/" target="_blank">project
+          Tokyo</a>, with the partners:<br>
+        <b>KOGA</b> - The project leaders, and bicycle builders<br>
+        <b>TU Delft</b> -&nbsp; Bikefit, handling and control<br>
+        <b>Actiflow</b> - Aerodynamic design<br>
+        <b>Pontis Engineering</b> - Structural design<br>
+        Each track bicycle is build individually for each rider such
+        that he has maximum power output and good handling at minimal
+        air drag and maximum structural integrity. More info (in Dutch)
+        at: <a href="https://www.projecttokyo.nl/" target="_blank">https://www.projecttokyo.nl/</a><br>
+        and at <a
+          href="https://www.koga.com/nl/baanfiets/over-de-koga-kinsei.htm"
+          target="_blank">https://www.koga.com/nl/baanfiets/over-de-koga-kinsei.htm</a><br>
+      </p>
+      <table width="100%" border="0" cellspacing="2" cellpadding="2">
+        <tbody>
+          <tr>
+            <td valign="top"><img src="IMG-20190307-WA0001.jpg"
+                alt="track bicycle" width="300" height="225"><br>
+            </td>
+            <td valign="top"><img
+                src="Shoot%20Koga%20Road%20to%20Tokyo%20-%20Nanba%cc%84wan-04606.jpg"
+                alt="track bicycle + team" width="337" height="225"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="left"><font style="font-size: 9pt" face="Verdana"><font
+            style="font-size: 9pt" face="Verdana"><br>
+            <a name="Apr_13_2019"></a><a href="#Apr_13_2019">Apr 13,
+              2019</a>:&nbsp; TUDelft demonstrates the steer-assist
+            bicycle, this is a prototype of a bicycle with a smart motor
+            in the handlebars which prevents the bicycle from falling at
+            low speed. This prototype has been developed in
+            collaboration with the Royal Gazelle bicycle company.&nbsp;</font><b>
+          </b></font></p>
+      <table width="100%" border="0" cellspacing="2" cellpadding="2">
+        <tbody>
+          <tr>
+            <td valign="top"><img
+                src="GazelleTUdelft-steerassist-13.jpg"
+                alt="steer-assist" width="300" height="200"> <br>
+            </td>
+            <td valign="top"><iframe
+                src="https://www.youtube.com/embed/rBOQp2uY_lk"
+                allow="accelerometer; autoplay; encrypted-media;
+                gyroscope; picture-in-picture" allowfullscreen=""
+                frameborder="0" width="350" height="197"></iframe><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="left"><br>
+        <br>
+      </p>
+      <p align="left"><font style="font-size: 9pt" face="Verdana"><font
+            style="font-size: 9pt" face="Verdana"><a name="Jan_19_2017"></a><a
+href="file:///Users/aschwab/Documents/WWW/Bicycle/index.htm#Jan_19_2017">Jan
+
+
+              19, 2017</a>:&nbsp; The TUDelft Bicycle Simulator, version
+            2, Jan 2017. Characteristics are: virtual environment by
+            Unity, visual feedback by a screen (1th and 3rd person view)
+            or by a head mount display (oculus rift), haptic torque
+            feedback on the handle bars driven by a Carvallo/Whipple
+            bicycle computer model, roll angle only in the virtual
+            world, not in the real world.</font></font></p>
+      <table width="711" border="0" cellspacing="2" cellpadding="2"
+        height="237">
+        <tbody>
+          <tr>
+            <td valign="top"><a target="_blank"
+                href="BicycleSimulatorJan2017.jpg"><img
+src="data:%3C;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QDKRXhpZgAATU0AKgAAAAgABwEPAAIAAAAJAAAAYgEQAAIAAAAHAAAAbAESAAMAAAABAAEAAAEaAAUAAAABAAAAdAEbAAUAAAABAAAAfAEyAAIAAAAUAAAAhIdpAAQAAAABAAAAmAAAAABNb3Rvcm9sYQAAWFQxMDY4AAAAAABIAAAAAQAAAEgAAAABMjAxNzowMToxOSAxNjowMTozNwAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABkKADAAQAAAABAAABLAAAAAD/4QlvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJYTVAgQ29yZSA1LjQuMCI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wOk1vZGlmeURhdGU9IjIwMTctMDEtMTlUMTY6MDE6MzciLz4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8P3hwYWNrZXQgZW5kPSJ3Ij8+AP/tADhQaG90b3Nob3AgMy4wADhCSU0EBAAAAAAAADhCSU0EJQAAAAAAENQdjNmPALIE6YAJmOz4Qn7/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"
+                  alt="" width="301" border="0" height="225"></a></td>
+            <td valign="top"> <iframe
+                src="https://www.youtube.com/embed/RabYm_Ay3p0"
+                allowfullscreen="" frameborder="0" width="360"
+                height="202"></iframe> <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="left"><font style="font-size: 9pt" face="Verdana"><br>
+        </font></p>
+      <p align="left"><font style="font-size: 9pt" face="Verdana"></font><font
+          style="font-size: 9pt" face="Verdana"><a name="Sep_15_2015"></a><a
+            href="#Sep_15_2015">Sep 15, 2015</a>: Oliver Lee
+          successfully presented some results on the usage of our static
+          bicycle simulator at the International Cycle Safety Conference
+          in Hannover, Germany </font><font style="font-size: 9pt"
+          face="Verdana"><font style="font-size: 9pt" face="Verdana">(<a
+              target="_blank" href="http://www.icsc2015.eu/">ICSC2015</a>).
+
+
+
+
+
+
+            One of the characteristics of the Static Bicycle Simulator
+            is haptic feedback on the handlebars driven by the bicycle
+            simulation model. Another aspect is that it does not roll,
+            therefore we call it the <i>static</i> bicycle simulator.
+            For visual feedback a simple screen with third person view
+            is used, but a head mounted display (HMD, such as the</font></font><font
+          style="font-size: 9pt" face="Verdana"><font style="font-size:
+            9pt" face="Verdana"><font style="font-size: 9pt"
+              face="Verdana"><font style="font-size: 9pt" face="Verdana">
+                <a target="_blank"
+                  href="https://www.oculus.com/en-us/rift/">oculus rift</a></font></font>)
+            can be used.<br>
+            Applications for this simulator are: traffic and
+            environmental interaction simulation and training, balance
+            and maneuver assessment, balance training. Below is a short
+            youtube video to see the static bicycle simulator in
+            operation. </font> </font></p>
+      <table width="100%" border="0" cellspacing="2" cellpadding="2">
+        <tbody>
+          <tr>
+          </tr>
+          <tr>
+            <td valign="top">
+              <div align="center"><br>
+              </div>
+              <div align="center"><a target="_blank"
+                  href="StaticBicycleSimulator.png"><img alt="static
+                    bicycle simulator"
+                    src="StaticBicycleSimulator%20small.png" width="234"
+                    border="0" height="184"></a><br>
+                <font style="font-size: 9pt" face="Verdana">Static
+                  Bicycle Simulator</font><br>
+              </div>
+            </td>
+            <td valign="top">
+              <div align="center">&nbsp;<iframe
+                  src="https://www.youtube.com/embed/XsQ3_LYgipM"
+                  allowfullscreen="" frameborder="0" width="400"
+                  height="230"></iframe><br>
+                <font style="font-size: 9pt" face="Verdana">Static
+                  Bicycle Simulator on YouTube</font><br>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%" border="0" cellspacing="2" cellpadding="2">
+        <tbody>
+          <tr>
+            <td valign="top"><font style="font-size: 9pt" face="Verdana"><a
+                  href="#17jan2015" name="17jan2015">Jan 17, 2015</a>: A
+                group of TU Delft BSc students (Jibbe Knuit, Frans Kok,
+                Philip Raaphorst and Arne Spek) did a project on
+                measuring vertical stiffness and damping of bicycle
+                tires. A total of 11 tires were measured at 3 normal
+                loads and 3 internal pressures. The setup, data and
+                results can be found at this website:&nbsp;<a
+                  href="http://bicycle.tudelft.nl/tiretestingvertical/"
+                  target="_blank">http://bicycle.tudelft.nl/tiretestingvertical/</a></font></td>
+            <td valign="top"><a target="_blank"
+                href="http://bicycletire.eu.pn/"><img alt="flat tire"
+                  src="flat%20tire2.jpg" width="276" border="0"
+                  height="105"></a><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table width="720" border="0" cellspacing="2" cellpadding="2"
+        height="109">
+        <tbody>
+          <tr>
+            <td valign="top"><font style="font-size: 9pt" face="Verdana"><a
+                  name="1_Sep_2014"></a><a href="#1_Sep_2014">1 Sep 2014</a>:
+                TU Delft is one of the participants within the European
+                Marie Curie Initial Training Network (ITN) on <u>Moto</u>rcycle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <u>R</u>ider <u>I</u>ntegrated <u>S</u>afe<u>t</u>y,
+                called MOTORIST. The project is coordinated by </font><font
+                style="font-size: 9pt" face="Verdana"><font
+                  style="font-size: 9pt" face="Verdana">Prof. Marco
+                  Pierini,&nbsp; from </font>University of&nbsp;
+                Firenze </font><font style="font-size: 9pt"
+                face="Verdana"><font style="font-size: 9pt"
+                  face="Verdana">(UNIFI</font>), Florence, Italy. More
+                info on this ITN can be found at: <a target="_blank"
+                  href="http://www.motorist-ptw.eu/">http://www.motorist-ptw.eu/</a><br>
+              </font></td>
+            <td valign="top"><a target="_blank"
+                href="http://www.motorist-ptw.eu/"><img alt="Motorist
+                  logo" src="MOTORISTlogo.jpg" width="115" border="0"
+                  height="76"></a><br>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><font style="font-size: 9pt" face="Verdana"><font
+                  face="Verdana"><a name="May_2013"></a><a
+                    href="#May_2013">May 2013</a>: Andrew Dressel
+                  successfully defended his PhD thesis entitled: <i>MEASURING
+
+
+
+
+
+
+
+                    AND MODELING THE MECHANICAL PROPERTIES OF BICYCLE
+                    TIRES</i>, PhD thesis, The University of
+                  Wisconsin-Milwaukee, May 2013. <a target="_blank"
+                    href="dressel2013measuring.pdf">pdf(30Mb)</a><br>
+                  &nbsp;<br>
+                </font></font></td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%" border="0" cellspacing="2" cellpadding="2">
+        <tbody>
+          <tr>
+            <td valign="top">
+              <p align="left"><font style="font-size: 9pt"
+                  face="Verdana"><a name="Nov_27_2012"></a><a
+                    href="#Nov_27_2012">Nov 27, 2012</a>:&nbsp; </font><font
+                  style="font-size: 9pt" face="Verdana"><font
+                    face="Verdana">Nick Appelman successfully defended
+                    his Engineering Dynamics MSc thesis on: <i>Dynamics
+                      and Control of a Steer-by-Wire Bicycle</i>, MSc
+                    thesis, Delft University of Technology, Nov 2012.
+                    His excellent work won the TU Delft Bicycle Lab
+                    award "De Gouden Spaak" (Golden Spoke).</font></font></p>
+              <p align="center"><a target="_blank"
+                  href="Gouden%20Spaak.jpg"><font style="font-size: 9pt"
+                    face="Verdana"><font face="Verdana"><img alt="gouden
+                        spaak" src="Gouden%20Spaak%20small.jpg"
+                        width="157" border="0" height="119"></font></font></a><br>
+                <font style="font-size: 9pt" face="Verdana"><font
+                    face="Verdana"> </font></font></p>
+              <p align="left"><font style="font-size: 9pt"
+                  face="Verdana"> </font></p>
+            </td>
+            <td valign="top"><a target="_blank"
+                href="steer-by-wire-bicycle-tudelft-2014.jpg"><img
+                  alt="steer-by-wire bicycle"
+                  src="steer-by-wire-bicycle-tudelft-2014%20small.jpg"
+                  width="338" border="0" height="250"></a><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" valign="top"><small>Below you find two
+                videos showing&nbsp; the steer-by-wire bicycle in
+                operation</small></td>
+          </tr>
+          <tr>
+            <td valign="top"><iframe
+                src="https://www.youtube.com/embed/cuB28eDVs68"
+                allowfullscreen="" frameborder="0" width="350"
+                height="250"></iframe><br>
+              <small>The steer-by-wire bicycle can be riden as a normal
+                bicycle.</small> <br>
+            </td>
+            <td valign="top"> <iframe
+                src="https://www.youtube.com/embed/j87JDFa0F8A"
+                allowfullscreen="" frameborder="0" width="350"
+                height="250"></iframe> <br>
+              <small>The steer-by-wire bicycle with steer assist to make
+                the bicycle stable from a speed as low as 4 km/h.</small><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="left"> <font face="Verdana"><a name="Nov_5,_2012"
+            href="#Nov_5,_2012">Nov 5, 2012</a>: TED talk by Arend
+          Schwab at TEDxDelft2012 on "Why bicycles do not fall":</font></p>
+      <p align="center"> &nbsp;<iframe
+          src="http://www.youtube.com/embed/2Y4mbT3ozcA"
+          allowfullscreen="" frameborder="0" width="640" height="390"></iframe>
+      </p>
+      <p align="left"> <font face="Verdana"><a name="Feb_8,_2012"
+            href="#Feb_8,_2012">Feb 8, 2012</a>: Andrew Dressel is
+          finishing his bicycle tire testrig, see: </font> <a
+          href="http://bicycle.tudelft.nl/tiretesting/">
+          http://bicycle.tudelft.nl/tiretesting/</a><br>
+      </p>
+      <table width="720" border="0" cellspacing="2" cellpadding="2"
+        height="205">
+        <tbody>
+          <tr>
+            <td valign="top"><small><font face="Verdana"><a
+                    name="Feb_8,_2012"
+                    href="file:///Users/aschwab/Documents/WWW/Bicycle/index.htm#Feb_8,_2012">Feb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    8, 2012</a>: Andrew Dressel is finishing his bicycle
+                  tire testrig. All information on the bicycle tire
+                  testing can be found at: </font> <a
+                  href="http://bicycle.tudelft.nl/tiretesting/">
+                  http://bicycle.tudelft.nl/tiretesting/ <br>
+                </a></small></td>
+            <td valign="top"><img alt="bicycle tire testing TU Delft"
+                src="BicycleTireTesterTUDelft2.png" width="147"
+                height="189"><img alt="TU Delft bicycle tire tester"
+                src="BicycleTireTesterTUDelft1.png" width="163"
+                height="193"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="left"><br>
+      </p>
+      <p align="left"> <font face="Verdana"><a name="Nov-30-2011"
+            href="#Nov-30-2011">Nov 30, 2011</a>: Peter de Lange
+          successfully defended his Engineering Dynamics MSc thesis and
+          graduate Cum Laude:</font></p>
+      <blockquote>
+        <p align="left"><font face="Verdana">P.D.L. de Lange, <i>Rider
+              Control Identification in Bicycling, a preliminary
+              analysis, </i>MSc thesis, </font> <font
+            style="font-size: 9pt" face="Verdana">Delft University of
+            Technology, Nov 2011. <a target="_blank"
+              href="lange2011rider.pdf">(pdf 2.3Mb)</a></font></p>
+      </blockquote>
+      <p align="left"> <font face="Verdana"><a name="Feb9" href="#Feb9">Feb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            9, 2011</a>: </font> <font style="font-size: 9pt"
+          face="Verdana"> Eric-Jan van den Ouden successfully defended
+          his Engineering Dynamics&nbsp; MSc thesis:</font></p>
+      <blockquote>
+        <p align="left"> <font style="font-size: 9pt" face="Verdana">J.H.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            van den Ouden, <i>Inventory of bicycle motion for the
+              design of a bicycle simulator</i>, MSc thesis, Delft
+            University of Technology, Jan 2011. <a
+              href="ouden2011inventory.pdf">(pdf 2.2Mb)</a></font></p>
+      </blockquote>
+      <table width="100%" border="0">
+        <tbody>
+          <tr>
+            <td valign="top"><font style="font-size: 9pt" face="Verdana">
+                <a name="Sep22" href="#Aug_19,_2010">Sep 22, 2010</a>:
+                This month the bicycle lab moved to the new lab space
+                (room <a href="OCP-plattegrond_2009.jpg">4A-1-04</a>)
+                which is on the first floor, close to our offices. We
+                are very happy with the new lab; more than 80 m<sup>2</sup>
+                of light and clean space with lots of room for table-top
+                experimental setups and high visibility from the
+                corridor because of the large glass windows.</font></td>
+            <td><a target="_blank" href="BicycleLab.JPG"> <img
+                  src="BicycleLabSmall.JPG" width="320" border="0"
+                  height="214"></a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="left"> <font face="Verdana"><a name="May_11,_2010"
+            href="#May_11,_2010">May 11, 2010</a>: Marc Evertse </font>
+        <font style="font-size: 9pt" face="Verdana"> successfully
+          defended his MSc thesis:</font></p>
+      <blockquote>
+        <p align="left"><font face="Verdana">M.V.C. Evertse, <i>Rider
+              Analysis using a fully instrumented motorcycle</i>, </font>
+          <font style="font-size: 9pt" face="Verdana">MSc thesis, Delft
+            University of Technology, May 2010. <a
+              href="evertse2010riderMinApp.pdf">(pdf 1.9Mb)</a></font></p>
+      </blockquote>
+      <p align="left"> <font style="font-size: 9pt" face="Verdana"> <a
+            name="Aug_19,_2010" href="#Aug_19,_2010">Aug 19, 2010</a>:
+          After many years of searching and negotiating we are now able
+          to post a selection of the <a href="calspan/index.htm">Calspan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            reports</a> on Bicycle and Motorcycle Dynamics research.
+          Thanks to the effort of Jim Papadopoulos and Doug Milliken!</font></p>
+      <p align="left"> <font style="font-size: 9pt" face="Verdana"><a
+            name="May_2010" href="#May_2010"> May 2010</a> <a
+            href="mailto:J.T.M.Mutsaerts@student.tudelft.nl?subject=NXTbike-GS">Joep
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Mutsaerts</a> builds a LEGO Mindstorms NXT based bicycle
+          robot in an assignment for the TUDelft 3mE/PME course
+          Mechatronic System Design II. The lateral stability control is
+          done by the concept of "steer into the undesired fall" and
+          comes down to only one line of code in the controller:
+          SteerMotorVoltage=8*RearFrameLeanRate.</font></p>
+      <p align="center"> <object width="425" height="344"><param
+            name="movie"
+            value="http://www.youtube.com/v/o7nSQ2ycGX4&amp;hl=en_US&amp;fs=1&amp;"><param
+            name="allowFullScreen" value="true"><param
+            name="allowscriptaccess" value="always"><embed
+            src="http://www.youtube.com/v/o7nSQ2ycGX4&amp;hl=en_US&amp;fs=1&amp;"
+            type="application/x-shockwave-flash"
+            allowscriptaccess="always" allowfullscreen="true"
+            width="425" height="344"></object></p>
+      <p align="left"> Here you can download the design (<a
+          href="NXTbike-GS%20Design.pdf">NXTbike-GS Design.pdf</a>) and
+        the building instructions (<a
+          href="NXTbike_GS_Building_Instructions.pdf">NXTbike_GS_Building_Instructions.pdf</a>).</p>
+      <p align="left"> <font style="font-size: 9pt" face="Verdana"> <a
+            name="Feb,_2010" href="#Feb,_2010">Feb, 2010</a> Recently
+          Jason Moore from UCDavis started a <a
+            href="http://groups.google.com/group/stvdy">google
+            discussion group on single track vehicle dynamics</a>.</font></p>
+      <p align="left"> <font style="font-size: 9pt" face="Verdana"> <a
+            name="July_16,_2009" href="#July_16,_2009">July 16, 2009</a>
+          VPRO Noorderlicht Nieuws made a 5 minute item out of our
+          Bicycle Treadmill experiments. The interview is in Dutch:</font></p>
+      <p align="center"> <object width="425" height="344"><param
+            name="movie"
+            value="http://www.youtube.com/v/rD21JAsq0Kg&amp;hl=en&amp;fs=1"><param
+            name="allowFullScreen" value="true"><param
+            name="allowscriptaccess" value="always"><embed
+            src="http://www.youtube.com/v/rD21JAsq0Kg&amp;hl=en&amp;fs=1"
+            type="application/x-shockwave-flash"
+            allowscriptaccess="always" allowfullscreen="true"
+            width="425" height="344"></object> </p>
+      <table id="table2" width="92%" border="0">
+        <tbody>
+          <tr>
+            <td valign="top" align="left">
+              <p><font style="font-size: 9pt" face="Verdana"><a
+                    name="#Jan2009" href="#Jan2009">Jan 9-11, 2009</a>:
+                  For three days we have been doing full motion capture
+                  of the rider and the bicycle while riding on the
+                  large(3X5 m) VU Amsterdam treadmil. This to
+                  investigate rider motions on a bicycle. The Optotrack
+                  Certus Motion Capture System with active markers was
+                  used (thanks to the VU!) with 31 markers (20 on the
+                  rider, 11 on the bicycle) at a sample freq of 100 Hz.
+                  The test comprised: normal pedalling, towing,
+                  hands-free pedalling, pedalling with line tracking.
+                  The belt speed (=forward bicycle speed) was varied
+                  from 5 to 30 km/h in steps of 5 km/h and then down in
+                  the same manner. At every speed we measured for 60
+                  seconds. Going down we also tried 5,4,3,2,.. km/h
+                  until one could not stabilize any more. Every test was
+                  done with three riders and two bicycles form Batavus,
+                  the Browser and a Stratos.</font></p>
+              <table width="100%" border="0">
+                <tbody>
+                  <tr>
+                    <td valign="top">
+                      <p> <img src="jodiMarkers02.gif" width="126"
+                          height="299"> <img src="jodiMarkers.gif"
+                          width="251" height="300"></p>
+                    </td>
+                    <td width="35%" valign="top"> <span
+                        style="font-size: 9pt">Here you see Jodi
+                        geared-up with 20 markers and a safety harness
+                        on the Batavus Stratos riding on the VU
+                        treadmill. Below you see a video of Jason on the
+                        same bicycle in a pedalling run at 10 km/h and
+                        to the right of that a visualisation of the
+                        marker motions for that same run. We analyze the
+                        large data sets by Principal Component Analysis.</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%" border="0">
+        <tbody>
+          <tr>
+            <td width="335"> <a
+                href="3062_Jason_normal_pedaling_First10sec.wmv"> <font
+                  style="font-size: 9pt" face="Verdana"> <object
+                    width="296" height="266"><param name="movie"
+                      value="http://www.youtube.com/v/amDqZcb8Sbk&amp;hl=en&amp;fs=1"><param
+                      name="allowFullScreen" value="true"><param
+                      name="allowscriptaccess" value="always"><embed
+                      src="http://www.youtube.com/v/amDqZcb8Sbk&amp;hl=en&amp;fs=1"
+                      type="application/x-shockwave-flash"
+                      allowscriptaccess="always" allowfullscreen="true"
+                      width="350" height="250"></object> </font></a><br>
+            </td>
+            <td> <font style="font-size: 9pt" face="Verdana"> <object
+                  width="281" height="256"><param name="movie"
+                    value="http://www.youtube.com/v/dUs94GaB5ek&amp;hl=en&amp;fs=1&amp;"><param
+                    name="allowFullScreen" value="true"><param
+                    name="allowscriptaccess" value="always"><embed
+                    src="http://www.youtube.com/v/dUs94GaB5ek&amp;hl=en&amp;fs=1&amp;"
+                    type="application/x-shockwave-flash"
+                    allowscriptaccess="always" allowfullscreen="true"
+                    width="350" height="250"></object> </font><br>
+            </td>
+          </tr>
+          <tr>
+            <td width="335"> <font style="font-size: 9pt"
+                face="Verdana"> <a
+                  href="3062_Jason_normal_pedaling_First10sec.wmv">
+                  Jason, pedalling, Batavus Stratos, 10 km/h</a></font></td>
+            <td> <font style="font-size: 9pt" face="Verdana"> <a
+                  href="PCA3062Jason.wmv">Measured marker motions same
+                  run</a></font></td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="table1" width="100%" border="0">
+        <tbody>
+          <tr>
+            <td colspan="2" valign="top" align="left"> &nbsp;
+              <p><font style="font-size: 9pt" face="Verdana"> <a
+                    name="Oct28" href="#Oct28"> Oct 28, 2008</a>: Today
+                  we did a number of exploratory tests on the big VU
+                  treadmill (3X5m) to have a first look at human rider
+                  control. The bicycle was a Batavus Browser town
+                  bicycle which was prepared by Jodi and Jason and is
+                  equipped with sensors for: steer angel, steer rate,
+                  rear frame lean and yaw rate, forward speed (2), and
+                  pedaling cadence. A video camera was added mounted on
+                  the rear frame looking at the rider to identify rider
+                  motions relative to the rear frame. <br>
+                  <br>
+                  <img src="BatavusBrowser.jpg" width="300" border="0"
+                    height="225"></font></p>
+              <p><font style="font-size: 9pt" face="Verdana">We looked
+                  at normal pedaling, towing and pedaling with lateral
+                  perturbations in the forward speed range of 5-30 km/h.
+                  Here you can find three compilations of the
+                  experiments:</font></p>
+            </td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td valign="top" align="left">
+              <p align="center"><font style="font-size: 9pt"
+                  face="Verdana"> <a href="arendcycling301505.wmv"> <img
+                      src="arendcycling301505_0001.jpg" width="320"
+                      border="0" height="240"></a><br>
+                  Normal Cycling<br>
+                  <a href="arendcycling301505.wmv">arendcycling301505.wmv</a></font></p>
+            </td>
+            <td valign="top" align="left">
+              <p align="center"><a href="arendtowing301505.wmv"> <img
+                    src="arendtowing301505_0001.jpg" width="320"
+                    border="0" height="240"></a><font style="font-size:
+                  9pt" face="Verdana"><br>
+                  Towing<br>
+                  <a href="arendtowing301505.wmv">arendtowing301505.wmv</a></font></p>
+            </td>
+            <td>
+              <p align="center">&nbsp;</p>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" align="left">
+              <p align="center"><a
+                  href="Jasoncyclingperturbing301505.wmv"> <img
+                    src="Jasoncyclingperturbing301505_0001.jpg"
+                    width="320" border="0" height="240"></a><br>
+                <font style="font-size: 9pt" face="Verdana">Cycling and
+                  Perturbing<br>
+                  <a href="Jasoncyclingperturbing301505.wmv">Jasoncyclingperturbing301505.wmv</a></font></p>
+            </td>
+            <td valign="top" align="left"> &nbsp;</td>
+            <td> &nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="left"> <font style="font-size: 9pt" face="Verdana"><a
+            name="Apr16" href="#Apr16">April 16, 2007</a>: Today we put
+          the instrumented bicycle from Jodi' MSc work on the big VU <a
+            target="_blank" href="TreadmillVU.jpg">treadmill</a>. We
+          feel more confident about the usage of this treadmill for our
+          bicycle handling experiments if the instrumented bicycle on
+          the treadmill shows the same lateral dynamic behaviour as on
+          the road. It turned out to be rather tricky to launch the
+          bicycle and catch it in the&nbsp; fall. Jodi got really handy
+          by first launching it from standing aside and then stepping to
+          the rear where he could steer, perturb and catch it. The weave
+          speed&nbsp; of the bicycle on the road is 4.0 m/s (14.4 km/h)
+          [The bicycle is laterally unstable below the weave speed and
+          stable above]. The preliminary result is that the bicycle
+          shows approximately the same weave speed on the treadmill, as
+          you can see from the three videos below:</font></p>
+      <table style="border-collapse: collapse" id="AutoNumber4"
+        width="100%" border="0" cellspacing="0" cellpadding="0"
+        bordercolor="#111111">
+        <tbody>
+          <tr>
+            <td width="33%"> <a target="_self" href="test_V12_M4.wmv">
+                <img src="test_V12_M4_0001.jpg" width="320" border="0"
+                  align="left" height="240"></a></td>
+            <td width="33%"><a target="_self" href="Test_V16M5.wmv"> <img
+                  src="Test_V16M5_0001.jpg" width="320" border="0"
+                  align="left" height="240"></a></td>
+          </tr>
+          <tr>
+            <td width="33%"> <font style="font-size: 9pt"
+                face="Verdana">12 km/h: Unstable <a target="_self"
+                  href="test_V12_M4.wmv"> (wmv 5.8 Mb)</a></font></td>
+            <td width="33%"><font style="font-size: 9pt" face="Verdana">16
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                km/h: Stable <a target="_self" href="Test_V16M5.wmv">(wmv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  9.4 Mb)</a></font></td>
+          </tr>
+          <tr>
+            <td width="33%">
+              <p align="center"><a target="_self" href="Test_V30M3.wmv">
+                  <img src="Test_V30M3_0001.jpg" width="320" border="0"
+                    align="left" height="240"></a> </p>
+            </td>
+            <td width="33%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td width="33%">
+              <p align="center"><font style="font-size: 9pt"
+                  face="Verdana">30 km/h: Very Stable <a target="_self"
+                    href="Test_V30M3.wmv">(wmv 6.5 Mb)</a></font></p>
+            </td>
+            <td width="33%">
+              <p align="center">&nbsp;</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="left"> <font style="font-size: 9pt" face="Verdana"><a
+            name="Apr4" href="#Apr4">April 4, 2007</a>: Today we (Jodi
+          and I) went to the VU University Amsterdam and looked at the
+          big treadmill from the faculty of Human Movement Sciences. My
+          friend <a target="_blank"
+            href="http://www.fbw.vu.nl/Epersona/Soest.htm">Knoek van
+            Soest</a> works there and was so nice to let us do some
+          preliminary tests to see if we could use the treadmill for our
+          bicycle handling quality experiments.&nbsp; The <a
+            target="_blank" href="TreadmillVU.jpg">treadmill</a> is big,
+          3 by 5 m, and has maximum speed of 30 km/h. The minister of
+          Education, <a target="_blank" href="demonstratie-0323red.jpg">Ronald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Plasterk</a>,&nbsp; on a work visit at the VU, also showed
+          genuine interest in our experiments!</font></p>
+      <table style="border-collapse: collapse" id="AutoNumber3"
+        width="100%" border="0" cellspacing="0" cellpadding="0"
+        bordercolor="#111111">
+        <tbody>
+          <tr>
+            <td width="50%">
+              <p align="center"><a target="_self" href="arend1.wmv"> <img
+                    src="arend1_0001.jpg" width="320" border="0"
+                    height="240"></a></p>
+            </td>
+            <td width="50%">
+              <p align="center"><a target="_self"
+                  href="touwtrekken1.wmv"> <img
+                    src="touwtrekken1_0001.jpg" width="320" border="0"
+                    height="240"></a></p>
+            </td>
+          </tr>
+          <tr>
+            <td width="50%">
+              <blockquote>
+                <p align="left"> <font style="font-size: 9pt"
+                    face="Verdana">My first run on the treadmill <a
+                      target="_self" href="arend1.wmv">(wmv 2.6 Mb)</a>.
+                    Low speed because it looked scary, and it turned out
+                    to be rather strange: you move but then you don't.
+                    Te problem is that you are cycling but your eyes
+                    tell you you are stationary. Of course after some
+                    practice it works out fine. Doing an emergency stop
+                    is really fun. You just fall over like an inverted
+                    pendulum!</font></p>
+              </blockquote>
+            </td>
+            <td width="50%">
+              <blockquote>
+                <p align="left"><font style="font-size: 9pt"
+                    face="Verdana">Jodi demonstrates <a target="_self"
+                      href="touwtrekken1.wmv">(wmv 11.2 Mb)</a> that you
+                    can ride at a moderate speed in a stable manner.
+                    Next we perturb the bicycle laterally by pulling a
+                    string attached to the saddle post. You see a nice
+                    response when Jodi recovers. Seems to work out
+                    fine,&nbsp; although we both had problems with the
+                    visual information (I'm not moving but the belt is!)
+                    and it felt like we had a soft rear tire.</font></p>
+              </blockquote>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="left"> <font style="font-size: 9pt" face="Verdana"> <a
+            name="Apr25" href="#Apr25">April 25, 2006</a>: Jodi Kooijman
+          succesfully defended his Engineering Dynamics&nbsp; MSc
+          thesis:</font></p>
+      <blockquote>
+        <p align="left"> <font style="font-size: 9pt" face="Verdana">J.
+            D. G. Kooijman, <i>Experimental Validation of a Model for
+              the Motion of an Uncontrolled Bicycle</i>, MSc thesis,
+            Delft University of Technology, April 2006. <a
+              href="Kooijman2006.pdf">(pdf 4.9Mb)</a></font></p>
+      </blockquote>
+      <p><font style="font-size: 9pt" face="Verdana"><u><a name="May29"></a><a
+              name="May29" href="#May29">May 29, 2005</a></u>: Salome, 3
+          and 11/12 years old, can ride a bicycle! Thanks to the
+          Cornell/UIUC method. In the last couple of years Andy Ruina,
+          Jim Papadopoulos and Richard Klein gave me advice on how to
+          teach your kid to ride a bike. With our first child, Samuel, I
+          screwed up. I was still unaware of the method so I used
+          trainer wheels. This was bad. It took him (and me) a long time
+          to learn how to ride a bike. <br>
+          With the next, Simon, things went better. I was now aware of
+          the method and I threw away the trainer wheels. He learned
+          quicker and now far more enjoys riding his bike. <br>
+          Then with Salome I started out with a <a target="_blank"
+            href="Stage1.jpg">scooter</a>. In this way she mastered
+          balancing by leaning and steering without the real danger of
+          falling over. Scooters are slow low riders. After some time
+          she wanted to go faster. So I took the bicycle, dismounted the
+          pedals and lowered the seat. She now could <a target="_blank"
+            href="Stage2.jpg">pedal the bike</a> like a scooter and get
+          used to the somewhat different dynamics of the bike opposed to
+          the scooter. Shortly after this she asked for the pedals. To
+          make her really connect to the bike we first went to shop and
+          bought some nice pink and lilac paint (her choice), <a
+            target="_blank" href="Stage3a.jpg">painted the bike </a>and
+          mounted the pedals. On Sunday we went out on the street walk
+          and after an initial push of she <a target="_blank"
+            href="Stage3b.jpg">rode of all by herself</a>!</font></p>
+      <p align="center"> <font style="font-size: 9pt" face="Verdana"> <img
+            src="Stage3bsmall.jpg" width="300" border="0" height="357"></font></p>
+      <p align="left"> <font style="font-size: 9pt" face="Verdana"> <u><a
+              name="May24" href="#May24">May 24, 2005</a></u>:Today we
+          did our first serious measurements with the <a
+            target="_blank" href="testbike.JPG">instrumented bike</a> in
+          the big hall at the TUDelft sports centre. We flipped the
+          front fork 180 degrees to get more trail and by such a larger
+          stable forward speed range. Forward speed is now measured with
+          the help of an old Avocet50 speedometer with a 10 magnet ring
+          and coil pickup (thanks Jim!). The trainer wheels are to catch
+          the bike.</font></p>
+      <p align="center"> <font style="font-size: 9pt" face="Verdana"> <img
+            src="Movie_40_0001.jpg" width="320" border="0" height="240">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <img src="Movie_41_0001.jpg" width="320" border="0"
+            height="240"></font></p>
+      <p align="left"> <font style="font-size: 9pt" face="Verdana">Here
+          is the <a target="_self" href="Movie_35.wmv">video file(2.8
+            Mb)</a> of a typical run, and here is the <a
+            target="_blank" href="em35.jpg">graph(102 KB) </a>with the
+          measured data (no processing, directly out of LabView). Note
+          that we are actually measuring the stability of a steady large
+          turn.</font></p>
+      <p align="left"> <font style="font-size: 9pt" face="Verdana"> <u><a
+              name="Mar11"></a><a name="Mar11" href="#Mar11">March 11,
+              2005</a></u>, first measurement data from the instrumented
+          bicycle. This work is done by my Delft MSc student Jodi
+          Kooijman. This is the bike:</font></p>
+      <p align="center"> <font style="font-size: 9pt" face="Verdana"> <img
+            src="Bike1Still.jpg" width="320" border="0" height="240">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <a target="_blank" href="https://youtu.be/7V1QWY1STi8"><img
+              alt="Firts experiments to measure dynamics respons of
+              bicycle" src="Bike1Start.jpg" width="320" border="0"
+              height="240"></a></font></p>
+      <p align="left"> <font style="font-size: 9pt" face="Verdana">Note
+          the laptop on the rear rack, the manual launcher is Jodi. The
+          bike is instrumented with two rate gyros, one for the lean
+          rate and one for the yaw rate. The steering angle is measured
+          by a potentiometer. The speed is measured (temporarily) by a
+          dynamo (originally meant for the head and tail light).&nbsp;
+          Data is collected via a USB data collecting box driven by
+          LabVIEW and stored on the laptop. Here is an <a
+            target="_self" href="CIMG0650.AVI">video file(2.8Mb)</a> of
+          the first test run, and here is the <a target="_blank"
+            href="Bike1Graph.gif">graph(23Kb) </a>with the first
+          measured data.</font></p>
+      <p align="left"> <font style="font-size: 9pt" face="Verdana">The
+          final goal is to create a <u>Robot Bicycle</u> by adding a
+          steering torque controller, to stabilize the bike, and a small
+          elector motor to maintain forward speed.</font></p>
+      <hr noshade="noshade" width="100%">
+      <p align="center"><font style="font-size: 9pt" face="Verdana"><b>(Spring
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            2003)</b> </font> </p>
+      <p><font style="font-size: 9pt" face="Verdana"><b> Results:</b>
+          Here are some of my preliminary results on the analysis of the
+          dynamic behavior of a bicycle. For the analysis we used our
+          software system SPACAR. This software has been developed at
+          Delft University of Technology and is capable of doing dynamic
+          analysis of flexible multibody systems. The method is based
+          upon the Finite Element Method where the expressions for the
+          generalized strains can be used as constraint equations to
+          model partly rigid systems. Pure rolling is be modeled by zero
+          generalized slips. The equations of motion are expressed in
+          terms of independent generalized coordinates this to
+          facilitate the numerical integration of the equations of
+          motion. </font></p>
+      <p> <font style="font-size: 9pt" face="Verdana">The model of the
+          bicycle is an ordinary Dutch city bike, like this one:</font>
+      </p>
+      <center> <font style="font-size: 9pt" face="Verdana"> <img
+            src="fiets2small.jpg" width="200" border="1" align="top"
+            height="125"> </font> </center>
+      <font style="font-size: 9pt" face="Verdana"> <br>
+        This is a sketch of the SPACAR model, with all the element and
+        node numbers:</font>
+      <center> <font style="font-size: 9pt" face="Verdana"> <img
+            src="bike2small.jpg" width="400" border="1" align="top"
+            height="400"> </font> </center>
+      <font style="font-size: 9pt" face="Verdana"> <br>
+        Finally the input file, which contains the complete definition
+        of the bike, looks like this:</font>
+      <center> <font style="font-size: 9pt" face="Verdana"> <iframe
+            src="bike3dat.txt" name="bike3.dat" width="600" height="400"></iframe>
+        </font> </center>
+      <p> <font style="font-size: 9pt" face="Verdana">In a first
+          analysis we look at the steady motion of the upright bicycle
+          with a rigid rider, hands free, and pure rolling. These are
+          the root-loci from the linearized equations of motion with the
+          forward speed <i> v</i> as a parameter. </font> </p>
+      <center> <font style="font-size: 9pt" face="Verdana"> <img
+            src="Bike3xrl.jpg" width="577" border="1" align="top"
+            height="433"> </font> </center>
+      <font style="font-size: 9pt" face="Verdana">You can take a closer
+        look at the original Figure <a target="_blank"
+          href="Bike3xrl.pdf">Bike3xrl.pdf</a>.<br>
+      </font>
+      <p> <font style="font-size: 9pt" face="Verdana">In order to get
+          an idea about the stability of this upright motion look at the
+          bottom-left figure, the forward speed <i> v</i> versus the
+          Real part of the eigenvalues l. Now its customary to have the
+          parameter, here the forward speed v, on the abscissa and the
+          Real part of the eigenvalue&nbsp; l on the ordinate. The
+          stability diagram then looks like this:</font> </p>
+      <center> <font style="font-size: 9pt" face="Verdana"> <img
+            src="Bike3xRev.jpg" width="577" border="0" height="433"> </font>
+      </center>
+      <font style="font-size: 9pt" face="Verdana">You can take a closer
+        look at the original Figure <a target="_blank"
+          href="Bike3xRev.pdf">Bike3xRev.pdf</a>, the dots are
+        horizontally equidistant at 0.1 m/s.<br>
+      </font>
+      <p><font style="font-size: 9pt" face="Verdana">We see that at a
+          forward speed <i> v</i> of less then 0.9 m/s the bike simple
+          falls over, 4 real eigenvalues l with 2 positive ones. We call
+          this the capsize mode. At a speed of 0.9 m/s two real
+          eigenvalues become identical and start forming a conjugated
+          pair after which we have an unstable oscillatory motion, the
+          so-called weave motion. This weave motion is an oscillatory
+          motion in which the bicycle sways about the headed direction.
+          At about 4.1 m/s this weave becomes stable. But then at about
+          5.7 m/s the previously stable capsize becomes marginally
+          unstable. So at high speed, v&gt;5.7 m/s, we have an unstable
+          capsize mode but the timescale is so long, l=0.2 1/s or t=5 s,
+          that in practice you can easily correct this mode. Now look at
+          the bottom-right part of the previous figure, the 3D depiction
+          of the root loci as a function of the forward speed, and
+          identify the different modes at increasing speed <i>v</i>. </font></p>
+      <p> <font style="font-size: 9pt" face="Verdana"> <a name="vrml"
+            href="#vrml"></a>In a second full nonlinear analysis we look
+          at the motion of the bike by means of a forward dynamic
+          analysis of the perturbed upright motion. The perturbation is
+          a small lateral velocity of 0.1 m/s for the whole bike to
+          start the unstable motion, if present. The results are
+          visualized by a number of VRML (Virtual Reality Modeling
+          Language) files at different initial forward speeds. You can
+          view these VRML files in internet browsers like Firefox, Opera
+          or Internet Explorer with the plugin Freeware from <a
+            target="_blank"
+            href="http://cic.nist.gov/vrml/cosmoplayer.html#AUTOMATIC">Cosmo</a>.
+          For the bike to start moving you must click on the red frame
+          of the bike. If you want to see the path of the rear and front
+          wheel, then you can click on one of the wheels. You can change
+          your viewpoint: look in the Viewpoint List located below left.
+          A very nice one is the one called 'Camera', which is a moving
+          camera with stable horizon (as if you were riding along on the
+          rear passenger seat).&nbsp; </font> </p>
+      <p> <font style="font-size: 9pt" face="Verdana">Ok, so now for
+          the VRML movies:<br>
+          <a href="bike3v000.wrl" title="B" target="B">bike3v000.wrl</a>
+          at v=&nbsp;&nbsp;&nbsp;&nbsp; 0 m/s, unstable capsize.<br>
+          <a href="bike3v175.wrl" title="B" target="B">bike3v175.wrl</a>
+          at v=1.75 m/s, unstable weave.<br>
+          <a href="bike3v350.wrl" title="B" target="B">bike3v350.wrl</a>
+          at v=3.50 m/s, unstable weave.<br>
+          <a href="bike3v368.wrl" title="B" target="B">bike3v368.wrl</a>
+          at v=3.68 m/s, stable weave in a curve! (a nice nonlinear
+          result)<br>
+          <a href="bike3v490.wrl" title="B" target="B">bike3v490.wrl</a>
+          at v=4.90 m/s, a stable weave.<br>
+          <a href="bike3v630.wrl" title="B" target="B">bike3v630.wrl</a>
+          at v=6.30 m/s, an unstable capsize.<br>
+        </font> </p>
+      <p><font style="font-size: 9pt" face="Verdana">Note that obtaining
+          a speed of 36 km/h and above is no problem in Ithaca, although
+          I myself do not dare to go that fast.</font></p>
+      <hr noshade="noshade" width="100%">
+      <p align="justify"> <font style="font-size: 9pt;
+          text-decoration:underline" face="Verdana"><b> <a name="Links"
+              href="#Links"></a>Links</b></font></p>
+      <ul>
+        <li>
+          <p align="justify"><font style="font-size: 9pt" face="Verdana">Andy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Ruina <a target="_blank"
+href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/overview.php">Bicycle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                Mechanics at Cornell</a></font></p>
+        </li>
+        <li>
+          <p align="justify"><font style="font-size: 9pt" face="Verdana">
+              <a
+href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/JBike6_web_folder/index.htm">JBike6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                software</a></font></p>
+        </li>
+        <li>
+          <p align="justify"><font style="font-size: 9pt" face="Verdana">
+              <a target="_blank" href="http://www.bicycle.tudelft.nl/">Delft
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                Bicycle Research</a></font></p>
+        </li>
+        <li>
+          <p align="justify"><font style="font-size: 9pt" face="Verdana">Hugh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Hunt's demystifying <a
+                href="http://www2.eng.cam.ac.uk/~hemh/gyrobike.htm">Gyrobike
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                page</a></font></p>
+        </li>
+        <li>
+          <p align="justify"><font style="font-size: 9pt" face="Verdana">
+              <a target="_blank" href="http://www.sheldonbrown.com/">Sheldon
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                Brown</a></font></p>
+        </li>
+        <li>
+          <p align="justify"><font style="font-size: 9pt" face="Verdana">
+              <a target="_blank" href="http://www.fixedgeargallery.com/">Fixed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                Gear</a></font></p>
+        </li>
+        <li>
+          <p align="justify"><font style="font-size: 9pt" face="Verdana">Charles
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Dauwe <a target="_blank"
+                href="http://www.fietsica.be/index.htm">Fietsen en
+                Fysica</a></font></p>
+        </li>
+        <li>
+          <p align="justify"><font style="font-size: 9pt" face="Verdana">Dick
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Klein's <a href="http://www.losethetrainingwheels.org/">Lose
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                the training wheels</a></font></p>
+        </li>
+      </ul>
+      <p>&nbsp;</p>
+      <script src="../../../www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+      <script type="text/javascript">
+_uacct = "UA-917181-2";
+urchinTracker();
+</script></div>
+  </body>
+
+<!-- Mirrored from http://bicycle.tudelft.nl/schwab/Bicycle/ by HTTrack Website Copier/3.x [XR&CO], Sat, 17 Oct 2026 14:28:40 GMT -->
+</html>

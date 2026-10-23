@@ -1,0 +1,22 @@
+Jim and Jaap, et al.
+
+Attached are the nonlinear equations of motion, the characteristic
+equation coefficients, and the stability criteria for the monocycle from
+Carvallo placed side-by-side with mine for comparison.  I converted all of
+Carvallo's equations and results into my notation which is at the front of
+the attachment. The equations are laid out with the same ordering of
+kinematic quantities.
+
+There are boxes around terms where we have disagreement and circles around
+the offending term within each box. Some differences appear to be due to
+Carvallo neglecting the mass and/or inertia of the wheel in certain
+instances, as you pointed out to me - but other differences don't seem to
+be due to that.
+
+The discrepancies in the nonlinear equations end up being insignificant
+for the most part because they go away mostly in the linearization.
+Still, the charac. eqn. coeff.'s are slightly different. The discrepancies
+only lead to one difference in the stability criterion - the critical
+speed for stability.
+
+Mike Coleman,  Burlington VT, Jan 9, 2008

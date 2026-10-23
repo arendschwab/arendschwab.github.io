@@ -1,0 +1,228 @@
+Discussion of: 
+
+E. Carvallo, 
+Theorie du mouvement du monocycle et de la bicyclette. 
+
+The comments are made on the reprint version as it is available from 
+The University of Michigan, 193 pp. The memoir was published in the 'Journal 
+de l'Ecole Polytechnique', second series, volume 5 (1900), pp. 119-188, and 
+volume 6 (1901), pp. 1-118. To convert page numbers, add 118 to the present 
+pages 1-70 and subtract 70 from the present pages 71-188. 
+
+Summary of the memoir. 
+
+At the end, pp. 186-188, Carvallo gives a summary of the results. 
+The first part (pp. 1-70) is about the hoop and the unicycle, and the 
+second part (pp. 71-188) is mainly about the the bicycle. 
+
+The first chapter discusses the general equations of the hoop and the 
+stability of the stationary rectilinear and circular motion. The treatment 
+is fairly complete, but most of the results were probably known at the time 
+of writing. 
+
+The second chapter is about the unicycle. It is assumed that the rider always 
+stays in a vertical position in the plane of the wheel, so stability in the 
+fore-aft direction is left out of consideration. The means by which this 
+can be achieved are not discussed. For the stationary motions, this 
+configuration can always be achieved. The product of inertia of the rider 
+is neglected, but its effect will be investigated in the second part. 
+As for the hoop, the stationary rectilinear and circular motions and their 
+stability are investigated. Some ill-advised simplifications in the 
+equations of motion are made, which do not change the qualitative results, 
+but make a comparison with the hoop as a limiting case impossible. 
+It is found that for a sufficiently high forward speed, the motion can be 
+stable. A 'paradox' of a cycle is discussed: if a pedal in the lowest 
+position is pulled in the backward direction, the cycle moves in the forward 
+direction. A digression about the analogy between gyroscopic systems and 
+electromagnetic systems is made. The first part of the memoir is concluded 
+with a section that draws attention to a change in notion in the second part. 
+
+The first chapter of the second part deals with the geometry of the bicycle. 
+The simplification is made that the two wheels are equal. The non-linear 
+equations to calculate the pitch angle from the lean and steer angle are 
+derived. The equilibrium positions for zero forward speed and negligible 
+mass of the front wheel assembly are derived: the lean angle is zero and 
+the steering angle is either zero or 180 degrees or in two intermediate 
+positions with fairly large steer angles (between 60 and 70 degrees). 
+Beyond this angle, the trail becomes effectively negative. 
+All of these equilibrium positions are unstable. 
+
+The second chapter considers the kinematic relations; that is, the 
+non-holonomic conditions of pure rolling, which yield relations between the 
+velocities and between virtual displacements. A second paradox is mentioned: 
+if the rotation of the wheels is suppressed by brakes and the steer is kept 
+in a fixed position, one would expect to have suppressed the three degrees 
+of freedom and the bicycle would not fall down. Of course, the constraints 
+are dependent for this case. 
+
+The third chapter discusses a modification of Lagrange's equations for 
+systems with non-holonomic constraints. This section is remarkable, because 
+it predates the classical papers by Boltzmann and Hamel. It points out the 
+very ground why the classical equations of Lagrange are not applicable for 
+this case: taking virtual variations and taking derivatives with respect to 
+time do not commute and the order is important. Then the general method for 
+investigating the stability by means of the eigenvalues of the linearized 
+equations is discussed and applied to the hoop and the unicycle. It is found 
+that the product of inertia of the rider, depending on its sign, can lead 
+to asymptotic stability or instability of the unicycle. 
+
+The final fourth chapter deals with the dynamics of the bicycle. It consists 
+of five sections, which are discussed in order. The basic simplifying 
+assumptions made are that the wheels are equal and the front fork with 
+handlebar has no mass. The first section deals with stationary motion with 
+the steer in a fixed position. Some simplified expression are also discussed. 
+The second section considers stationary motion with free steer. On page 143, 
+in equation (1)', a factor sin(omega) is  missing (compare with equation (1) 
+on the same page). This error leads to the false conclusion that no 
+stationary circular motions are possible with a free steer (page 144). 
+The third section discusses the stability of the stationary motions with 
+fixed steer. It naturally leads to the conclusion that all of these 
+motions are unstable for bicycles of the usual construction. The fourth 
+section discusses the stability of the rectilinear motion with free steer. 
+This leads to the linearized equations of motion. Note that the entries in 
+the first column on page 171 should have their signs reversed. When the 
+terms are collected, op page 173, this is corrected. The fifth section 
+discusses the stability. The capsize speed and the weave speed are 
+identified and a stable speed range between them is found. The influence 
+of varying bicycle parameters on the stability is discussed. Furthermore, 
+the influence of friction on the stability is discussed in a qualitative 
+way. It seems that Carvallo was not aware that friction may actually 
+destabilize the bicycle in some cases. 
+
+
+List of errors. There are apparently more than listed here, and only those 
+that are considered important and did not escape my attention are listed. 
+
+Page 26, table at the bottom: in the middle row, the expression for s_0 is 
+not correct: see formula at the middle of the same page for the correct 
+expression. 
+
+page 30, table in the middle, second line: sign of n_2: it should be 
+s < -n_2 < -n_1 
+
+Page 41: some ill-advised simplification are made in the equations. See the 
+discussion above. 
+
+Page 42, displayed equations and text around them: it should be sin(i) and 
+not tang(i) .
+
+Page 50, first displayed equation: there is a sign error in the denominator; 
+the plus before z should be a minus. This error propagates into the 
+subsequent equations. 
+
+Page 56, equation (1), top: prime missing for p: it should be Ap' = ... 
+                    middle: missing minus sign between B_1 and mu_1 R^2
+
+Page 57, equation (S)_1: it seems that a term with sn is missing. 
+
+Page 57, second equation from bottom: it should be - n'/p , not -p'/p
+
+Page 64, table: the 0,03 should be 0,63 (n at zero degrees)
+
+Page 69: the equation (E) should be with a script letter E 
+
+Page 70, second line: it should be C/(mu_1 R), not (mu_1 R)/C
+
+Page 78, equation (3): I have my doubts about this equation, but I am not a 
+specialist in spherical trigonometry. This equation is not used in the rest 
+of the paper. 
+
+Page 79, equation (2)', second line: sin(sigma_0) should read cos(sigma_0) 
+
+Page 86, line 8 of No 58: theta should have a subscript 1 
+
+Page 89, equation (4), line 4: second I should read J 
+
+Page 93, equation (delta nu), second line: last R should be within the 
+brackets, before the sin(mu) 
+
+Page 94, equation (1), last part: read x cos(alpha) for alpha cos(x) 
+(see errata on page 188). 
+
+Page 100, before equation (7): read I|OM for OM 
+
+Page 100, equation (7): sin(gamma) in the second term is missing: gamma=0 
+should give eta'=0 (propagates in equation (8), and on page 101)
+
+Page 107, equation labelled (no 3): O' should be added to the first equation. 
+This has no further consequences. 
+
+Page 109, last line: sn should be in italics, simply s times n, not an 
+elliptic function. See also on page 110, first equation. 
+
+Page 116, bottom, entry (2,1) in the determinant: cos(theta) with L is 
+missing. 
+
+Page 117, bottom line: s missing in middle term; in the last term, 
+mu should be mu_1 
+
+Page 126, equation (3): s should not be underlined; there should be a minus 
+sign before L 
+
+Page 126, equation (4): again, signs before L are wrong; the last sin(theta) 
+should be cos(theta) and the last minus should be plus. 
+
+Page 126, equation (5): a term -B eta' is missing. 
+
+Page 126, equation (6): again, sign before L is wrong. 
+
+Page 129: the errors on page 126 have consequences for the middle line 
+for the 'Cadre monte' . 
+
+Page 135, line 3 from bottom: 'eos' should be 'cos' 
+
+Page 136, line 5: in the last quotient, theta and gamma should be 
+interchanged. See also errata on page 188; in this equation (2), the right 
+quotient is shown. 
+
+Page 139, line 5 from bottom: last N' should read M' 
+
+Page 140: propagation of the errors from page 129. 
+
+Page 141: value of mu_1, 57 kg, is presumably a printing error. 
+
+Page 143, equation (1)': sin(omega) missing; see discussion above. 
+
+Page 150. line 10: capital C should be lower case c 
+
+Page 152, first displayed equation: second minus should be plus; this 
+propagates into the next equation. 
+
+Page 159, equation (6), last equation: (1-alpha^2) should read (1-0.5*alpha^2) 
+This propagates into page 160. 
+
+Page 152, equation (8), second line: last gamma should be gamma' 
+
+Page 163, line 3: the first cos(eta) should not be there (corrected in 
+subsequent equations). 
+
+Page 165, equation (1): js'M' should be jS'M' (capital S) 
+
+Page 168, first displayed equation: in last term, j should read j' 
+
+Page 169, first line of the table: d eta/d theta should read d eta/d gamma 
+
+Page 171, table: signs in the first column; in the heading of the fifth 
+part, theta should read gamma (see corresponding heading on page 170). 
+
+
+JPM, Nottingham, 29 August 2007
+
+
+To come back to the paper by Carvallo, I have no clear idea about the exact 
+time it was printed, as it contains no date. Apparently, it was in or after 
+1898, as this year is mentioned in the footnote. There is a hand-written year 
+1898, apparently added by a librarian. To me it appears that the 
+memoir is essentially the same as the one submitted for the Prix Fourneyron. 
+A way to find out more is to use the number at the end (hardly legible), 
+and to compare this number with publications from the same publisher around 
+the same time. As to the archives of the publisher, the material for the 
+Proceedings of the 1946 ICTAM congress in Paris seems to have been lost, 
+so these Proceedings have not, up till now, been published. 
+
+
+As to the modified equations of Lagrange, Carvallo did not give a full 
+reduction and his equations still differ considerably from those of 
+Boltzmann and Hamel. 
+
+JPM, Nottingham, 12 September 2007

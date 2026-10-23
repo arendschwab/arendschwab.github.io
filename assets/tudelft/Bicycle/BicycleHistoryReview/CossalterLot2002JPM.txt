@@ -1,0 +1,14 @@
+I have looked through some papers by Cossalter et al. Some are about 
+experimental work, some about tire modelling. A paper about actually 
+deriving the equations of motion is 
+V. Cossalter and R. Lot (2002), 
+'A motorcycle multi-body model for real time simulations based on the natural 
+  coordinates approach', 
+Vehicle System Dynamics 37, No 6, pp.423-447. 
+In this article, a model with 11 degrees of freedom is described. The 
+equations are formulated as a large system of Differential-Algebraic Equations 
+(DAEs). Furthermore, a tire force model is described, and a full set of 
+parameters values for an example motorcycle are given. 
+We can make a reference to this article. 
+
+JPM, Nottingham, 8 Nov. 2005.

@@ -1,0 +1,79 @@
+Roland and Massing, 1971. 
+I do not think his equations are too difficult. His derivations is quite 
+straight-forward. Up to and including Section 2.5, the analysis is basically 
+sound. There are some slips of the pen, however. Most of the slips only 
+affect the non-linear terms. In his figures, the actual signs of some 
+dimensions are negative in the configuration shown; this can be confusing. 
+The slips in the equations of motion that I found are: 
+
+page 11: in \gamma_{22}, 
+second line, first term: there should be a factor 2 before it. 
+third line: the cosine-squared should not be there.  
+
+page 13, equation of motion (2.3.21): 
+In the right-hand side, the first term should have a minus sign and the second 
+a plus sign. In the very last term, the - x_F'' should not be there (this 
+affects the linear terms). 
+
+page 16, (2.4.12), expression for \gamma_{13}: 
+first line, sign last term but one, -y_D pq 
+second line, first term: sign again; second term: the 2 should not be there. 
+
+page 16, (2.4.13), expression for \gamma_{23}: 
+first line: sign: +y_D(p^2 + q^2)  
+
+page 18, equation of motion (2.4.21): 
+first two terms in the right-hand side: signs should be - in both of them. 
+
+page 22, (2.5.20), equation of motion for rotation about the X axis: 
+fourth line, the last term before \dot{q} should not be there, but instead 
+before \dot{r} in the following expression between ( ) with plus sign, because 
+the minus is before the ( ). This affects the linear equations. 
+seventh line: the \ddot{\phi}_D is missing before the equal sign. This is 
+corrected in the matrix expression on page 37. 
+eighth line, fourth term: the sign should be +, so +\cos ... 
+This affects the linear equations. 
+
+page 22, (2.5.21), equation of motion for rotation about the Y axis: 
+first line, second term: \dot{v} should be \dot{w} 
+second line, second term: \rho_D should be y_D . 
+third line: y_F should be z_F (two times) 
+I think that the expression [1 - \cos \phi_D] (three places) should be 
+simply zero. This term is the consequence of some simplifications for small 
+roll angles of the rider made earlier. 
+eighth line: there should be squares at the cos and sin 
+ninth line: second term should have a plus sign. 
+
+page 23, (2.5.22), equation of motion for rotation about the Z axis: 
+third line, last but one term: y_F should be squared. 
+sixth line, first term after plus: a term \cos\delta has been forgotten. 
+It is there on Page 37. 
+ninth line: squares again at cos and sin of \phi_D. 
+tenth line: an I_{DXY} has been forgotten. 
+
+There are further slips is the intermediate results. 
+
+These were just slips, and not essential errors. In Section 2.6, however, 
+an approximation in the calculation of the side slip angles is made. For the 
+rear wheel, this seems to be correct for the linearized results. For the 
+front wheel, however, no term due to \dot{\delta} is included. So if we 
+put Roland's slip angles equal to zero and consider only linearized 
+equations, our results do not agree. However, if we use the correct linear 
+expression for the slip angle, make the corrections listed above, 
+linearize the equations and eliminate the constraint forces, our  
+results agree. (after some 20 pages of calculations)  
+
+Roland (1973) gives basically the same equations. Apparently, no typos were 
+corrected, only some further typos were introduced. 
+
+JPM, Nottingham, 8 Nov. 2005.
+
+Ik ben nu in Roland and Massing (1971) aan het lezen. Er zitten daar nogal wat 
+'slips of the pen' in. Ook de sliphoek van het voorwiel is niet exact voor het 
+lineaire geval. Zijn latere artikel uit 1973 (Roland 1973) heb ik niet. 
+Daar schijnt een en ander verbeterd te zijn. Er zijn dus niet alleen 
+drukfouten, maar ook echte fouten/benaderingen. Kan je me een afdrukje van 
+(Roland 1973) sturen? Overigens is hun meetfiets wel interessant. Je bent 
+echt niet de eerste met je fiets. 
+
+JPM, Nottingham, 2 Nov. 2005.
