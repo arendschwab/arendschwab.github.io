@@ -1,0 +1,24 @@
+It seems that Timoshenko and Young have taken all their material from Bouasse 
+(1910). (That is why it is a rather weak paragraph in their book.) 
+Perhaps we should move what we have said about T. and Y. to a 
+discussion about Bouasse, and just make a short note about T. and Y. that 
+says that they use the same model and assumptions as Bouasse. 
+There is a reference to Bouasse in Neimark and Fufaev's book. 
+Henri Bouasse was born in the same year as Bourlet, but survived another 
+world war and lived until 1953. 
+
+JPM, Nottingham, 15 Dec. 2005.
+
+Ik las in Timoshenko en Young over de fiets. Zij hebben al een eenvoudig 
+modelletje zoals het model met twee toestandsvariabelen van Astrom et al. 
+Zij verwijzen echter naar Bouasse, Cours de mecanique ..., p.620. In jullie 
+centrale bieb (en misschien ook in de mechanicabieb?) hebben ze dat wel. 
+Het is uit 1910, dus al heel oud voor fietsliteratuur. Misschien moet je 
+hier eens naar kijken. Het boek staat ook in de literatuurlijst van Neimark 
+en Fufayev. Ik ben de catalogus van jullie mechanicabieb kwijtgeraakt. Heb jij 
+die nog en kan je me die opsturen? 
+
+Henri Bouasse (1866-1953) was een echte veelschrijver, zoals je wel kunt zien 
+in de catalogus. Er schijnt nooit een tweede editie geweest te zijn. 
+
+JPM, Nottingham, 8 Dec. 2005.

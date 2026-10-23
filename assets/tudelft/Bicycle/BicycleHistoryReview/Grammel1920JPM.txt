@@ -1,0 +1,5 @@
+Grammel geeft een vrij envoudige analyse, waarin hij wel twee belangrijke 
+effecten meeneemt. Hij vergeet echter de invloed van de naloop (trail) in zijn 
+beschouwing. 
+
+JPM, Nottingham, 11 Nov. 2005.

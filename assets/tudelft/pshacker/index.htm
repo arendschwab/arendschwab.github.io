@@ -1,0 +1,354 @@
+<HTML>
+<!-- CREATION DATE: 18/11/2002 -->
+
+<!-- Mirrored from http://bicycle.tudelft.nl/schwab/pshacker/index.htm by HTTrack Website Copier/3.x [XR&CO], Sat, 17 Oct 2026 14:46:55 GMT -->
+<HEAD>
+<TITLE></TITLE>
+<META NAME="Description" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Author" CONTENT="arend schwab">
+<META NAME="Generator" CONTENT="Microsoft FrontPage 6.0">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<style>
+<!--
+ div.p { margin-top: 7pt;} span.roman {font-family: serif; font-style: normal; font-weight: normal;}
+-->
+</style>
+<style>
+body {
+/* font-size: 62.5%; /* Resets 1em to 10px */
+font-family: Verdana, Arial, Sans-Serif;
+text-align: center;
+min-width: 760px;
+}
+#main {
+width: 720px;
+margin: 0 auto;
+padding: 0 6px 0 6px;
+font-size: 9pt;
+text-align: left;
+background-color: rgb(230, 245, 255);
+}
+</style>
+</HEAD>
+<div id="main">
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#800080" ALINK="#FF0000">
+<center>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="70%">
+    <p align="center"><b><font size="5" face="Verdana">pshacker</font></b></td>
+    <td width="15%">
+    <p align="center">
+	<a href="http://www.adobe.com/products/postscript/">
+	<img border="0" src="adobelogo.jpg" width="92" height="107"></a></td>
+    <td width="15%" valign="bottom">
+    <p align="right">
+    <img border="0" src="TUD_01-logo_025.gif" width="146" height="62"></td>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" bgcolor="#3399FF" height="20">
+  <tr>
+    <td width="100%">
+    <p align="right">
+    <font face="Verdana" style="font-weight: 700" size="1" color="#FFFFFF">Delft
+    University of Technology&nbsp; </font></td>
+  </tr>
+</table>
+</center>
+
+
+<h1 align="center"><font face="Verdana" size="4">pshacker<br>
+<br>
+</font><font face="Verdana" style="font-size: 9pt; font-weight: 400">a Matlab
+wrapper for the postscript language</font></h1>
+<h3 align="center"><span style="font-weight: 400">
+<font face="Verdana" style="font-size: 9pt">January 2010 </font>
+</span> </h3>
+<h3 align="center"><font face="Verdana" style="font-size: 9pt">A.&nbsp;L.&nbsp;Schwab and J.&nbsp;P.&nbsp;Meijaard</font></h3>
+<p align="left"><font face="Verdana" style="font-size: 9pt">PostScript is a
+graphic programming language developed by Adobe Systems that allows its user to
+produce high-quality graphics and text that can be printed. </font> </p>
+<p align="left"><font face="Verdana" style="font-size: 9pt">The language is
+somewhat hard to use
+because it uses this crazy Reverse Polish Notation (RPN). Therefore we wrote a Matlab
+wrapper around it, with identical function names as the postscript function
+names. These collection of Matlab functions are called 'pshacker'. </font> </p>
+<p align="left"><font face="Verdana" style="font-size: 9pt">A quick and easy
+introduction to postscript is 'Learning PostScript by Doing', by Andre Heck (2005):<br>
+<a href="http://staff.science.uva.nl/~heck/Courses/Mastercourse2005/tutorial.pdf">
+http://staff.science.uva.nl/~heck/Courses/Mastercourse2005/tutorial.pdf</a></font></p>
+<p align="left"><font face="Verdana" style="font-size: 9pt">The official
+postscript language reference books are the 'green book':<br>
+<a href="http://www-cdf.fnal.gov/offline/PostScript/GREENBK.PDF">
+http://www-cdf.fnal.gov/offline/PostScript/GREENBK.PDF</a><br>
+and the 'blue book' (tutorials):<br>
+<a href="http://www-cdf.fnal.gov/offline/PostScript/BLUEBOOK.PDF">
+http://www-cdf.fnal.gov/offline/PostScript/BLUEBOOK.PDF</a></font></p>
+<p align="left"><font face="Verdana" style="font-size: 9pt">We learn by example. Read page 1-5 from
+Heck 2005.</font></p>
+<p align="left"><font face="Verdana" style="font-size: 9pt">The equivalent
+pshacker matlab program for EXERCISE 2 is <a href="exercise2.m">exercise2.m</a>:</font></p>
+<blockquote>
+	<p align="left"><font face="Courier New">% define a global variable which
+	holds the postscript file identifier<br>
+	global PSFID<br>
+	% open the file that will contain the postsript commands<br>
+	PSFID=fopen('exercise2.ps','w')<br>
+	% write the header that every ps file needs<br>
+	header<br>
+	% write the bounding box to the file<br>
+	boundingbox(5,5,105,105)<br>
+	% write some shorthand notations to the file<br>
+	prolog<br>
+	a=10;<br>
+	b=90;<br>
+	newpath<br>
+	moveto(a,a)<br>
+	rlineto(b,0)<br>
+	rlineto(0,b)<br>
+	rlineto(-b,0)<br>
+	closepath<br>
+	setlinewidth(5)<br>
+	stroke<br>
+	showpage<br>
+	% write some closing postscript statements to the file<br>
+	trailer<br>
+	eof<br>
+	% close the file<br>
+	fclose(PSFID)</font></p>
+</blockquote>
+<p align="left">And then the postscript file <a href="exercise2.ps">exercise2.ps</a>
+which exercise2.m creates looks like this:</p>
+<blockquote>
+	<p align="left"><font face="Courier New">%!PS-Adobe-3.0<br>
+	%%BoundingBox: 5 5 105 105<br>
+	%%BeginProlog<br>
+	/CP /closepath load def<br>
+	/CT /curveto load def<br>
+	/GR /grestore load def<br>
+	/GS /gsave load def<br>
+	/L /lineto load def<br>
+	/M /moveto load def<br>
+	/NP /newpath load def<br>
+	/RC /rcurveto load def<br>
+	/RF /rectfill load def<br>
+	/RS /rectstroke load def<br>
+	/RL /rlineto load def<br>
+	/RM /rmoveto load def<br>
+	/RO /rotate load def<br>
+	/SC /scale load def<br>
+	/SF /selectfont load def<br>
+	/SD /setdash load def<br>
+	/SG /setgray load def<br>
+	/SL /setlinewidth load def<br>
+	/S /show load def<br>
+	/ST /stroke load def<br>
+	/TR /translate load def<br>
+	/SHB {dup stringwidth pop neg exch show 0 rmoveto} def<br>
+	/SHL {dup stringwidth pop neg 0 rmoveto show} def<br>
+	/SHM {dup stringwidth pop 2 div neg 0 rmoveto show} def<br>
+	%%EndProlog<br>
+	NP<a href="exercise2.ps"><img border="0" src="exercise2.jpg" width="154" height="157" align="right"></a><br>
+	10 10 M<br>
+	90 0 RL<br>
+	0 90 RL<br>
+	-90 0 RL<br>
+	CP<br>
+	5 SL<br>
+	ST<br>
+	showpage<br>
+	%%Trailer<br>
+	%%EOF</font></p>
+</blockquote>
+<p align="left">The first line %! is mandatory and tells us its postscript. Next
+the bounding box is defined. The prolog has a number of definitions with
+shorthand notations, these make the postscipt file shorter because instead of
+writing <font face="Courier New">10 10 moveto</font> we can write
+<font face="Courier New">10 10 M</font>, a silent convention is that self made
+definitions are in capitols. <br>
+After the prolog we finally have our small example, the drawing of a rectangle.
+Note that we have used variables <font face="Courier New">a</font> and
+<font face="Courier New">b</font> in the Matlab file instead of the constants 10
+and 90. This is one of the most powerful instruments you have with pshacker;
+your figure is parameterized. Of course this can also be done within the
+postscript language but the RPN make this and the writing of functions within
+postscript very cumbersome!</p>
+<p align="left">An alphabetic list of the implemented postscript commands is
+given below. Not all postscript commands are yet implemented, but the collection
+below has served me well up till now. I tried to keep the postscript command and
+the matlab function the same, this worked for almost all commands but for a few
+which already existed in Matlab like <font face="Courier New">fill. </font>
+<font face="Verdana">Here is the alphabetic overview:</font></p>
+<blockquote>
+	<p align="left"><font face="Courier New">arc(x,y,r,ang1,ang2)<br>
+	arcn(x,y,r,ang1,ang2)<br>
+	arct(x,y,r,ang1,ang2)<br>
+	boundingbox(llx,lly,urx,ury)<br>
+	circle(x,y,r)<br>
+	closepath<br>
+	comment(str)<br>
+	creationdate(str)<br>
+	creator(str)<br>
+	curveto(x1,y1,x2,y2,x3,y3)<br>
+	eof<br>
+	fil<br>
+	grestore<br>
+	gsave<br>
+	header<br>
+	initclip<br>
+	lineto(x,y)<br>
+	moveto(x,y)<br>
+	newpath<br>
+	pijlpunt(xp,yp,angle,dx,dy)<br>
+	pijl(x1,y1,x2,y2,dx,dy)<br>
+	prolog<br>
+	pstitle(str)<br>
+	rcurveto(dx1,dy1,dx2,dy2,dx3,dy3)<br>
+	rectclip(x,y,width,height)<br>
+	rectfill(x,y,width,height)<br>
+	rectstroke(x,y,width,height)<br>
+	rlineto(x,y)<br>
+	rmoveto(x,y)<br>
+	rotate(dalfa)<br>
+	scale(sx,sy)<br>
+	selectfont(fontname,fontsize)<br>
+	setdash(arr,offset)<br>
+	setgray(x)<br>
+	setlinecap(x)<br>
+	setlinejoin(x)<br>
+	setlinewidth(x)<br>
+	setmiterlimit(x)<br>
+	show(str)<br>
+	showback(str)<br>
+	showl(str)<br>
+	showm(str)<br>
+	showpage<br>
+	stroke<br>
+	title(str)<br>
+	trailer<br>
+	translate(x,y)</font></p>
+</blockquote>
+<p align="left"><font face="Verdana">These files can be found in the zip file
+<a href="pshacker.zip">pshacker.zip</a>. Unzip the file in a directory on your
+computer f.i. </font><font face="Courier New">D:/MATLAB/user/pshacker</font><font face="Verdana">
+and add this path to the Matlab path: </font><font face="Courier New">
+path(path,'D:/MATLAB/user/pshacker').</font><font face="Verdana">If you write an
+m-file to make a new figure don't forget to put in as one of the first lines of
+your code the declaration of this global variable PSFID, </font><font face="Courier New">
+global PSFID</font><font face="Verdana">.</font></p>
+<p align="left">The implementation of the commands is very straight forward, as
+an example I show the m-file <a href="moveto.m">moveto.m</a> for the postscript
+command <font face="Courier New">moveto</font>:</p>
+<blockquote>
+	<p align="left"><font face="Courier New">function moveto(x,y)<br>
+	global PSFID<br>
+	<br>
+	if nargin==1<br>
+&nbsp;&nbsp; fprintf(PSFID,'%g %g M\n',x(1),x(2));<br>
+	else<br>
+&nbsp;&nbsp; fprintf(PSFID,'%g %g M\n',x,y);<br>
+	end</font></p>
+</blockquote>
+<p align="left">It simply makes use of the <font face="Courier New">fprintf</font>
+command to write the postscript command together with the numeric data to the
+file in this weird RPN. Note that you can call moveto(P) with an array P then it
+assumes that the fist element P(1) holds x and the second element P(2) holds y.
+I have also created some handy extra functions like f.i.
+<font face="Courier New">pijl(x1,y1,x2,y2,dx,dy)</font> which draws a line with
+an arrow head. <br>
+If you miss a postscript command then its very easy to add that to your
+implementation.</p>
+<p align="left">Next I will give two examples of application, a drawing and a
+graph. Just run the m-file, look at the figure and then look in the m-file for
+the commands I used. No nice programming things, just some examples.</p>
+<p align="left">The first example is a drawing of a bicycle,
+<a href="fig1aBicycleModel.m">fig1aBicycleModel.m</a>. The resulting figure
+should look like this:</p>
+<blockquote>
+	<p align="left"><font face="Courier New">global PSFID<a href="fig1aBicycleModel.ps"><img border="0" src="fig1aBicycleModel.jpg" width="315" height="247" align="right"></a><br>
+	<br>
+	PSFID=fopen('fig1aBicycleModel.ps','w')<br>
+	header<br>
+	boundingbox(152,169,405,357)<br>
+	pstitle('Bicycle model degrees of freedom')<br>
+	creator('pshacker')<br>
+	creationdate(date)<br>
+	prolog<br>
+	dots=0.24;<br>
+	translate(200,200)<br>
+	selectfont('Helvetica-Oblique',10)<br>
+	<br>
+	% JBini_Benchmark2.m<br>
+	scf=140;<br>
+	<br>
+	l=scf*1.02;<br>
+	Rr=scf*0.33;<br>
+	Rf=scf*0.33;<br>
+	lambda=pi/10;<br>
+	trail=scf*0.08;<br>
+	...........</font></p>
+</blockquote>
+<p align="left">The second example is a graph. The data for the graph is in the
+Matlab data file <a href="run19sm.mat">run19sm.mat</a> and the m-file which
+generates the graph is <a href="fig3bLeanYawRateStableBicycle.m">
+fig3bLeanYawRateStableBicycle.m</a>. The figure should look like this:</p>
+<blockquote>
+	<p align="left"><font face="Courier New">function fig4</font><font face="Courier New"><br>
+	<br>
+	global PSFID<br>
+	if exist('tdleans')~=1<br>
+	load run19sm.mat;<br>
+	end;<br>
+	PSFID=fopen('fig3bLeanYawRateStableBicycle.ps','w')<br>
+	header<br>
+	boundingbox(164,381,401,582)<br>
+	pstitle('Stable Bicycle GB7Sv9e lean and yaw angles and rates measured and 
+	simulated')<br>
+	creator('pshacker')</font><a href="fig3bLeanYawRateStableBicycle.ps"><img border="0" src="fig3bLeanYawRateStableBicycle.jpg" width="372" height="313" align="right"></a><font face="Courier New"><br>
+	creationdate(date)<br>
+	prolog<br>
+	d=0.24;<br>
+	translate(200,400)<br>
+	selectfont('Helvetica-Oblique',8)<br>
+	% b=5*40;<br>
+	% h=8*18;<br>
+	b=5*40;<br>
+	h=8*22.5;<br>
+	xmin=0;<br>
+	xmax=5;<br>
+	dx=xmax-xmin;<br>
+	<br>
+	ymin=-0.8;<br>
+	ymax=0.8;<br>
+	dy=ymax-ymin;<br>
+	<br>
+	newpath<br>
+	setlinewidth(3*d)<br>
+	moveto(0,h+1*d/2)<br>
+	lineto(0,0)<br>
+	lineto(b+1*d/2,0)<br>
+	stroke<br>
+	%rectstroke(0,0,b,h)<br>
+	newpath<br>
+	setlinewidth(1*d)<br>
+	nb=5;<br>
+	% gridlines<br>
+	.............</font></p>
+</blockquote>
+<p>Success with pshacker, I do hope you enjoy 'programming' your figures as much
+as we do!</p>
+<p style="text-align: center">Questions or comments? <br>
+<a href="mailto:a.l.schwab@tudelft.nl?subject=pshacker">a.l.schwab@tudelft.nl</a></p>
+<hr>
+<p align="left">(I made some extension to 2D plotting from 3D data with general
+projection methods. The m-files are already in the zip file but I will discuss
+this some time later.)</p>
+
+
+</BODY>
+</div>
+
+<!-- Mirrored from http://bicycle.tudelft.nl/schwab/pshacker/index.htm by HTTrack Website Copier/3.x [XR&CO], Sat, 17 Oct 2026 14:47:00 GMT -->
+</HTML>
+<comment>

@@ -1,0 +1,15 @@
+J. Boussinesq, 
+
+Four short summary papers in the CR, two papers in Liouville's Journal. 
+
+Boussinesq seems to have drawn heavily on previous work by Bourlet. He 
+has the advantage that he only considers linearized equations. Only the 
+mass of the rear frame is taken into account, and again, the trail is zero. 
+In principle, the derived equation is able to explain in a qualitative way 
+how a bicycle is steered and balanced with a prescribed steer input, but the 
+discussion is not so clear about the way a rider really control the bicycle. 
+Three means are considered: changing the forward speed, steer input and 
+lateral shifting of body weight. Indeed, control theory was only developed 
+in later years. 
+
+JPM, Nottingham, 5 September 2007. 

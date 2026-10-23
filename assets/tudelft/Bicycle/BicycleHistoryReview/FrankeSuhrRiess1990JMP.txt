@@ -1,0 +1,85 @@
+initial comments Franke Riess SuhrFrom: bikengr@netnet.net
+Sent: Saturday, October 15, 2005 6:46 PM
+To: Andy Ruina
+Cc: Schwab, A.L.
+Subject: initial comments Franke Riess Suhr
+
+This refers to AN ADVANCED MODEL OF BICYCLE DYNAMICS 
+G. Franke, W. Suhr, F. Riess 
+Eur. J. Physics 11 (1990)  116-121 
+
+Here are some initial comments, Andy you can certainly put them on the website. 
+I hope and expect these can be modified and extended. Maybe even the authors can 
+rebut or clear up. 
+
+Section 2 the analysis of bicycle geometry is a lovely piece of work. Now I have 
+made my own exhaustive evaluation of the spherical trigonometry of the leaned 
+steered bicycle, I can see that they neatly anticipated many of my calculations 
+in a reasonably clean way. I did not confirm equations in detail, but the 
+methods are fine. 
+
+The authors end up with a numerical (not analytical) solution for frame pitch 
+angles based on rearframe lean and the steer angle. I didn't understand how this 
+is implemented. 
+
+What is not entirely clear is what fundamental triad they use in analysis. Looks 
+like a co-ordinate system that leans and yaws with the rear frame, but has one 
+axis parallel to the ground. The authors are not clear about where the origin 
+is, so the checking of details in the next section is quickly awash in 
+uncertainty. 
+
+Section 3 Dynamics 
+
+My problems begin in this section. As noted above, lack of explicit definition, 
+or explicit examples, makes it hard to interpret some notation. The matrix D has 
+to do with motion relative to the fundamental triad, while A has to do with lean 
+and yaw of that triad. I can't dispute what I can't follow. 
+
+But bring your attention to what follows eq (14). "Only the most important 
+angular momenta are taken into account, those of the rear and front wheel (in 
+hub direction) and of the steering system:" 
+
+It looks like (15) and (16) exhibit spin angular momenta of the wheels. But the 
+wording seems to imply that tip angular momentum, of the wheels themselves 
+[necessary in a gyroscope to exhibit the wobbles of free precessions] and of the 
+rider [who has a very significant mass-center moment of inertia tensor] has been 
+neglected? 
+
+In other words, for the linear problem, the model is something like point masses 
+plus gyrostats? Note that angular momentum vector [though unstated I assume 
+giving moment of momentum about an axis through each body's mass center] is 
+given exactly along certain vectors, which are not even rotation axes -- this 
+suggests an inertia tensor of the form NN, namely a uniaxial tensor, which is 
+intolerable as an approximation for any real inertia. [Can not be exhibited by 
+any body.] 
+
+My further suspicion about this modelling is that it ignores any pitch angular 
+momentum of the frames -- irrelevant for linear theory but not necessarily for 
+nonlinear. 
+
+
+
+
+Transferring my attention to the angular momentum balance equation (19) I have 
+additional bafflement. (Andy you might know enough about 'rates with respect to 
+frames' to decode their formalism.) The time rate of change of mass center 
+angular momentum L is used (for both wheels and the front assembly), then there 
+is a term relating to rates of linear momentum an offset from some origin. 
+[Typo, the equation should have a dot over the p] 
+
+Andy, apart from this typo, is the equation a correct one, when L is defined 
+correctly? 
+
+My current hypothesis is, the dynamic analysis is flawed by 1. simplification to 
+point masses and      2. inconsistent neglect of certain terms in the moment of 
+momentum of the bodies. 
+
+Few specific numbers are avaiable for the bicycle they model, except the 
+wheelbase, trail, and rider mass. 
+
+I vaguely remember some pre-publication discussion with the authors, which they 
+kindly acknowledge. The upshot was, they could not get agreement with JBike5, 
+but I don't recall their data, nor do I have highest confidence in the 
+programming of JBike5 at that time. 
+
+JMP 

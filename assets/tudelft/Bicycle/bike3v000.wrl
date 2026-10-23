@@ -1,0 +1,1411 @@
+#VRML V2.0 utf8
+
+NavigationInfo {
+  headlight TRUE
+  avatarSize  [0.25 1.6 0.75]
+  type        ["EXAMINE", "ANY"]
+}
+Transform{
+ rotation 1 1 -1 -2.1
+ children[
+ Background {
+  skyColor [0   0   0.4
+            0.2 0.2 0.6
+            0.4 0.4 0.8]
+  skyAngle [1.2 1.57 ]
+  groundColor [0.2 0.2 0
+               0.4 0.4 0.2 ]
+  groundAngle [1.57   ]
+ }
+ ]
+}
+DirectionalLight {
+  ambientIntensity  1
+  color             1 1 1
+  direction         -1 -1 1
+  intensity         0.1
+  on                TRUE
+}
+Viewpoint {
+  position    -1.5 2 -1.5
+  orientation  1 0.2  -0.2  -1.67
+  fieldOfView  1.0472
+  description "Initial View"
+}
+Viewpoint {
+  position    -1 0.25 -0.5
+  orientation  1 1 -1 -2.1
+  fieldOfView  1.0472
+  description "Back View"
+}
+Viewpoint {
+  position    0 0 -10
+  orientation  1 1 0 3.14159
+  fieldOfView  1.0472
+  description "Top View"
+}
+DEF CAMERA Transform{
+ translation 0 0 -0.35
+ rotation 0 0 1 0
+ children[
+  Viewpoint{
+   position -1.5 0 -0.9
+   orientation 1 1 -1 -2.1
+   fieldOfView  1.0472
+   description "Camera"
+  }
+ ]
+}
+Shape{
+ appearance Appearance{
+  material Material{
+   diffuseColor 0.4 0.4 0.4
+   emissiveColor 0.4 0.4 0.4
+   }
+  }
+ geometry IndexedLineSet{
+  coord Coordinate{
+   point[
+    -50 -50 0
+    50 -50 0
+    -50 -48 0
+    50 -48 0
+    -50 -46 0
+    50 -46 0
+    -50 -44 0
+    50 -44 0
+    -50 -42 0
+    50 -42 0
+    -50 -40 0
+    50 -40 0
+    -50 -38 0
+    50 -38 0
+    -50 -36 0
+    50 -36 0
+    -50 -34 0
+    50 -34 0
+    -50 -32 0
+    50 -32 0
+    -50 -30 0
+    50 -30 0
+    -50 -28 0
+    50 -28 0
+    -50 -26 0
+    50 -26 0
+    -50 -24 0
+    50 -24 0
+    -50 -22 0
+    50 -22 0
+    -50 -20 0
+    50 -20 0
+    -50 -18 0
+    50 -18 0
+    -50 -16 0
+    50 -16 0
+    -50 -14 0
+    50 -14 0
+    -50 -12 0
+    50 -12 0
+    -50 -10 0
+    50 -10 0
+    -50 -8 0
+    50 -8 0
+    -50 -6 0
+    50 -6 0
+    -50 -4 0
+    50 -4 0
+    -50 -2 0
+    50 -2 0
+    -50 0 0
+    50 0 0
+    -50 2 0
+    50 2 0
+    -50 4 0
+    50 4 0
+    -50 6 0
+    50 6 0
+    -50 8 0
+    50 8 0
+    -50 10 0
+    50 10 0
+    -50 12 0
+    50 12 0
+    -50 14 0
+    50 14 0
+    -50 16 0
+    50 16 0
+    -50 18 0
+    50 18 0
+    -50 20 0
+    50 20 0
+    -50 22 0
+    50 22 0
+    -50 24 0
+    50 24 0
+    -50 26 0
+    50 26 0
+    -50 28 0
+    50 28 0
+    -50 30 0
+    50 30 0
+    -50 32 0
+    50 32 0
+    -50 34 0
+    50 34 0
+    -50 36 0
+    50 36 0
+    -50 38 0
+    50 38 0
+    -50 40 0
+    50 40 0
+    -50 42 0
+    50 42 0
+    -50 44 0
+    50 44 0
+    -50 46 0
+    50 46 0
+    -50 48 0
+    50 48 0
+    -50 50 0
+    50 50 0
+    -50 -50 0
+    -50 50 0
+    -48 -50 0
+    -48 50 0
+    -46 -50 0
+    -46 50 0
+    -44 -50 0
+    -44 50 0
+    -42 -50 0
+    -42 50 0
+    -40 -50 0
+    -40 50 0
+    -38 -50 0
+    -38 50 0
+    -36 -50 0
+    -36 50 0
+    -34 -50 0
+    -34 50 0
+    -32 -50 0
+    -32 50 0
+    -30 -50 0
+    -30 50 0
+    -28 -50 0
+    -28 50 0
+    -26 -50 0
+    -26 50 0
+    -24 -50 0
+    -24 50 0
+    -22 -50 0
+    -22 50 0
+    -20 -50 0
+    -20 50 0
+    -18 -50 0
+    -18 50 0
+    -16 -50 0
+    -16 50 0
+    -14 -50 0
+    -14 50 0
+    -12 -50 0
+    -12 50 0
+    -10 -50 0
+    -10 50 0
+    -8 -50 0
+    -8 50 0
+    -6 -50 0
+    -6 50 0
+    -4 -50 0
+    -4 50 0
+    -2 -50 0
+    -2 50 0
+    0 -50 0
+    0 50 0
+    2 -50 0
+    2 50 0
+    4 -50 0
+    4 50 0
+    6 -50 0
+    6 50 0
+    8 -50 0
+    8 50 0
+    10 -50 0
+    10 50 0
+    12 -50 0
+    12 50 0
+    14 -50 0
+    14 50 0
+    16 -50 0
+    16 50 0
+    18 -50 0
+    18 50 0
+    20 -50 0
+    20 50 0
+    22 -50 0
+    22 50 0
+    24 -50 0
+    24 50 0
+    26 -50 0
+    26 50 0
+    28 -50 0
+    28 50 0
+    30 -50 0
+    30 50 0
+    32 -50 0
+    32 50 0
+    34 -50 0
+    34 50 0
+    36 -50 0
+    36 50 0
+    38 -50 0
+    38 50 0
+    40 -50 0
+    40 50 0
+    42 -50 0
+    42 50 0
+    44 -50 0
+    44 50 0
+    46 -50 0
+    46 50 0
+    48 -50 0
+    48 50 0
+    50 -50 0
+    50 50 0
+
+   ]
+  }
+  coordIndex[
+   0 1 -1
+   2 3 -1
+   4 5 -1
+   6 7 -1
+   8 9 -1
+   10 11 -1
+   12 13 -1
+   14 15 -1
+   16 17 -1
+   18 19 -1
+   20 21 -1
+   22 23 -1
+   24 25 -1
+   26 27 -1
+   28 29 -1
+   30 31 -1
+   32 33 -1
+   34 35 -1
+   36 37 -1
+   38 39 -1
+   40 41 -1
+   42 43 -1
+   44 45 -1
+   46 47 -1
+   48 49 -1
+   50 51 -1
+   52 53 -1
+   54 55 -1
+   56 57 -1
+   58 59 -1
+   60 61 -1
+   62 63 -1
+   64 65 -1
+   66 67 -1
+   68 69 -1
+   70 71 -1
+   72 73 -1
+   74 75 -1
+   76 77 -1
+   78 79 -1
+   80 81 -1
+   82 83 -1
+   84 85 -1
+   86 87 -1
+   88 89 -1
+   90 91 -1
+   92 93 -1
+   94 95 -1
+   96 97 -1
+   98 99 -1
+   100 101 -1
+   102 103 -1
+   104 105 -1
+   106 107 -1
+   108 109 -1
+   110 111 -1
+   112 113 -1
+   114 115 -1
+   116 117 -1
+   118 119 -1
+   120 121 -1
+   122 123 -1
+   124 125 -1
+   126 127 -1
+   128 129 -1
+   130 131 -1
+   132 133 -1
+   134 135 -1
+   136 137 -1
+   138 139 -1
+   140 141 -1
+   142 143 -1
+   144 145 -1
+   146 147 -1
+   148 149 -1
+   150 151 -1
+   152 153 -1
+   154 155 -1
+   156 157 -1
+   158 159 -1
+   160 161 -1
+   162 163 -1
+   164 165 -1
+   166 167 -1
+   168 169 -1
+   170 171 -1
+   172 173 -1
+   174 175 -1
+   176 177 -1
+   178 179 -1
+   180 181 -1
+   182 183 -1
+   184 185 -1
+   186 187 -1
+   188 189 -1
+   190 191 -1
+   192 193 -1
+   194 195 -1
+   196 197 -1
+   198 199 -1
+   200 201 -1
+   202 203 -1
+
+  ]
+ }
+}
+Group{
+children[
+DEF FRAME_TOUCH TouchSensor{}
+DEF FRAME Transform{
+ rotation 0 0 1 0
+ translation 0 0 -0.35
+ children[
+ Transform{
+  translation 0 0 0.35
+  children[
+Transform{
+ rotation -0.941454 0 0.337142 1.5708
+ translation 0.374 0 -0.596
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 1 0 0
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.015
+    height 0.628815
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation -0.0643823 0 -0.997925 1.5708
+ translation 0.59 0 -0.88
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 1 0 0
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.015
+    height 0.621289
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation -0.735931 0 -0.677057 1.5708
+ translation 0.71 0 -0.55
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 1 0 0
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.015
+    height 0.679412
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation 0.103517 0 -0.993765 1.52938
+ translation 0.24 -0.03 -0.325
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 1 0 0
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.01
+    height 0.483011
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation 0.103517 0 -0.993765 1.61222
+ translation 0.24 0.03 -0.325
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 1 0 0
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.01
+    height 0.483011
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation -0.875416 0 -0.48062 1.51928
+ translation 0.14 -0.025 -0.605
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 1 0 0
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.01
+    height 0.58258
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation -0.875416 0 -0.48062 1.62231
+ translation 0.14 0.025 -0.605
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 1 0 0
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.01
+    height 0.58258
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation 0 0 0 3.14159
+ translation 0.48 0 -0.3
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 1 0 0
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.025
+    height 0.064
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation -0.936329 0 0.351123 1.5708
+ translation 0.244 0 -0.956
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 0.3 0.3 0.3
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.01
+    height 0.136704
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ translation 0.22 0 -1.02
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 0.5 0.25 0
+     shininess 0.5
+    }
+   }
+   geometry IndexedFaceSet {
+    coord Coordinate {
+     point [
+       0.12 -0.015 -0.0075
+       -0.08 -0.06 -0.0175
+       -0.08 0.06 -0.0175
+       0.12 0.015 -0.0075
+       0.12 -0.015 0.0075
+       -0.08 -0.06 0.0175
+       -0.08 0.06 0.0175
+       0.12 0.015 0.0075
+
+     ]
+    }
+    coordIndex [
+      0 1 2 3 -1 
+      7 6 5 4 -1 
+      5 6 2 1 -1 
+      6 7 3 2 -1 
+      0 3 7 4 -1 
+      0 4 5 1 -1 
+
+    ]
+   }
+  }
+ ]
+}
+  ]
+ }
+ ]
+}
+]
+}
+DEF FORK Transform{
+ rotation 0 0 1 0
+ translation 0.9 0 -0.9
+ children[
+ Transform{
+  translation -0.9 0 0.9
+  children[
+Transform{
+ rotation 0 0 0 0
+ translation 0.84 0 -1.02
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 0.3 0.3 0.3
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.01
+    height 0.4
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation -0.894427 0 0.447214 1.5708
+ translation 0.86 0 -0.98
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 0.3 0.3 0.3
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.01
+    height 0.0894427
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation 0 0 0 0
+ translation 0.98 0 -0.74
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 0.3 0.3 0.3
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.015
+    height 0.078
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation -0.894427 0 0.447214 1.5708
+ translation 0.93 0 -0.84
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 1 0 0
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.015
+    height 0.223607
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation 0.905459 0 -0.424434 1.5708
+ translation 1.055 0.03 -0.58
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 1 0 0
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.01
+    height 0.353412
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation 0.905459 0 -0.424434 1.5708
+ translation 1.055 -0.03 -0.58
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 1 0 0
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.01
+    height 0.353412
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation 0.707107 0 -0.707107 1.5708
+ translation 1.165 0.03 -0.385
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 1 0 0
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.01
+    height 0.0989949
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+Transform{
+ rotation 0.707107 0 -0.707107 1.5708
+ translation 1.165 -0.03 -0.385
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 1 0 0
+     shininess 0.5
+    }
+   }
+   geometry Cylinder{
+    radius 0.01
+    height 0.0989949
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+  ]
+ }
+ ]
+}
+DEF REARWHEEL_TOUCH TouchSensor{}
+DEF REARWHEEL Transform{
+ rotation 0 0 1 0
+ translation 0 0 -0.35
+ children[
+ Transform{
+  translation 0 0 0.35
+  children[
+Transform{
+ translation 0 0 -0.35
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 0.1 0.1 0.1
+     shininess 0.5
+    }
+    texture ImageTexture {
+     url "bicyclewheel.jpg"
+    }
+   }
+   geometry Cylinder{
+    radius 0.35
+    height 0.02
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+  ]
+ }
+ ]
+}
+DEF FRONTWHEEL Transform{
+ rotation 0 0 1 0
+ translation 1.2 0 -0.35
+ children[
+ Transform{
+  translation -1.2 0 0.35
+  children[
+Transform{
+ translation 1.2 0 -0.35
+ children[
+  Shape {
+   appearance Appearance{
+    material Material {
+     diffuseColor 0.1 0.1 0.1
+     shininess 0.5
+    }
+    texture ImageTexture {
+     url "bicyclewheel.jpg"
+    }
+   }
+   geometry Cylinder{
+    radius 0.35
+    height 0.02
+    side   TRUE
+    top    TRUE
+    bottom TRUE
+   }
+  }
+ ]
+}
+  ]
+ }
+ ]
+}
+DEF REARSWITCH Switch {
+   whichChoice 0
+   choice [
+Shape{ }
+Shape{
+ appearance Appearance{
+  material Material{
+   emissiveColor 0.2 0.2 0.2
+   }
+  }
+ geometry IndexedLineSet{
+  coord Coordinate{
+   point[
+    0 0 0
+    5.46899e-008 1.72963e-012 0
+    7.43962e-007 -6.0548e-011 0
+    2.40681e-006 -6.24528e-010 0
+    -8.4292e-007 3.87357e-009 0
+    -4.24795e-005 1.2305e-007 0
+    -0.000249033 1.35003e-006 0
+    -0.000968314 9.29578e-006 0
+    -0.00257447 3.56309e-005 0
+    -0.00519684 6.80895e-005 0
+    -0.016358 -2.49729e-005 0
+    -0.0470298 -0.00109346 0
+    -0.103171 -0.00503233 0
+    -0.181648 -0.0134507 0
+    -0.261301 -0.0234449 0
+    -0.346992 -0.0375725 0
+    -0.663768 -0.37288 0
+
+   ]
+  }
+  coordIndex[
+   0    1    2    3    4    5    6    7    8    9    10    11    12    13    14    15    16 
+ -1]
+ }
+}
+]
+}
+DEF FRONTSWITCH Switch {
+   whichChoice 0
+   choice [
+Shape{ }
+Shape{
+ appearance Appearance{
+  material Material{
+   emissiveColor 0.2 0.2 0.2
+   }
+  }
+ geometry IndexedLineSet{
+  coord Coordinate{
+   point[
+    1.2 0 0
+    1.2 -2.85669e-010 0
+    1.20002 -4.63537e-008 0
+    1.20015 -1.10044e-006 0
+    1.20065 -1.2952e-005 0
+    1.20231 -0.000109132 0
+    1.20742 -0.000766328 0
+    1.22201 -0.00468207 0
+    1.25488 -0.0226884 0
+    1.28896 -0.0590471 0
+    1.29652 -0.072069 0
+    1.28621 -0.0520937 0
+    1.25233 -0.0014381 0
+    1.17085 0.0747862 -2.46098e-021
+    0.94944 0.137409 8.14753e-024
+    0.716084 0.0426392 3.19259e-023
+    0.55086 -0.213649 -7.56601e-022
+
+   ]
+  }
+  coordIndex[
+   0    1    2    3    4    5    6    7    8    9    10    11    12    13    14    15    16 
+ -1]
+ }
+}
+]
+}
+DEF CYCLE Script {
+   eventIn SFTime touchTime
+   field SFInt32 number 2
+   eventOut SFInt32 output
+   url "javascript:
+      function initialize() {
+         output = 0;
+      }
+      function touchTime(value, time) {
+         if (output == number - 1) output = 0;
+         else ++output;
+      }
+   "
+}
+DEF TIMER TimeSensor{ cycleInterval 1.6}
+ROUTE FRAME_TOUCH.touchTime TO TIMER.startTime
+DEF FRAME_TRAN PositionInterpolator{
+ key[
+ 0
+ 0.0625
+ 0.125
+ 0.1875
+ 0.25
+ 0.3125
+ 0.375
+ 0.4375
+ 0.5
+ 0.5625
+ 0.625
+ 0.6875
+ 0.75
+ 0.8125
+ 0.875
+ 0.9375
+ 1
+
+ ]
+ keyValue[
+ 0 0 -0.35
+ -1.00929e-008 -0.00354517 -0.349982
+ -4.0415e-007 -0.00736493 -0.349923
+ -4.46818e-006 -0.0117518 -0.349803
+ -2.80906e-005 -0.0170342 -0.349585
+ -0.000129877 -0.023596 -0.349204
+ -0.00049241 -0.0319064 -0.348542
+ -0.0015493 -0.0426129 -0.347395
+ -0.00357303 -0.056928 -0.345332
+ -0.00564862 -0.0770306 -0.341402
+ -0.0144865 -0.103568 -0.334328
+ -0.0403002 -0.137753 -0.322147
+ -0.0874542 -0.182206 -0.301434
+ -0.154491 -0.237639 -0.267399
+ -0.225349 -0.29889 -0.212926
+ -0.278212 -0.356454 -0.126822
+ -0.315439 -0.401567 -0.0185441
+
+ ]
+}
+ROUTE TIMER.fraction_changed  TO FRAME_TRAN.set_fraction
+ROUTE FRAME_TRAN.value_changed TO FRAME.translation
+DEF FRAME_ROT OrientationInterpolator{
+ key[
+ 0
+ 0.0625
+ 0.125
+ 0.1875
+ 0.25
+ 0.3125
+ 0.375
+ 0.4375
+ 0.5
+ 0.5625
+ 0.625
+ 0.6875
+ 0.75
+ 0.8125
+ 0.875
+ 0.9375
+ 1
+
+ ]
+ keyValue[
+ 0 0 0 0
+ -0.0050646 -4.69393e-008 -9.13616e-006 0.0101293
+ -0.0105219 -8.68479e-007 -7.79225e-005 0.0210448
+ -0.0167906 -5.59079e-006 -0.000292292 0.0335879
+ -0.0243418 -2.45289e-005 -0.000798485 0.0487146
+ -0.0337284 -8.94477e-005 -0.00184575 0.0675709
+ -0.0456327 -0.000287504 -0.00378862 0.0916134
+ -0.0610148 -0.000771028 -0.00672984 0.122857
+ -0.0816754 -0.0012054 -0.00857726 0.164452
+ -0.110825 0.000445929 -0.00292529 0.222185
+ -0.149654 0.00253537 0.0083459 0.300951
+ -0.199572 0.00175609 0.0227483 0.404496
+ -0.263478 -0.00390528 0.0405476 0.539744
+ -0.343158 -0.0161953 0.0549262 0.710666
+ -0.441513 -0.0297738 0.0586862 0.925455
+ -0.564644 -0.0253468 0.0638459 1.21011
+ -0.703892 -0.0114059 0.048593 1.56671
+
+ ]
+}
+ROUTE TIMER.fraction_changed  TO FRAME_ROT.set_fraction
+ROUTE FRAME_ROT.value_changed TO FRAME.rotation
+DEF FORK_TRAN PositionInterpolator{
+ key[
+ 0
+ 0.0625
+ 0.125
+ 0.1875
+ 0.25
+ 0.3125
+ 0.375
+ 0.4375
+ 0.5
+ 0.5625
+ 0.625
+ 0.6875
+ 0.75
+ 0.8125
+ 0.875
+ 0.9375
+ 1
+
+ ]
+ keyValue[
+ 0.9 0 -0.9
+ 0.9 -0.00913261 -0.899954
+ 0.9 -0.0190786 -0.899798
+ 0.899996 -0.0307447 -0.899474
+ 0.899976 -0.045238 -0.898854
+ 0.899894 -0.0639913 -0.897679
+ 0.899607 -0.0888397 -0.895424
+ 0.898763 -0.121615 -0.891175
+ 0.896843 -0.161688 -0.884569
+ 0.893492 -0.203507 -0.878106
+ 0.883993 -0.25218 -0.866445
+ 0.861864 -0.31337 -0.8396
+ 0.825451 -0.389171 -0.78751
+ 0.777042 -0.487859 -0.694174
+ 0.724665 -0.613371 -0.546206
+ 0.675881 -0.745236 -0.352776
+ 0.626591 -0.873149 -0.0704109
+
+ ]
+}
+ROUTE TIMER.fraction_changed  TO FORK_TRAN.set_fraction
+ROUTE FORK_TRAN.value_changed TO FORK.translation
+DEF FORK_ROT OrientationInterpolator{
+ key[
+ 0
+ 0.0625
+ 0.125
+ 0.1875
+ 0.25
+ 0.3125
+ 0.375
+ 0.4375
+ 0.5
+ 0.5625
+ 0.625
+ 0.6875
+ 0.75
+ 0.8125
+ 0.875
+ 0.9375
+ 1
+
+ ]
+ keyValue[
+ 0 0 0 0
+ -0.00513769 -9.71714e-007 -0.000191862 0.0102826
+ -0.0111454 -1.72218e-005 -0.00163667 0.0225303
+ -0.0191314 -0.000103193 -0.00614514 0.0401914
+ -0.0307576 -0.00041019 -0.0168481 0.0701588
+ -0.0487207 -0.00132913 -0.0394038 0.125432
+ -0.0774457 -0.00382021 -0.0837991 0.228839
+ -0.123563 -0.0100468 -0.165616 0.416761
+ -0.19258 -0.0237794 -0.296586 0.724593
+ -0.267381 -0.0461111 -0.424042 1.0551
+ -0.315195 -0.0692438 -0.453956 1.18147
+ -0.349186 -0.0904664 -0.411624 1.1583
+ -0.38285 -0.107068 -0.319991 1.07113
+ -0.418857 -0.10501 -0.178123 0.972049
+ -0.448826 -0.040314 0.0380975 0.938552
+ -0.521765 0.0483233 0.166879 1.16456
+ -0.66986 0.0665436 0.125038 1.5083
+
+ ]
+}
+ROUTE TIMER.fraction_changed  TO FORK_ROT.set_fraction
+ROUTE FORK_ROT.value_changed TO FORK.rotation
+DEF REARWHEEL_TRAN PositionInterpolator{
+ key[
+ 0
+ 0.0625
+ 0.125
+ 0.1875
+ 0.25
+ 0.3125
+ 0.375
+ 0.4375
+ 0.5
+ 0.5625
+ 0.625
+ 0.6875
+ 0.75
+ 0.8125
+ 0.875
+ 0.9375
+ 1
+
+ ]
+ keyValue[
+ 0 0 -0.35
+ -1.00929e-008 -0.00354517 -0.349982
+ -4.0415e-007 -0.00736493 -0.349923
+ -4.46818e-006 -0.0117518 -0.349803
+ -2.80906e-005 -0.0170342 -0.349585
+ -0.000129877 -0.023596 -0.349204
+ -0.00049241 -0.0319064 -0.348542
+ -0.0015493 -0.0426129 -0.347395
+ -0.00357303 -0.056928 -0.345332
+ -0.00564862 -0.0770306 -0.341402
+ -0.0144865 -0.103568 -0.334328
+ -0.0403002 -0.137753 -0.322147
+ -0.0874542 -0.182206 -0.301434
+ -0.154491 -0.237639 -0.267399
+ -0.225349 -0.29889 -0.212926
+ -0.278212 -0.356454 -0.126822
+ -0.315439 -0.401567 -0.0185441
+
+ ]
+}
+ROUTE TIMER.fraction_changed  TO REARWHEEL_TRAN.set_fraction
+ROUTE REARWHEEL_TRAN.value_changed TO REARWHEEL.translation
+DEF REARWHEEL_ROT OrientationInterpolator{
+ key[
+ 0
+ 0.0625
+ 0.125
+ 0.1875
+ 0.25
+ 0.3125
+ 0.375
+ 0.4375
+ 0.5
+ 0.5625
+ 0.625
+ 0.6875
+ 0.75
+ 0.8125
+ 0.875
+ 0.9375
+ 1
+
+ ]
+ keyValue[
+ 0 0 0 0
+ -0.0050646 -3.15321e-008 -9.13624e-006 0.0101293
+ -0.0105219 -2.42164e-007 -7.7929e-005 0.0210448
+ -0.0167906 1.47455e-006 -0.00029241 0.0335879
+ -0.0243418 2.06742e-005 -0.000799585 0.0487146
+ -0.033728 0.00012311 -0.00185292 0.0675711
+ -0.0456296 0.000529404 -0.00382594 0.0916177
+ -0.0609973 0.00179651 -0.00688677 0.1229
+ -0.081626 0.00438141 -0.00903497 0.164669
+ -0.1108 0.00770358 -0.00373453 0.222721
+ -0.149788 0.0217523 0.00543546 0.304085
+ -0.200582 0.0608991 0.0106572 0.422932
+ -0.266557 0.130229 0.00349495 0.602447
+ -0.345896 0.221345 -0.0336107 0.849359
+ -0.432191 0.301115 -0.107652 1.13525
+ -0.534842 0.340295 -0.191944 1.44789
+ -0.639166 0.3336 -0.298819 1.7908
+
+ ]
+}
+ROUTE TIMER.fraction_changed  TO REARWHEEL_ROT.set_fraction
+ROUTE REARWHEEL_ROT.value_changed TO REARWHEEL.rotation
+DEF FRONTWHEEL_TRAN PositionInterpolator{
+ key[
+ 0
+ 0.0625
+ 0.125
+ 0.1875
+ 0.25
+ 0.3125
+ 0.375
+ 0.4375
+ 0.5
+ 0.5625
+ 0.625
+ 0.6875
+ 0.75
+ 0.8125
+ 0.875
+ 0.9375
+ 1
+
+ ]
+ keyValue[
+ 1.2 0 -0.35
+ 1.2 -0.00359633 -0.349982
+ 1.2 -0.00780126 -0.349913
+ 1.19999 -0.0133889 -0.349744
+ 1.19993 -0.0215129 -0.349338
+ 1.19961 -0.0340032 -0.348345
+ 1.19835 -0.0536274 -0.345866
+ 1.19394 -0.0832807 -0.339904
+ 1.18209 -0.119496 -0.328375
+ 1.16522 -0.140303 -0.317153
+ 1.1516 -0.142766 -0.310646
+ 1.13011 -0.138686 -0.301059
+ 1.09061 -0.129834 -0.2826
+ 1.03132 -0.128003 -0.248814
+ 0.964459 -0.143479 -0.208269
+ 0.906389 -0.188503 -0.181266
+ 0.87577 -0.299009 -0.09822
+
+ ]
+}
+ROUTE TIMER.fraction_changed  TO FRONTWHEEL_TRAN.set_fraction
+ROUTE FRONTWHEEL_TRAN.value_changed TO FRONTWHEEL.translation
+DEF FRONTWHEEL_ROT OrientationInterpolator{
+ key[
+ 0
+ 0.0625
+ 0.125
+ 0.1875
+ 0.25
+ 0.3125
+ 0.375
+ 0.4375
+ 0.5
+ 0.5625
+ 0.625
+ 0.6875
+ 0.75
+ 0.8125
+ 0.875
+ 0.9375
+ 1
+
+ ]
+ keyValue[
+ 0 0 0 0
+ -0.00513769 -9.62394e-007 -0.000191862 0.0102826
+ -0.0111454 -1.70337e-005 -0.00163668 0.0225303
+ -0.0191314 -0.000102288 -0.00614516 0.0401913
+ -0.0307576 -0.000411072 -0.0168481 0.0701588
+ -0.0487221 -0.00136484 -0.039402 0.125433
+ -0.0774671 -0.00407431 -0.0837792 0.228857
+ -0.123737 -0.0110786 -0.165486 0.416868
+ -0.192885 -0.0247423 -0.296387 0.724734
+ -0.261018 -0.0332015 -0.427988 1.05275
+ -0.289561 -0.0231246 -0.470721 1.17225
+ -0.29705 0.0110256 -0.450696 1.14063
+ -0.303633 0.0835302 -0.395949 1.06087
+ -0.333796 0.200601 -0.309434 1.04121
+ -0.417984 0.365227 -0.167886 1.23722
+ -0.532862 0.473371 -0.127064 1.61915
+ -0.615403 0.482281 -0.292618 1.97565
+
+ ]
+}
+ROUTE TIMER.fraction_changed  TO FRONTWHEEL_ROT.set_fraction
+ROUTE FRONTWHEEL_ROT.value_changed TO FRONTWHEEL.rotation
+DEF CAMERA_TRAN PositionInterpolator{
+ key[
+ 0
+ 0.0625
+ 0.125
+ 0.1875
+ 0.25
+ 0.3125
+ 0.375
+ 0.4375
+ 0.5
+ 0.5625
+ 0.625
+ 0.6875
+ 0.75
+ 0.8125
+ 0.875
+ 0.9375
+ 1
+
+ ]
+ keyValue[
+ 0 0 -0.35
+ -1.00929e-008 -0.00354517 -0.349982
+ -4.0415e-007 -0.00736493 -0.349923
+ -4.46818e-006 -0.0117518 -0.349803
+ -2.80906e-005 -0.0170342 -0.349585
+ -0.000129877 -0.023596 -0.349204
+ -0.00049241 -0.0319064 -0.348542
+ -0.0015493 -0.0426129 -0.347395
+ -0.00357303 -0.056928 -0.345332
+ -0.00564862 -0.0770306 -0.341402
+ -0.0144865 -0.103568 -0.334328
+ -0.0403002 -0.137753 -0.322147
+ -0.0874542 -0.182206 -0.301434
+ -0.154491 -0.237639 -0.267399
+ -0.225349 -0.29889 -0.212926
+ -0.278212 -0.356454 -0.126822
+ -0.315439 -0.401567 -0.0185441
+
+ ]
+}
+ROUTE TIMER.fraction_changed  TO CAMERA_TRAN.set_fraction
+ROUTE CAMERA_TRAN.value_changed TO CAMERA.translation
+DEF CAMERA_ROT OrientationInterpolator{
+ key[
+ 0
+ 0.0625
+ 0.125
+ 0.1875
+ 0.25
+ 0.3125
+ 0.375
+ 0.4375
+ 0.5
+ 0.5625
+ 0.625
+ 0.6875
+ 0.75
+ 0.8125
+ 0.875
+ 0.9375
+ 1
+
+ ]
+ keyValue[
+ 0 0 0 0
+ 0 0 -9.13675e-006 1.82734e-005
+ 0 0 -7.79445e-005 0.000155889
+ 0 0 -0.000292509 0.000585016
+ 0 0 -0.000799793 0.00159959
+ 0 0 -0.00185193 0.00370386
+ 0 0 -0.00381368 0.00762739
+ 0 0 -0.00681508 0.0136303
+ 0 0 -0.00876395 0.0175281
+ 0 0 -0.00292982 0.00585968
+ 0 0 0.00903597 0.0180724
+ 0 0 0.0245995 0.049204
+ 0 0 0.0442249 0.0884787
+ 0 0 0.0602372 0.120547
+ 0 0 0.0648499 0.129791
+ 0 0 0.10602 0.212439
+ 0 0 0.677466 1.48862
+
+ ]
+}
+ROUTE TIMER.fraction_changed  TO CAMERA_ROT.set_fraction
+ROUTE CAMERA_ROT.value_changed TO CAMERA.rotation
+ROUTE REARWHEEL_TOUCH.touchTime TO CYCLE.touchTime
+ROUTE CYCLE.output TO REARSWITCH.whichChoice
+ROUTE CYCLE.output TO FRONTSWITCH.whichChoice

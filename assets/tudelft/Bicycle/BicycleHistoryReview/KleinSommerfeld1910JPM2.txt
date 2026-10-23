@@ -1,0 +1,46 @@
+Nottingham, 9 Feb. 2006.
+
+Dear Arend, Jim and Andy, 
+
+Some comments on Klein and Sommerfeld (1910). 
+What I stated as a mere possibility, that Fritz Noether wrote the bicycle 
+part, now appears to be so. That the preface is not in Arend's copy, may 
+have several reasons. It is possible that it is a reprinted edition, or 
+the binder removed the unnumbered pages. Now more about the contents. 
+
+About the date of writing: I think the part was written in the years just 
+before publication, although it could go back as far as 1901, as the 
+references are concerned. Reference is made to Rankine, Bourlet, Whipple and 
+Carvallo. The part is predominantly written in the 'neue Rechtschreibung' 
+(new orthography), which was introduced in 1903, although some words are 
+written in the old spelling, such as 'Zuthun' on page 865, line 20. 
+This does not say anything, because the publisher might change the spelling 
+to their house style. They apparently did not agree with some of the new 
+rules. Kaiser Wilhelm II did not approve either, so, as a compromise, to this 
+day, the Germans write 'Thron'. We should remember that F. Noether was born 
+in 1884, which make a late date more probable.  
+
+There are a few typos or slips, although the ultimate equations are correct. 
+On Page 875, Eq.(9), there should be s_2 instead of h_2 sin \sigma in the 
+third line, or the full expression for s_2. The slip continues in the 
+fifth line of Eq.(10) on Page 876. In the same line, in the last term, in 
+the expression between ( ), c_1 should be c_2. 
+On Page 880, 2nd line of the unnumbered expression, a \sigma is missing. This 
+is a mere typo. 
+On Page 881, Eq. (15), a cos \sigma should be added to the very last term, 
+inside the (). 
+
+Comparisons. On P.866, it is said that 'The equations so obtained agree with 
+those of Whipple and Carvallo', and on page 877, footnote **) says: 
+'Our equations I,II,III are linear combinations of those obtained by Whipple 
+(page 323) as well as those by Carvallo (page 100)', so it seems that at least 
+some comparison was made. So Klein and Sommerfeld, with Noether, were the 
+first to compare results. 
+It appears that Doehring (1953-1955) closely follows the derivation 
+given here, but generalizes the model. Even some of the notation is the same. 
+It seems very probable that Doehring compared his equations for the special 
+case which is treated here, which is easy to do, but that he did not compare 
+his results with those of Whipple and Carvallo. 
+
+Best regards, 
+Jaap.

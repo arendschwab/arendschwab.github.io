@@ -1,0 +1,18 @@
+Remarks about Van Zytveld, 1975: 
+His approach to derive the equations of motion is very similar to what I 
+have done in my hand calculation in 2004. He does not give full details 
+about his derivation. His first equation of motion appears to be perfectly 
+correct. His second equation appears to be correct, except for the terms 
+with the robot lean angle \psi. The first should have dots, and the moment of 
+inertia should be an inertia product, as in the next equation of motion, 
+to make a symmetric mass matrix (with the sign of the second equation 
+reversed), and the second term should not be there, to make the constant 
+stiffness matrix symmetric. The third equation appears to be correct, except 
+for the interpretation. I^R_xz is not the product of inertia with respect to 
+the centre of mass, but with respect to a point on the hinge axis directly 
+above the rear wheel. 
+
+If the robot is removed, his equations agree with ours. Note that his sign 
+conventions and the direction af the axes are different. 
+
+JPM, Nottingham, 8 Nov. 2005.

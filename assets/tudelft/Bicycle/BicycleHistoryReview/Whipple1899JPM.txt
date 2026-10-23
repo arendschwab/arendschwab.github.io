@@ -1,0 +1,203 @@
+Here follows a rambling commentary on Whipple's 1899 paper. 
+
+I cite first Truesdell's quip about errors: 
+
+`Newton relinquished the diplomatic immunity granted to nonmathematical 
+philosophers, chemists, psychologists. etc., and entered into the area 
+where an error is an error even if it is Newton's error; in fact, 
+all the more so because it is Newton's error.' 
+
+The paper contains more printing errors than real errors. 
+
+Whipple was 23 years old in 1899, and we are still poring over his article. 
+I was 27 when my first paper was published. And though it is still worth 
+reading, it was not as good as Whipple's. 
+
+
+p.312 and ff: Spelling of tyre: Fowler, and Webster, do not agree. 
+
+p.313: the stick balancing problem. It turns out that it is an easy task if 
+the length of the stick is larger than 1 m, corresponding to unstable 
+eigenvalues of 2. For sticks shorter than 25 cm (a pencil), balancing is 
+impossible. So my definitions of 'mildly unstable' and 'strongly unstable'. 
+
+The traite by Bourlet was published in 1896. I have not seen a copy, but the 
+Bibliotheque Nationale in Paris has a copy. 
+
+'intructions' should be 'instructions'. 
+
+I have not seen McGaw's paper, although it must be easy to find it. 
+
+I like this :- punctuation. Note the space before the colon. 
+
+p.314: the distance p' is not indicated in fig.2, but I assume that it is 
+the distance Q'O'. My assumption is wrong: it is minus this distance. 
+
+Figure 3 is puzzling. The hundred words in the text say more than the 
+picture. Apparently, it is a top view, with V pointing towards us. B_2 is the 
+forward direction, or x-direction. The H-system is a little awkward. 
+H_1M_2B_3 is more convenient, with H_1 along the steering head hinge, M_2 
+in the direction of OQ and B_3 in the direction of the rear wheel axle. The 
+H-system is found from this system by a rotation with an angle \phi about H_1. 
+\theta is another inconvenient angle, for us. For Whipple, the choice of 
+coordinates is quite natural. 
+
+p.315: the four goniometric formulas are correct, as far as I can see. I 
+derived them with the help of rotation matrices. 
+Eq.I is not correct. The left-hand side should be multiplied by \cos \psi. 
+(and \cos \psi' for the primed terms) 
+If you take the time derivative, you should get \cos \theta times the first 
+plus \sin \theta times the second of Eq.II. After some pages of calculations, 
+this appears to be the case for the corrected formula, and not for the 
+original one. If you linearize, as on p. 320, the linearized result is the 
+same in both cases. 
+
+I came up with the idea: can you eliminate the dependent terms in the 
+constraint equation in closed form? Yes, it should be possible. It should 
+lead to a polynomial equation of degree four, for which the solution can be 
+obtained exactly by a complicated formula. I have not tried to do this, 
+however, but someone might have a go. 
+
+Eq.II: some printing errors: a square bracket is missing in the second line; 
+       a minus sign should be added in the sixth line. 
+
+p.316: Eq.III: \theta_2 should be \theta_3 in the last term on the fourth 
+line. 
+Eq.IV: the second a in the third line should not be there. 
+last line: force Q_1Q_2Q_3, not F_1F_2F_3. 
+It is poor practice to use g for the centre of gravity as well as for the 
+acceleration of gravity: do not be confused.  And do not confused by B_3: it 
+is an axis and a moment of inertia. 
+
+p.318: line 4: H_1 is meant, I presume. 
+4th and 5th line of displayed equation: the expressions between parentheses 
+must be interchanged. 
+before Eq.VII: VI.(3) should read V.(3). 
+
+Eq.VII: second line: remove subscript 1 from \gamma. 
+last line: there should be a \delta before W: compare with Eq.VIII. 
+
+last line: there should be an a between the ( and \cos. 
+
+p.319: Eq.VIII: remove subscript 1 from \gamma. 
+
+forcive: is it in the Dictionary? Yes, it is. But I think that this is a typo. 
+
+Eq,IX: there is some confusion in the order of the indices in the inertia 
+tensor E; this tensor is symmetric, of course, so the order does not matter. 
+
+p.320: 3rd line from below: III should read II. 
+
+p.321: 4th line: In the figure, R is called S. 
+
+Eq.VIII: the equation number is spoilt: dots should be before V. 
+
+Eq.XI: subscript 1 is missing in first P, and/or a prime is missing. 
+
+4th line from below: there should be an extra dot over \phi, or \phi should be 
+\tau. 
+
+p.322: apparently, it is assumed that the products of inertia E_{13} and 
+E_{23} are zero, which is the case for symmetric frames. No, the terms 
+containing them are not important: the first-order terms may be neglected. 
+
+line 8: there should be a prime on the second W. 
+3rd line from below: \gamma' should be \kappa' 
+2nd line from below: the minus before W' should not be there. 
+
+p.323: fourth line: there should be an opening parenthesis. 
+5th line: the same expression with dashes, but with a minus sign before 
+\Lambda. \Lambda and also b are odd, so they change signs with primed terms. 
+Whipple calls the primes dashes. 
+11th line: the corresponding primed coefficient has +\mu'\Pi . 
+
+Eq.XV: 
+2nd line: dot over \phi missing. 
+3rd line: two dots over first \phi' and one dot over second \phi' missing. 
+
+So there we are: the linearized equations. Note that \tau could be eliminated 
+with the help of Eq.XIII, yielding two second-order differential equations. 
+For the tricycle, in section 23, this is done. 
+Do these equations really agree with Papadopoulus, Schwab and Meijaard? 
+Yes, they do in the following way. 
+First use the lean angle and the steering angle as independent coordinates. 
+Then we have \phi = \psi/(\sin \theta) and \phi' = \delta + \psi/(\sin \theta) 
+Use Eq.XIII to eliminate \tau and \dot{\tau}. 
+And hurray! the first equation is identical to SMP. To get the second equation 
+of SMP, multiply Eq.XV by (\mu\mu')/(b \cos \theta) = (f \mu)/(\cos \theta), 
+and subtract (f \sin \theta)/(\cos \theta) times the first from it. This gives 
+the desired result, after some further substitutions. 
+(f is here according to SMP). 
+
+The elegance of Whipple's paper is that he presents the equations in a fully 
+symmetric form. Can we do something similar with our equations? No, it seems 
+that you always un against a singularity for \theta=0. But we can define the 
+auxiliary quantities in a symmetric form. This does not make the equations 
+simpler; only the comparison with Whipple's results becomes simpler. 
+
+p.324: Eq.XVI is our steering angle = \phi' - \phi. 
+our lean angle is \phi \sin \theta. 
+
+p.326: the determinant. Element (2,1): subscript 2 should be power after 
+\lambda. 
+Element (2,3): no prime at first W; closing parenthesis is superfluous. 
+
+p.327: Element (1,3): \cos b should read \cos \theta. 
+two lines down: the terms with \Pi b \cos \theta, and the closing parenthesis 
+should not be there. 
+next line: in expression between brackets with \mu's, prime should be 
+with the other \mu. 
+
+p.329: Eq.XXVI, third line, last term between (): in the first term, \mu 
+should be \mu' (or is it with the second?). 
+
+p.330: Whipple makes some simplifications for the calculations of the 
+moments of inertia: the mass of the wheels is not considered separately. 
+
+p.331: Whipple, without a Millonaer, gets his calculations 
+basically correct. I have one objection: 1116.6/264.7 = 4.2 and not 4.6 
+
+p.332: there should be a dot before 839 somewhere. 
+The gear is the effective wheel diameter. 
+
+p.333: The idea of a very heavy rear wheel is interesting. The bicycle 
+becomes a rolling penny. You can also make the centre of gravity of the 
+rear frame very low, as in a bicycle on a tight-rope with its centre of 
+gravity below the rope. 
+20 revolutions of the pedals? I found about 5 revolutions, or 3 seconds. This 
+seems more in agreement with experience, but a little too unstable for a 
+good bicycle. Note that the trail in Whipple's example is small: 5 cm or 
+5.5 cm. For the SMP-bicycle it is about 6 seconds, which seems to be right. 
+
+p.334: Eq.XXIX: \omega should be W; lower case v should be upper case V ; 
+lower case \pi should be upper case \Pi . 
+
+p.335: Eq.XXX: in first line, minus 7.5 should be + 7.5 . 
+
+It is funny to see that Whipple rounds the same numbers differently in 
+different places. 
+
+p.336: I come out at Z_2 = 0.24 (\epsilon=0.8) and Z_1 = -3.1 (\epsilon=0.1). 
+
+p.338: he calls it an eliminant. 
+
+p.340: .86 should be 8.6; the coefficient before \epsilon^2 should be 
+about 1.45 instead of 2.4. 
+Near the bottom of the page: the conversion from \chi to A\phi is not done 
+correctly. The error is small, however. 
+
+p.341: .46 should be .36 in the equation. This is a typo, because 0.36 is used 
+further on. 
+
+p.343: Whipple now writes 'can not' instead of 'cannot': does he mean to put 
+emphasis on this? 
+
+p.347: There should be a prime at C_3 . 
+
+JPM, Nottingham, 25 Oct. 2005.
+
+Whipple nog een keer. Je weet toch dat zijn niet-lineaire vergelijkingen niet 
+goed zijn. 
+
+JPM, Nottingham, 17 Oct. 2005.
+

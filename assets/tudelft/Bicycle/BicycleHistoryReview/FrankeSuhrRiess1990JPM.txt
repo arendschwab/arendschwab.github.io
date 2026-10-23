@@ -1,0 +1,18 @@
+Comments on Franke, Suhr and Riess (1990): 
+It took me some time to understand Figure 1. The left rotation \phi is a 
+rotation of the front frame, the right rotation -\phi is a rotation of the 
+rear frame. Eq. (1-3) seem to be correct if the sign of \beta_f is reversed, 
+or the figure is changed. For zero steering angle, the betas should have an 
+opposite sign. The main approximation seems to be in Eq. (15-17), where it is 
+said: 'Only the most important angular momenta are taken into account, ...' 
+So no full agreement with our results should be expected. 
+I did not check the equations of motion (23). 
+
+Another puzzle for me was the bicycle wheel on the preprint. It has 32 spokes. 
+The spoke pattern is very strange. If the spokes go to the two flanges 
+alternately, one flange has all pulling spokes and the other has only pushing 
+spokes. So probably two consecutive spokes go to one flange and then two 
+to the other flange, etc. 
+
+JPM, Nottingham, 31 Oct. 2005.
+

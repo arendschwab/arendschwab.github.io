@@ -1,0 +1,8 @@
+Klein and Sommerfeld (1910): It appears to me that the last part of this 
+work, which contains the bicycle model, was published in 1910 after all. 
+Previous parts were published from 1897: part 1, 1897; part 2, 1898; part 3, 
+1903; part 4, 1910. The last part has the line 'bearbeitet und ergaenzt von 
+Fritz Noether' (edited and completed by Fritz Noether). So it is possible 
+that Noether actually derived the equations. 
+
+JPM, Nottingham, 8 Nov. 2005.

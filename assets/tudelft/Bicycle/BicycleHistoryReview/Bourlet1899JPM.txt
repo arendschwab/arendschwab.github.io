@@ -1,0 +1,40 @@
+C. Bourlet, 
+
+Etude theorique sur la bicyclette
+
+Bulletin de la Societe Mathematique de France 27 (1899), pp. 47-67, 76-96. 
+
+(available from Numdam, http://www.numdam.org)
+
+Not much remains to be discussed here. There is the geometric issue of 
+assumed constant wheelbase and zero pitch angle. The steer angle is initially 
+taken into account, but on simplifying the equations on page 65, it is 
+assumed that the inclination angles of the rear and front wheels are the same, 
+which is only true for small angles if the steer axis is vertical. In the 
+first equation on page 65, the gyroscopic term coming from the last term 
+in equation (27), page 63, a linear contribution, is for some reason not 
+taken into account. If this term is included in the equation on page 65, and 
+the equations are linearized, the correct lean equation is obtained 
+(with the further assumptions of zero mass of the handle bar/front fork 
+and zero trail). 
+
+In general, the conditions for slipping of the tyres are only approximately 
+valid. Compare with the slightly more general treatment by Routh. 
+
+It seems that this is one of the first publications in which the 
+'Cornu spiral' (clothoid) is mentioned for the shape of a bend. 
+
+Further remarks:
+
+page 51: 'dextrorsum': apparently, this is what we call now left-handed. 
+
+page 55: 'forces centrifuges composees': that are what we call now Coriolis 
+     forces. 
+
+page 63, eq. (27): the first E' should be F' 
+     (compare with equation on page 65). 
+
+page 92, eq. (43): the final cos(psi) should be sin(psi) 
+     (compare with eq. (42) and eq. (42 bis)). 
+
+JPM, Nottingham, 12 September 2007

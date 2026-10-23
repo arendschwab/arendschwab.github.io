@@ -1,0 +1,26 @@
+From: Jaap meijaard [Jaap.Meijaard@nottingham.ac.uk]
+Sent: Tuesday, September 26, 2006 3:18 PM
+To: a.l.schwab@tudelft.nl; jaap.meijaard@nottingham.ac.uk;
+papadopoulos@alum.mit.edu; ruina@cornell.edu
+Subject: more on v.29
+
+
+  To: papadopoulos@alum.mit.edu
+      a.l.schwab@wbmt.tudelft.nl
+      ruina@cornell.edu
+      jaap.meijaard@nottingham.ac.uk
+
+Nottingham, 26 September 2006 
+
+Dear Arend, (copy to Andy and Jim) 
+
+Some further remarks and comments on Andy's comments. 
+
+About Herfkens 1949: I checked the equations and they are basically correct, 
+except for some typos. Note that his beta is our delta cos(lambda) in the 
+linearized equations. On page 12, Eq. (28), cot(beta) should be cot(alpha). 
+There are a missing term and misplaced brackets on p.13, 
+and the subscript of b_5 is missing in Eq. (34) on page 14. 
+The coefficients on page 15 agree with ours. 
+
+JPM

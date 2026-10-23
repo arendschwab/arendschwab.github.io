@@ -1,0 +1,62 @@
+G.R.R. Routh, 'On the motion of a bicycle',  The Messenger of Mathematics, 
+vol. 28, May 1898 - April 1899, pp. 151-169. 
+
+In four sections, four problems are considered. They all deal with the case 
+with prescribed small steer input and zero trail. In this case the wheelbase 
+can be considered to be constant. Except in the first problem, only the rear 
+frame has mass, as in Boussinesq's model. There are quite a few small 
+errors. 
+
+I. Bicycle with locked steer. The unstable falling motion is independent of 
+the forward speed. 
+
+II. Small oscillations about a steady motion in a straight line. The steer 
+angle is assumed to be proportional to the lean angle, which can stabilize the 
+bicycle. 
+
+III. Steady circular motion. Also the lateral forces at the tires are 
+considered. 
+
+IV. Stability of the steady circular motion. For wide curves, the conditions 
+are essentially the same for the motion in a straight line. 
+
+List of errors.
+
+page 152, line 9: apparently d^2 z/dt^2 is meant instead of dv/dt 
+page 152, line 6 from below: A^2 should read a^2
+
+page 153, line 2: A_2^2 should read a_2^2
+
+page 157, line 10 from below: p' should read p (no prime)
+
+page 159, line 6: factor 1/2 for the real root is missing 
+
+page 160, line 2: prime at omega_1 is missing
+page 160, line 4: prime at omega_3 is missing; sin(beta) should be sin(p) 
+page 160, line 5: final cos(beta) should be cos(p) 
+page 160, line 7: minus before last term should be plus 
+page 160, line 14: last cos(p) should be sin(p) 
+page 160, passim and following pages: Omega_3 should be omega_3, or at least 
+                                      they are always equal. 
+
+page 161, eq. (8): minus sign missing before h
+
+page 163, last line: l_3 should be l_2; 
+                     R_1 in the second equation should be R_2
+
+page 164, line 4: factor omega^2 missing; this is also the case in the two 
+                  corresponding expressions lower on the same page. 
+
+page 165, line 9 from below: factor sin(beta) missing in the first term. 
+page 165, line 3 from below: factor cos(p_0) missing in the last term; 
+                             this error propagates over the following pages:
+                             second terms of eq. (10) and (14) on page 166 
+                             and line 6 of page 167; also in last term of 
+                             line 10 of page 167.
+
+page 166, eq. (14), second term: transpose beta and sin 
+
+JPM, Nottingham, 12 September 2007. 
+
+
+

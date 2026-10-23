@@ -1,0 +1,65 @@
+* bike3 
+pinbody  1  1 2 3
+pinbody  2  1 2 4
+pinbody  3  1 2 5
+hinge    4  2 6      1 0 0
+pinbody  5  5 6 7
+hinge    6  2 8      0.36 0 0.9
+pinbody  7  3 8 9
+pinbody  8  3 8 10
+hinge    9  8 11     0 -1 0
+wheel   10  10 11 12 0 -1 0
+hinge   11   2 13    0 -1 0
+wheel   12   4 13 14 0 -1 0
+hinge   13  2 15     0 1  0
+hinge   14  15 16   -1 0  0
+hinge   15  16 18    0 0 -1
+pinbody 16  17 18 14
+x  1  0.50 0 -0.60
+x  3  0.90 0 -0.90
+x  4  0    0 -0.35
+x  5  0.25 0 -1.00
+x  7  0.30 0 -1.20
+x  9  1.00 0 -0.70
+x 10  1.20 0 -0.35
+x 12  1.20 0  0
+x 14  0    0  0
+x 17  0    0  0
+fix 17  1 2 3
+fix 18  1 2 3 4
+line 6 1
+rlse 9 1
+enhc 10 4  9 1
+enhc 10 5 15 1
+inpute 11 1
+enhc 12 4 16 1
+enhc 12 5 16 2
+rlse 13 1
+line 14 1
+rlse 15 1
+rlse 16 1 2 3
+mass  1 16
+mass  2  2 0 0 8 0 2
+mass  4  2
+* mass  6 10 0 0 10 0 2
+mass  6 6 0 -4 10 0 6
+mass  7 80
+mass  9  1
+mass 10  2
+mass 11  0.12 0 0 0.24 0 0.12
+mass 13  0.12 0 0 0.24 0 0.12
+* dependent should be calculated from m*g
+* take g=10
+force  1  0 0 160
+force  4  0 0  20
+force  7  0 0 800
+force  9  0 0  10
+force 10  0 0  20
+ed 11 1 30
+epskin 1e-3
+epsint 1e-3
+epsind 1e-3
+timestep 1 0.001
+hmax 0.01
+end
+eof

@@ -1,0 +1,18 @@
+Doehring's (1955) German original is easier to read than the translation. 
+The translation is pretty good, especially of the technical terms. 
+It appears that he has compared his results with those of Klein and 
+Sommerfeld, but he does not state it explicitly. He only says: Die bekannten 
+linearisierten Bewegungsgleichungen ... Perhaps the thesis can 
+shed some further light on this issue. 
+
+I have just a few remarks: he uses wheels of equal radius, so his equations 
+are a little less general than ours. In Eq. (20) and (21) on page 54, (page 
+10 of the translation), the kinematic relations are not correct: r_2 and r_1 
+should be multiplied by \cos\sigma, not divided by it. In the examples, it 
+appears that D. has used the right formula, although not for the Vespa, for 
+which both formulas give values that differ from from those of the table. 
+It is possible that there is an error in the caster angle. 
+In Eq. (35), the right-hand side should not be there, or be divided by the 
+exponential function. 
+
+JPM, Nottingham, 31 Oct. 2005.

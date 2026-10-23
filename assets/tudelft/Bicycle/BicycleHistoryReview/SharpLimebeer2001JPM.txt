@@ -1,0 +1,7 @@
+In Sharp & Limebeer 2001 wordt een AutoSim-model 
+besproken. De motorfiets is gebaseerd op Koenens proefschrift. Een volledige 
+overeenstemming kon niet bereikt worden. We weten nu dat er een foutje in 
+AutoSim zat. Hij zegt niet zo veel over control daarin. De regeling wordt 
+alleen gebruikt om stationaire oplossingen te vinden.
+
+JPM, Nottingham, 17 Oct. 2005.

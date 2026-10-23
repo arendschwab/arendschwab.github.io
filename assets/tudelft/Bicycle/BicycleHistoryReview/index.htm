@@ -1,0 +1,1091 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from http://bicycle.tudelft.nl/schwab/Bicycle/BicycleHistoryReview/index.htm by HTTrack Website Copier/3.x [XR&CO], Sat, 17 Oct 2026 14:50:20 GMT -->
+<head>
+<!-- CREATION DATE: 18/11/2002 -->
+  <title>Bicycle Dynamics</title>
+  <meta name="Description" content="">
+  <meta name="Keywords" content="">
+  <meta name="Author" content="arend schwab">
+  <meta name="Generator" content="Microsoft FrontPage 6.0">
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+ <style>
+body {
+/* font-size: 62.5%; /* Resets 1em to 10px */
+font-family: Verdana, Arial, Sans-Serif;
+text-align: center;
+min-width: 760px;
+}
+#main {
+width: 720px;
+margin: 0 auto;
+padding: 0 6px 0 6px;
+font-size: 9pt;
+text-align: left;
+background-color: rgb(230, 245, 255);
+}
+</style>
+</head>
+
+<base target="_blank">
+<div id="main">
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#800080" ALINK="#FF0000">
+
+
+
+<font face="Verdana" style="font-size: 9pt">
+
+
+<title> History of bicycle steer and dynamics
+equations.</title>
+
+</font>
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="70%">
+    <p align="center"><b><font face="Verdana" size="5">History of bicycle steer
+    and dynamics equations</font></b></td>
+    <td width="15%">
+    <p align="center">
+      <img border="0" src="Lamente.gif" width="210" height="142"></td>
+    <td width="15%" valign="bottom">
+    <p align="right">
+    <img border="0" src="TUD_01-logo_025.gif" width="146" height="62"></td>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" bgcolor="#3399FF" height="20">
+  <tr>
+    <td width="100%">
+    <p align="right">
+    <font face="Verdana" style="font-weight: 700" size="1" color="#FFFFFF">Delft
+    University of Technolog<span lang="en-us">y</span></font></td>
+  </tr>
+</table>
+<a name="applitrev">
+<span style="font-size: 9pt"></span>
+</a>
+
+<p>
+<font face="Verdana" style="font-size: 9pt">This partial survey, of analyses and simulations of rigid-body models of
+<span lang="en-us">&nbsp;</span>bicycles and motorcycles, had its genesis in the
+M.Sc. thesis of Hand (1988).  Included are several papers
+which do not contain comparable equations, but which are well
+known as related to bicycle dynamics.  Note that, from distant
+past to present, much of the key literature has not been
+peer-reviewed. </font>
+
+</p>
+<p>
+<font face="Verdana" style="font-size: 9pt">Most motorcycle models include tire compliance, which permits precise comparison
+with rigid-wheel models only if the tire stiffness can be made infinite. So we
+have largely neglected the motorcycle literature<span lang="en-us">.</span></font></p>
+<p>
+<font face="Verdana" style="font-size: 9pt">Papers marked with a * have equations at least nearly as general
+as ours and also have equations which we either have verified as
+at least close to correct or which we believe are likely to be
+close to correct. Papers marked with a ** are at least as general
+as ours and we are confident that they agree with ours exactly
+(but for minor typographical errors). </font>
+
+</p>
+<p>
+<font face="Verdana" style="font-size: 9pt">Although surely there are gaps to be filled and corrections to be made, this
+survey is more complete than anything available in the open literature.</font></p>
+
+<dl compact="compact">
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1869</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Rankine (famed civil engineer and thermodynamics theorist) presents
+    fundamental, semi-quantitative observations on leaning and steering of
+    Velocipedes (an early name for bicycles). Seemingly the vehicles he
+    considers have vertical steering axes, straight forks, and pedals directly
+    driving the front wheel. His exposition contains the earliest known
+    description of 'countersteering' -- briefly turning left in order to enter a
+    rightward curve.</font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1896</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Archibald Sharp's authoritative book on the design of bicycles and
+    tricycles includes a calculation of the torque required to execute a steady
+    turn on a bicycle. His model is much simplified and his calculation is
+    slightly wrong. Most importantly for bicycle dynamics analysis, his
+    assumption that steering must self-center in order to be self-stable is now
+    known to be wrong.</font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>189</b><span lang="en-us"><b>5</b></span></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Bourlet's book on bicycles is published.  It is
+criticized by Klein and Sommerfeld (1910).  We did not check it.<br>
+    <a href="Bourlet1895JPM.txt">Bourlet1895JPM.txt</a> , <a href="Bourlet1899JMP.txt">Bourlet1899JMP.txt</a></font></dd>
+    <dt><font face="Verdana" style="font-size: 9pt"><b>189</b><span lang="en-us"><b>8</b></span></font></dt>
+    <dd> <font face="Verdana" style="font-size: 9pt">McCaw determines under what conditions a biycle can make a
+      steady turn with a zero steering torque. He considers a road with
+    superelevation, as in an in-door cycle track. One can argue that the paper considers a special case, nothing is said
+    about stability, and the calculation has an error, and Whipple (1899) did not
+      interpret the paper correctly.<br>
+    <a href="McCaw1898JPM.txt">McCaw1898JPM.txt</a></font><font face="Verdana" style="font-size: 9pt"><br>
+    </font></dd>
+    <dt><font face="Verdana" style="font-size: 9pt"><b></b></font></dt>
+  <dt><font face="Verdana" style="font-size: 9pt"><b>1898-189</b><span lang="en-us"><b>9</b></span></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">G. R. RRouth, <span lang="en-us"> &nbsp;On
+    the motion of a bicycle</span>.<br>
+    <a href="Routh1898JPM.txt">Routh1898JPM.txt</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>189</b><span lang="en-us"><b>9</b></span></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Bourlet, <span lang="en-us"> &nbsp;</span>Étude
+  théorique sur la bicyclette.<br>
+    <a href="Bourlet1899JPM.txt">Bourlet1899JPM.txt</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>189</b><span lang="en-us"><b>9</b></span></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Boussinesq, four summaries
+    + two papers.<br>
+    <a href="Boussinesq1899JPM.txt">Boussinesq1899JPM.txt</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1899**</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Meteorologist and mathematician Francis Whipple,
+just after his graduation as second wrangler from  Trinity College
+(Cambridge), writes an "hono<span lang="en-us">u</span>rable mention" thesis and then paper
+on bicycle dynamics. Whipple writes non-linear governing equations
+which <span lang="en-us">are nearly correct</span>. <span lang="en-us">A cosine
+    psi term is missing in the constraint
+    equation for the pitch angle, and this error propagates into the non-linear
+    equations of motion. Fortunately this has no influence on the linearized equations.
+    Therefore, he is the first to derive the correct linearized
+    equations for a bicycle.&nbsp; </span>But for typographical errors,
+his linearization agrees with our linearized equations. <span lang="en-us">He
+    also considered the stabilization of the bicycle by steering torques and
+    body lean.<br>
+    </span>
+    <a target="_blank" href="Whipple1899Hand88.pdf">Whipple1899Hand88.pdf</a><span style="color: #000000">,
+    <a target="_blank" href="Whipple1899JPM.txt">Whipple1899JPM.txt</a></span></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1900-1901*</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Carvallo writes a 300 page prize-winning
+monograph on the dynamics<span lang="en-us"> of</span> monocycles and bicycles (a monocycle is
+a single-wheeled vehicle where the rider sits inside the wheel). Carvallo's model is not quite as general as the model presented
+here (see Hand 1988). When our model is simplified to correspond
+to his, the equations agree exactly.<span lang="en-us"> </span>Carvallo
+    <span lang="en-us">&nbsp;and Whipple (1899) </span>seem unaware of each other.<br>
+    <a target="_blank" href="Carvallo1901Hand88.pdf">Carvallo1901Hand88.pdf</a>,
+    <a href="Carvallo1901JPM.txt">Carvallo1901JPM.txt</a>,
+    <a target="_blank" href="Carvallo1901JMPJPM2.txt">Carvallo1901JMPJPM2.txt</a>,
+    <a target="_blank" href="Carvallo1901MJC.txt">Carvallo1901MJC.txt</a>,
+    <a target="_blank" href="Carvallo1901_comp_coleman2.pdf">
+    Carvallo1901_comp_coleman2.pdf</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1910</b></font></dt>
+	<dd>  <font face="Verdana" style="font-size: 9pt">  <span lang="en-us">Henri </span>Bouasse<span lang="en-us"> </span>uses
+    a much simplified model of a bicycle to show how a bicycle can be
+    <span lang="en-us">balanced by </span>steering. Therefore only the lean
+    equation is considered, with the steering input appearing as a forcing term<span lang="en-us">
+    in the right-hand side. </span>When so simplified our equations agree with these. The
+    spirit, although perhaps not the <span lang="en-us">rigour</span>, is much in the
+    <span lang="en-us">line</span> of more modern
+    control-theory-oriented work such as that of Getz &amp; Marsden (1995)<span lang="en-us">.</span><br>
+    <a href="Bouasse1910JPM.txt">Bouasse1910JPM.txt</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1910*</b></font></dt>
+	<dd>  <font face="Verdana" style="font-size: 9pt">Physicists Felix Klein &amp; Arnold Sommerfeld write a
+book about gyroscopes which includes a chapter on bicycles.  <span lang="en-us">
+    This chapter appears in part 4 which has been edited and completed by Fritz
+    Noether. </span>The
+model in th<span lang="en-us">is</span> book is not as general as the model here, for
+example the mass of the front frame is effectively limited to a line along the
+    steering axis.
+After our model is simplified it agrees with theirs exactly (see
+Hand 1988).<br>
+    <a target="_blank" href="KleinSommerfeld1903Hand88.pdf">
+    KleinSommerfeld1903Hand88.pdf</a>,
+    <a target="_blank" href="KleinSommerfeld1910JPM.txt">
+    KleinSommerfeld1910JPM.txt</a><span lang="en-us">,
+    <a href="KleinSommerfeld1910JPM2.txt">KleinSommerfeld1910JPM2.txt</a></span></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1915</b></font></dt>
+	<dd>  <font face="Verdana" style="font-size: 9pt">G. S. Bower, apparently unaware of all of the work
+above, derives incorrect equations for a highly simplified bicycle
+model (see Hand 1988).<br>
+    <a target="_blank" href="Bower1915Hand88.pdf">Bower1915Hand88.pdf</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1920</b></font></dt>
+ <dd><font face="Verdana" style="font-size: 9pt">R<span lang="en-us">ichard</span> Grammel<span lang="en-us"> has a
+ simplified bicycle model in his book on spinning tops (`Der Kreisel`) to
+ illustrate the gyroscopic effect. He takes into account two important effects
+ but forgets about the trail. We did not check.</span><br>
+ <a href="Grammel1920JPM.txt">Grammel1920JPM.txt</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1922</b></font></dt>
+	<dd>  <font face="Verdana" style="font-size: 9pt">R. H. Pearsall attempts to extend Bower's analysis
+(1915) in order to explain "speedmans wobble" (which may
+correspond to what we would now call shimmy).  His model is highly
+simplified and his equations for that model are not correct (see
+Hand 1988).<br>
+    <a target="_blank" href="Pearsall1922Hand88.pdf">Pearsall1922Hand88.pdf</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1934</b></font></dt>
+	<dd>   <font face="Verdana" style="font-size: 9pt">L. G.&nbsp;Lo<span lang="en-us">i</span>cjanski<span lang="en-us">i</span> &amp; A. G.&nbsp;Lu\'re derive
+equations for a  simplified bicycle.  These are the basis for
+the model in Ne<span lang="en-us">i</span>mark &amp; Fufaev (1972).  We have not seen the
+work. The more general but incorrect equations in Ne<span lang="en-us">i</span>mark &amp;
+Fufaev, when reduced to apply to this simpler model, give
+equations which agree with our equations when similarly
+simplified.  Ne<span lang="en-us">i</span>mark &amp; Fufaev presumably used this for
+checking their more general model, thus there is a good chance
+that the 1934 equations of the simplified model are correct.</font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1948</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Timoshenko<span lang="en-us"> and Young</span>'s dynamics text book use
+    the same model and assumptions as Bouasse<span lang="en-us"> (1910)</span>. <br>
+    <a target="_blank" href="TimoshenkoYoung1948Hand88.pdf">
+    TimoshenkoYoung1948Hand88.pdf</a>,
+    <a target="_blank" href="TimoshenkoYoung1948JPM.txt">
+    TimoshenkoYoung1948JPM.txt</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1948</b></font></dt>
+	<dd>  <font face="Verdana" style="font-size: 9pt">J. P. Den Hartog's excellent textbook on dynamics
+includes a discussion (see <span lang="en-us">article 61</span>) of how a bicycle can be
+balance, with control, by steering the wheels to a position
+underneath the rider as he/she falls.  Den Hartog also explains
+that the gyroscopic torque of the front wheel naturally
+accomplishes steer in the right direction even without rider
+input.  <span lang="en-us">This work is in the line of Grammel (1920). </span>There are no detailed equations of any bicycle model.</font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>194</b><span lang="en-us"><b>9</b></span></font></dt>
+	<dd>  <font face="Verdana" style="font-size: 9pt">  <span lang="en-us">B. D. Herfkens writes a report (in Dutch) on the
+    stability of a bicycle. This is one of 13 reports of the Dutch Bicycle
+    Research Institute (in Dutch: Instituut voor Rijwielontwikkeling) written
+    between 1948 and 1952. He derives linearized equations of motion for the
+    Whipple model by a Lagrange method with nonholonomic constraints. He gives
+    reference to Carvallo (1900) and Whipple (1899) but makes no comparison. He
+    addresses the question of design changes and the effect on the weave speed.
+    He makes a graph showing the effect of changes in the front wheel inertia on
+    the stable forward speed range. This is an intelligent report and we
+    suspect, by first impression, that his equations are correct.<br>
+    <a href="Herfkens1949JPM.txt">Herfkens1949JPM.txt</a></span></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1953<span lang="en-us">-1955</span>**</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">E.&nbsp;D&#246;hring<span lang="en-us">,</span> University of Technology Braunschweig, Germany,
+    <span lang="en-us">writes a </span>PhD thesis<span lang="en-us"> on the
+    stability of a straight ahead running motorcycle. He builds on&nbsp; the
+    model by Klein &amp; Sommerfeld (1901) and ends up with the same
+    model as presented here</span>.<span lang="en-us"> His 1955 paper is
+    translated by Lotsof at Calspan into English: t</span>he<span lang="en-us">se</span>
+    equations agree with ours in detail and are  correct<span lang="en-us">.
+
+    </span>D&#246;hring<span lang="en-us"> also did experiments on a motor-scooter and two different motorcycles to
+    validate his results. Some of these results are reported in his 1954 paper.</span><br>
+    <a href="Doehring1953JPM.txt">Doehring1953JPM.txt</a></font></dd>
+	<dd>
+    <font face="Verdana" style="font-size: 9pt">
+    <a target="_blank" href="Doehring1955Hand88.pdf">Doehring1955Hand88.pdf</a>,
+    <a target="_blank" href="Doehring1955JPM.txt">Doehring1955JPM.txt</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1963</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">R. N. Collins' University of Wisconsin PhD thesis,
+sponsored by Harley Davidson, considers a model of a motorcycle
+that is equivalent to the model here with the addition of drive
+and drag forces. He writes non-linear differential equations and
+then linearizes.  There appears to be a small error  but the form
+of the equations also seems generally correct. The equations were
+deemed to<span lang="en-us">o</span> complicated in form to check in detail (see Hand 1988).<br>
+    <a href="Collins1963Hand88.pdf">Collins1963Hand88.pdf</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1964</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">D. V. Singh, at Wisconsin with Collins (1963) adds a
+tire slip to Collins model.  However the Collins and Singh
+equations seem to be mutually incompatible.  And neither of them
+compare their equations with previous equations (see Hand 1988).<br>
+    <a href="Singh1964Hand88.pdf">Singh1964Hand88.pdf</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1967*</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Ne<span lang="en-us">i</span>mark &amp; Fufaev authoritative monograph<span lang="en-us">
+    </span>on non-holonomic
+dynamics <span lang="en-us">(translated in 1972) </span>has a chapter on the
+    equations for a bicycle. <span lang="en-us">The model is based on </span>Lo<span lang="en-us">i</span>cjanski<span lang="en-us">i</span>
+    &amp; Lu're <span lang="en-us">(1937). </span>The formulation
+    <span lang="en-us">by </span>Ne<span lang="en-us">i</span>mark &amp; Fufaev<span lang="en-us">
+    </span>seems correct, and is imitated in Hand<span lang="en-us">'s thesis</span>
+    (1988). However there are various errors (missing terms, calculation errors,
+    typographical errors) so that the final equations are incorrect.<span lang="en-us">
+    </span>&nbsp;<span lang="en-us">The main</span> error is the
+    <span lang="en-us">lacking of </span>second order contribution of steer
+    angle to pitch of rear frame, leading to the error in energy, which of
+    course makes the <span lang="en-us">L</span>agrangian incorrect.<span lang="en-us">
+    </span>Although they mention that their equations have the same general
+    form as those of D&#246;hring (1955) they
+did not check for detailed agreement<span lang="en-us"> </span>(see Hand 1988).<br>
+    <a href="NeimarkFufaev1967Hand88.pdf">NeimarkFufaev1967Hand88.pdf</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1970</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Chemist D. E. H. Jones writes a popular-style, casual
+and widely remembered article about his attempt to build an
+unrid<span lang="en-us">e</span>able (no-hands) bicycle. Jones gives up on
+    dynamics equations and attempts an empirical understanding. He<span lang="en-us">
+    discovers that positive trail and </span>angular momentum of the front wheel<span lang="en-us">
+    are both critical for riderless stability; while trail has a greater effect
+    on making no-hands riding impossible.</span></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1970</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt"> <span lang="en-us">Commissioned by the National Commission on Product
+    Safety, R. S. Rice and R. D. Roland write a report on the safe handling of a bicycle.
+    The study involves experiments and an analytical model. They (Roland) derive
+    equations of motion for a bicycle which includes radial and lateral tire
+    stiffness and a lateral leaning rider. They show no simulation results,
+    apparently due to lack of time and funding. We did not check the equations.
+    </span></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1971**</b></font></dt>
+	<dd>  <font face="Verdana" style="font-size: 9pt">D. V. Singh &amp; V. K. Goel use  D&#246;hring's (1955)
+correct model to analyze the stability of a motor<span lang="en-us">-</span>scooter
+and thus most likely have correct equations (see Hand 1988).<br>
+    <a href="SinghGoel1971Hand88.pdf">SinghGoel1971Hand88.pdf</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1971*</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">R. S. Sharp considers a model that is slightly less
+general <span lang="en-us">(mass moment of inertia of front assembly parallel to
+    steering axis) </span>than the model here but which has tire compliance.
+    <span lang="en-us">He is the first to  label the two major rigid eigenmodes
+    as weave and capsize mode. His nonlinear model is incorrect, he treats
+    rear-frame pitch as zero, with a constant force acting upward on the front
+    wheel. </span>When
+he linearizes his non-linear model and takes the limit of infinite
+tire stiffness he introduces several algebraic and typographical
+errors<span lang="en-us">. After correcting for these errors his model agrees
+    with ours</span> (see Hand 1988).<br>
+    <a href="Sharp1971Hand88.pdf">Sharp1971Hand88.pdf</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1971<span lang="en-us">-1972</span></b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">In the only known study financed by a bicycle company
+(Schwinn),    Roland<span lang="en-us"> &amp; </span>Massing <span lang="en-us">(1971)
+    and Roland &amp; Lynch (1972) </span>derive non-linear
+equations for a bicycle with <span lang="en-us">radial and lateral </span>tire deformation. <span lang="en-us">The equations
+    of motion contains several algebraic and typographical errors. The side-slip
+    angle of the front wheel does not contain the steering rate angle and leads
+    to discrepancies. Therefore,</span> <span lang="en-us">after </span>linearizing and taking the
+    non-slip limit we were unable to make agreement with our equations<span lang="en-us">
+    </span>(see Hand 1988). <span lang="en-us">The same bicycle model is
+    presented</span> <span lang="en-us">in </span>Roland (1973).<br>
+    <a href="Roland1971Hand88.pdf">Roland1971Hand88.pdf</a>,
+    <a href="RolandMassing1971JPM.txt">RolandMassing1971JPM.txt</a><span lang="en-us">,
+    </span>
+    <a href="Roland1973JPM.txt">Roland1973JPM.txt</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1972**</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">D. H. Weir's UCLA motorcycle PhD <span lang="en-us">thesis </span>makes bicycle
+dynamics history by being the first researcher to explicitly
+compare his equations, in detail, with previous research. Weir's
+equations, when slightly simplified to apply to Sharp's (1971)
+simpler model,  agrees with Sharp's equations.   When, instead,
+Weir's model is left more general with regard to inertial
+properties, but side-slip is eliminated, his equations agree with
+our equations (see Hand 1988).<br>
+    <a href="Weir1972Hand88.pdf">Weir1972Hand88.pdf</a>,
+    <a href="Weir1972JPM.txt">Weir1972JPM.txt</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1973</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">D. J. Eaton's Michigan PhD <span lang="en-us">thesis </span>concerns vehicle-rider
+interactions. We have not checked his governing differential
+equations.</font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1975</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Singh &amp; Goel derive equations for a more general
+model than they used in 1971. They do not mention checking if
+their new equations reduce to their previous (D&#246;hring's)
+equations and we did not attempt this check either (see Hand
+1988).</font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1975</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">P. J. <span lang="en-us">V</span>an Zytveld's PhD <span lang="en-us">
+    thesis </span>at Stanford includes
+equations for a bicycle with a rider as a fifth rigid body.  <span lang="en-us">
+    If the rider is removed, his equations agree with ours</span>.
+    <span lang="en-us">V</span>an Zytveld was  advised by John Breakwell who
+(private communication - Andreas von Flotow) is said to have had
+an independent derivation (see Breakwell 1982) that agreed with
+Van Zytveld.<br>
+    <a href="VanZytveld1975JPM.txt">VanZytveld1975JPM.txt</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1975*</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">R. S. Sharp &amp; C. J. Jones extended Sharp's 1971
+model to include  a different tire model. When we removed the tire
+deformation the equations agree with a simplified version of our
+model (see Hand 1988).<br>
+    <a href="SharpJones1975Hand88.pdf">SharpJones1975Hand88.pdf</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1978</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Weir &amp; Zellner <span lang="en-us">present in an appendix the same
+    derivation as </span>Weir (1972)<span lang="en-us"> but unfortunately
+    introduce a number of typographical errors.</span> Weir's dissertation (1972) is the
+more authoritative work (see Hand 1988).<br>
+    <a href="WeirZellner1978Hand88.pdf">WeirZellner1978Hand88.pdf</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1978</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">L. G. <span lang="en-us">L</span>obas <span lang="en-us">(in the
+    translated work his name gets misspelled into Gobas) </span>presents
+    equations for a model like ours, including the possibility of forward
+    acceleration.  <span lang="en-us">He uses</span> the &quot;Boltzman<span lang="en-us">n</span>-Hamel&quot;<span lang="en-us">
+    equations in the </span>derivation but the final equations do not agree with
+    ours and thus seem to be incorrect (see Hand 1988).<br>
+    <a href="Lobas1978Hand88.pdf">Lobas1978Hand88.pdf</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1979</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">C. Adiele writes a Master of Engineering thesis in
+which he uses Kane's equations <span lang="en-us">t</span>o derive equations of motion that
+do not agree with our equations (see Hand 1988).<br>
+    <a href="Adiele1979Hand88.pdf">Adiele1979Hand88.pdf</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1979*</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Mark Psiaki, now a Professor of Mechanical
+Engineering at Cornell, writes a Princeton Physics honor's thesis
+on the dynamics of a bicycle, writing full non-linear equations.
+    <span lang="en-us">We have compared the eigenvalues in a forward speed range
+    for the example from his thesis with our model and the results agree within
+    plotting accuracy. Recently Psiaki (</span> private communication)  compared
+    <span lang="en-us">his</span> results with those of
+Hand 1988 and <span lang="en-us">also </span>found agreement to within plotting accuracy. So Psiaki's equations show signs of being correct.<br>
+    <a href="Psiaki1979JPM.txt">Psiaki1979JPM.txt</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1982</b></font></dt>
+	<dd>  <font face="Verdana" style="font-size: 9pt">Lowell &amp; McKell write  equations for a highly
+simplified model of a bicycle.  When our equations are simplified
+to correspond to their model, the equations <span lang="en-us">do not agree</span>.  Very specialist model, point masses and no front mass,
+vertical axis and it<span lang="en-us"> i</span>s incorrect.<br>
+    <a href="LowellMcKell1982Hand88.pdf">LowellMcKell1982Hand88.pdf</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1982</b></font></dt>
+	<dd>  <font face="Verdana" style="font-size: 9pt">John V. Breakwell,  the advisor of Van Zytveld (1975)
+gives a talk about bicycles.  This talk, or a one presumably like
+it, is mentioned in the Breakwell memorial biography by Arthur
+Bryson.  We have not seen any notes of any kind from Breakwell or
+his talks.</font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1983</b></font></dt>
+ <dd><font face="Verdana" style="font-size: 9pt">C. Koenen, advised by Hans Pacejka, writes a Delft
+ PhD thesis on motorcycle dynamics. <span lang="en-us">He investigates the </span>
+ stability of <span lang="en-us">motorcycles, running </span>straight ahead and
+ <span lang="en-us">in </span>steady state
+ cornering.<span lang="en-us"> His model includes tires, rear and front wheel
+ suspension and a passive hinged rider. He puts extra effort in visualizing the eigenmodes. We have not checked his equations.
+ </span></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1985</b></font></dt>
+ <dd><font face="Verdana" style="font-size: 9pt">Robin Sharp writes a review <span lang="en-us">paper </span>on the lateral dynamics of single track
+ vehicles.<br>
+ <a href="SharpReviewsJPM.txt">SharpReviewsJPM.txt</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1987</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt"> <span lang="en-us">Arnold Schoonwinkel writes a PhD thesis at Stanford on the design and test of a computer stabilized unicycle. </span></font></dd>
+    <dt><font face="Verdana" style="font-size: 9pt"><b>1987</b></font></dt>
+    <dd> <font face="Verdana" style="font-size: 9pt"> <span lang="en-us">Jim </span>Papadopoulos presents various results concerning the dynamics of
+      bicycles. The <span lang="en-us">present</span> publication is the first to
+      move <span lang="en-us">some</span> contents of his notes from the grey to
+      the peer-reviewed literature. The compact derivation of linearized equations
+      presented here is from Papadopoulos (1987).</font></dd>
+    <dt><font face="Verdana" style="font-size: 9pt"><b></b></font></dt>
+  <dt><font face="Verdana" style="font-size: 9pt"><b>1988</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Scott Hand's Master thesis, advised by Papadopoulos
+and Ruina, presents equations of motion that are checked against
+the literature. The Hand derivation follows the approach of
+Ne<span lang="en-us">i</span>mark and Fufaev (1972) but corrects errors therein. Hand's
+equations agree with Papadopoulos (1987), D&#246;hring (1955), Weir
+(1972) and, when simplified, with Whipple (1899). Hand was unaware
+of  Van Zytveld (1975), <span lang="en-us">and </span>Breakwell (1982).
+Hand's <span lang="en-us">FORTRAN </span>program&nbsp; for calculating stability eigenvalues has
+errors and the eigenvalue calculations in Hand's thesis should not
+be trusted.</font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1988**</b></font></dt>
+	<dd>  <font face="Verdana" style="font-size: 9pt">B. C. Mears,  R. E. Klein's PhD student at Urbana Champaign,
+confirms the correctness of the Papadopoulos (1987) and Hand
+(1988) equations.</font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1990<span lang="en-us">*</span></b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt"> <span lang="en-us">In a substantial bicycle research program at
+    Oldenburg, </span>G. Franke, W. Suhr &amp; F. Riess derive non-linear
+equations of a bicycle. We did not check the derivation in detail.
+The authors were unable to find agreement between integration of
+their differential equations for small angles and the integration
+of the Hand equations (private communication to JP from the
+authors). <span lang="en-us">Recent comparison of the linearized stability on
+    the benchmark bicycle showed agreement of the eigenvalues within plotting
+    accuracy. </span>This paper was the topic of an entertaining lead editorial in
+Nature by John Maddox (1990).<br>
+    <a href="FrankeSuhrRiess1990JPM.txt">FrankeSuhrRiess1990JPM.txt</a><span lang="en-us">,
+    <a href="FrankeSuhrRiess1990JMP.txt">FrankeSuhrRiess1990JMP.txt</a></span></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>1995</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">The non-linear dynamics group at Caltech, including
+Jerry Marsden and colleagues, writes the first of several papers
+on bicycle control.  Because the emphasis is on control, not
+passive-dynamics, highly simplified models are used. We have not
+checked any of these in detail.</font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>2001</b></font></dt>
+ <dd><font face="Verdana" style="font-size: 9pt">Sharp and Limebeer<span lang="en-us"> derive the equations of motion for a
+ motorcycle by means of the multibody dynamics software AutoSim. The model is
+ based on Koenen (1983), but the results did not agree.</span><br>
+ <a href="SharpLimebeer2001JPM.txt">SharpLimebeer2001JPM.txt</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>2002</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Cossalter and Lot<span lang="en-us"> derive the equations of motion for
+    a motorcycle for real time simulations based on the natural coordinate
+    approach. The equations are formulated as a large system of
+    Differential-Algebraic Equations (DAEs). We have not checked it.</span><br>
+    <a href="CossalterLot2002JPM.txt">CossalterLot2002JPM.txt</a></font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>2004</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">In a chapter of David Wilson's <span lang="en-us">popular</span> book
+Bicycling Science, Papadopoulos presents various issues related to
+bicycle steering and balance. This discussion includes an informal
+introduction to the equations here.</font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>200<span lang="en-us">5</span>**</b></font></dt>
+	<dd>  <font face="Verdana" style="font-size: 9pt">J. P. Meijaard in preparing for this publication,
+makes an independent derivation of the linearized equations<span lang="en-us">
+    of motion</span>.</font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>2005**</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">Schwab, Meijaard and Papadopoulos write a draft of
+the present paper and present it at a meeting.  The paper here
+completely subsumes that conference paper.</font></dd>
+ <dt><font face="Verdana" style="font-size: 9pt"><b>2005</b></font></dt>
+	<dd> <font face="Verdana" style="font-size: 9pt">K. J. &#197;str&#246;m, R. E. Klein &amp;  A. Lennartsson
+present an inspiring 3 part paper on bicycle dynamics.  The
+experimental work of Klein and students, much in the spirit of
+Jones (1970), extends back to the mid 1980s and is interestingly
+documented well here for the first time.  Lennartsson presents
+simulations from a general purpose rigid-body dynamics code and
+gets agreement with the equations here, although not with enough
+accuracy presented to be totally assured of correctness. The
+theoretical work and bibliography in the  paper is largely based
+on Papadopoulos (1987), Hand (1988) and related documents.  The
+equations used to describe the simplified model (in turn used to
+intuitively explain bicycle stability) do not agree with the
+equations later used in the paper nor with the equations here.
+And, opposite to what is written in the paper, that model is not
+self-stable.</font></dd>
+</dl>
+
+<div class="p"><font face="Verdana" style="font-size: 9pt"><!----></font></div>
+
+<div class="p"><font face="Verdana" style="font-size: 9pt"><!----></font></div>
+
+<h2><font face="Verdana" style="font-size: 9pt">References</font></h2>
+
+<dl compact="compact">
+
+	<dd>
+    <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt"><span lang="en-us">[</span>If you know the
+    whereabouts of any of these authors or copyright holders, please let us
+    know.<span lang="en-us">]</span></font></dd>
+
+	<dd>
+    <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Adiele, C. 1979 Two wheeled vehicle design.  M.Eng.
+  thesis, Sibley School of Mechanical and Aerospace Engineering,
+  Cornell University.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Appell, P.E. 1896 <i>Mecanique Rationnelle</i>, Vol.
+  II, pp.297<span lang="en-us">-</span>302, 6th edn. Paris: Gauthier-Villars.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">&#197;str&#246;m, K.J.,  Klein, R.E. &amp;  Lennartsson, A. 2005
+  Bicycle dynamics and control: Adapted bicycles for education
+  and research. <i>IEEE Control Systems Magazine</i>
+  <b>25</b>(4), 26-47.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Besseling, J. F. 1964
+  The complete analogy between the matrix equations and the
+  continuous field equations of structural analysis.
+  In <i>International symposium on analogue and digital
+  techniques applied to aeronautics: Proceedings</i>,
+  Presses Acad&#233;miques Europ&#233;ennes, Bruxelles, pp. 223-242.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt"><span lang="en-us">Bouasse, H. 1910 <i>Cours de
+  Mechanique</i>, part 2, pp. 620-623. Paris: Ch. Delagrave. (<a href="Bou1910pp620-623.pdf">Bou1910pp620-623.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Bourlet, C.<span lang="en-us"> 1899 </span>Étude
+  théorique sur la bicyclette. Bulletin de la Société Mathématique de France, 27
+  (1899), p. 47-67 <span lang="en-us">(<a href="Bourlet1899pp47-67.pdf">Bourlet1899pp47-67.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Bourlet, C.<span lang="en-us"> 1899 </span>Étude
+  théorique sur la bicyclette. Bulletin de la Société Mathématique de France, 27
+  (1899), p. 76-96 <span lang="en-us">(<a href="Bourlet1899pp76-96.pdf">Bourlet1899pp76-96.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Bourlet,<span lang="en-us"> C. 1904 </span>Les
+  bicyclettes a retropedalage<span lang="en-us">, </span>Le Genie Civil, 1904,
+  <span lang="en-us">Vol? pp.126-120, pp.141-145.(<a href="Bourlet1904.pdf">Bourlet1904.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt"><strong style="font-weight: 400">Valentine Joseph
+  Boussinesq, 1899, </strong>&quot;Apercu sur la thèorie de la bicyclette<strong>&quot;,
+  </strong>Journal de Mathèmatique Pures et appliquèes, Tome Cinquième, pp
+  117-135. (<a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/Boussinesq Mathematiques pp. 117-135.pdf">pdf</a>)</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt"><strong style="font-weight: 400">Valentine Joseph
+  Boussinesq, 1899, ``</strong>Complèment à une ètude rècente concernant la
+  thèorie de la bicyclette (1): influence, sur l'èquilibre, des mouvements
+  latèraux spontanès du cavalier <strong>&quot;, </strong>Journal de Mathèmatique
+  Pures et appliquèes, Tome Cinquième, pp 217-232. (<a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/Boussinesq Mathematiques pp. 217-232.pdf">pdf</a>)</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt"><strong style="font-weight: 400">Valentine Joseph
+  Boussinesq, 1899, </strong>&quot;De l'effet produit, sur le mouvement d'inclinaison
+  d'une bicylette en marche, par les dèplacements latèraux que s'imprime le
+  cavalier.&quot;<strong>, </strong>Journal de Mathèmatique Pures et appliquèes, Tome
+  Cinquième, CR, vol 128, pp 766-781. (<a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/Boussinesq CR 1899 vol 128.pdf">pdf</a>),
+  <a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/Boussinesq859-862.pdf">
+  and another</a> (859-862),
+  <a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/BoussinesqComptesRendusDesSeancesArticle11.pdf">
+  one more</a> (art 11) and
+  <a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/BoussinesqComptesRendusDesSeancesArticle21.pdf">
+  still another</a> (art 21).</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Bower, G. S. 1915 Steering and stability of single-track
+  vehicles. <i>The Automobile Engineer</i> <b>V</b>, 280-283.</font></dd>
+
+	<dd>
+  <font face="Verdana" style="font-size: 9pt">Breakwell, J. V. 1982 (April 12)
+  Riding a bicycle without hands: The stability of a bicycle.
+  Lecture series at Sonoma State University called "What Physicists Do".</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Carvallo, M. E. 1900
+  Th&#233;orie du mouvement du Monocycle et de la Bicyclette.
+  <i>Journal de L'Ecole Polytechnique</i>, Series 2,
+  Part 1, Volume 5, "Cerceau et Monocyle", 1900, pp.&nbsp;119-188,
+  Part 2, Volume 6, "Th&#233;orie de la Bicyclette", 1901,
+  pp.&nbsp;1-118.<span lang="en-us">(<a href="Carvallo1900.pdf">Carvallo1900.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Collins, R. N. 1963
+  A mathematical analysis of the stability of two-wheeled vehicles.
+  Ph.D. thesis, Dept. of Mechanical Engineering, University of
+  Wisconsin.[Posted <em>without</em> permission]<span lang="en-us">(<a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/CollinsRobert1963.pdf">CollinsRobert1963.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Cossalter, V. &amp; Lot, R. 2002 A motorcycle multi-body model for real time
+  simulations based on the natural coordinate approach. <i>Vehicle System
+  Dynamics</i> <b>37</b>(6), 423-447.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Davis, J. A.<span lang="en-us"> </span>1975&nbsp;
+  Bicycle tire testing – effects of inflation pressure &amp; low<span lang="en-us">
+  </span>coefficient surfaces, Cornell Aero. Lab. Report no.<span lang="en-us">
+  </span>ZN-5431-V-3</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Davis, J. A. <span lang="en-us">&amp;</span> R. J.
+  Cassidy<span lang="en-us"> </span>1974 The Effect of Frame Properties on<span lang="en-us">
+  </span>Bicycling Efficiency, Cornell Aero. Lab. Report no. ZN-5431-V-2</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Den Hartog, J. P. 1948 <i>Mechanics</i><span lang="en-us">,
+  article 61</span>.
+  New York and London: McGraw-Hill.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt"><strong style="font-weight: 400">Dikarev, Dikarev and
+  Fufaev</strong>, 1981, A correction of the equations in Niemark and Fufaev.<span lang="en-us">(</span><a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/DikarevDikarevFufuev.pdf">pdf</a><span lang="en-us">)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana"><span style="font-size: 9pt">D&#246;hring, E. 195</span></font><span lang="en-us" style="font-size: 9pt"><font face="Verdana">3 . Über d</font></span><font face="Verdana"><span style="font-size: 9pt">ie Stabilit&#228;t
+  <span lang="en-us">und die Lenkkr</span>ä<span lang="en-us">fte </span>von Einspurfahrzeugen.</span><span style="font-size: 9pt" lang="en-us"> Ph.D.
+  thesis, Technical University Braunschweig, Germany.</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">D&#246;hring, E. 195<span lang="en-us">4</span> Die Stabilit&#228;t von Einspurfahrzeugen.
+  <i>Automobil Technische Zeitschrift</i> <span lang="en-us"><b>56</b></span>(<span lang="en-us">3</span>),
+  <span lang="en-us">68-72. (<a href="Doh54.pdf">Doh54.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">D&#246;hring, E. 1955
+  Stability of single-track vehicles,
+  (Transl.   by J. Lotsof, March 1957
+  Die Stabilit&#228;t von Einspurfahrzeugen.
+  <i>Forschung Ing.-Wes.</i> <b>21</b>(2), 50-62<span lang="en-us"> (<a href="Doh55a.pdf">Doh55a.pdf</a>)
+  </span>) [Posted <em>without</em> permission]<span lang="en-us">(<a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/Dohring.pdf">Dohring.pdf</a>)<br>
+  [</span>Posted here with the assumed courtesy (without permission) of CALSPAN.<span lang="en-us">]</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Eaton, D. J. 1973
+  Man-machine dynamics in the stabilization of single-track vehicles.
+  Ph.D. thesis, University of Michigan.[Posted <em>without</em> permission]<span lang="en-us">(<a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/EatonDavid1973.pdf">EatonDavid1973.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Franke, G., Suhr, W. &amp; Riess, F. 1990
+  An advanced model of bicycle dynamics.
+  <i>Eur. J. Physics.</i> <b>11</b>(2), 116-121.<span lang="en-us"> (<a href="FraSuhRie90.pdf">FraSuhRie90.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Getz, N. H. &amp; Marsden, J. E. 1995
+  Control for an autonomous bicycle
+  In <i>IEEE Conference on Robotics and Automation.
+  21-27 May 1995, Nagoya, Japan.</i></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Grammel, R. 1920 <i>Der Kreisel, </i>ch. 15, pp. 183-186. Braunschwieg:
+  Vieweg &amp; Sohn.<span lang="en-us"> (<a href="Gra1920pp183-186.pdf">Gra1920pp183-186.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Grammel, R. 1950 <i>Der Kreisel, </i>Vol 2, ch. 3, pp. 53-57. Berlin:
+  Springer Verlag.<span lang="en-us"> (<a href="Gra1950pp53-57.pdf">Gra1950pp53-57.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Herfkens, B. D. 1949 De stabiliteit van het rijwiel,
+  (In <span lang="en-us">D</span>utch, The stability of the bicycle.)<br>
+  Report S-98-247-50-10-’49, Instituut voor rijwielontwikkeling, Delft, The
+  Netherlands.<span lang="en-us">(<a href="Herfkens1949.pdf">Herfkens1949.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Herlihy, D. V. 2004
+  <i>Bicycle: The history</i>, New Haven, CT: Yale University
+  Press.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Hand, R. S. 1988
+  Comparisons and stability analysis of linearized equations
+  of motion for a basic bicycle model.
+  M.Sc. thesis, Cornell University. <span lang="en-us">(<a href="Han88.pdf">Han88.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Jones, D. E. H. 1970
+  The Stability of the bicycle.
+  <i>Physics Today</i> <b>23</b>(3), 34-40.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Jonker, J. B. 1988
+  A finite element dynamic analysis of flexible spatial
+  mechanisms and manipulators.
+  Ph.D. thesis, Delft University of Technology, Delft.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Jonker, J. B. &amp; Meijaard, J. P. 1990
+  SPACAR-Computer program for dynamic analysis of flexible spatial
+  mechanisms and manipulators.
+  In <i>Multibody Systems Handbook</i> (ed. W.&nbsp;Schiehlen).
+  Berlin: Springer-Verlag, pp. 123-143.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Kane, T. R. 1968
+  <i>Dynamics</i>. New York: Holt, Rinehart and Winston.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Kane, T. R. 1975
+  Fundamental kinematic relationships for single-track vehicles.
+  <i>International Journal for Mechanical Sciences</i> <b>17</b>, 499-504.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Klein, F. &amp; Sommerfeld, A. 1910
+  <i>&#220;ber die Theorie des Kreisels</i>,
+  Ch. IX, Section 8, Stabilit&#228;t des Fahrrads, pp.&nbsp;863-884.
+  Leipzig: Teubner.<span lang="en-us">(<a href="KleiSom1910V4pp863-884.pdf">KleiSom1910V4pp863-884.pdf</a>) </span>
+  Here is an English translation arranged by Jim Papadopoulos (<a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/SommerfeldKleinNoetherEnglish.pdf"><span lang="en-us">PDF</span></a>).</font></dd>
+
+  <dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Koenen, C. 1983 The dynamics behaviour of a motorcycle when running straight
+  ahead and when cornering. Ph.D. thesis, Delft University of Technology, Delft.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Kunkel, D. T. 1975 Simulation Study of Motorcycle
+  Response to Pavement<span lang="en-us"> </span>Grooving,
+  Cornell Aero. Lab. Report no.&nbsp; ZN-5740<span lang="en-us">-</span>V-1<span lang="en-us">.</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Kunkel, D. T. 1976&nbsp; Bicycle dynamics – simulated
+  bicycle / rider system<span lang="en-us"> </span>performance in a turning
+  maneuver,
+  Cornell Aero. Lab. Report no. ZN-5921-V-1</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Kunkel, D. T.<span lang="en-us"> &amp;</span> R. S. Rice<span lang="en-us">
+  </span>1975 Low speed wobble study of the Harley<span lang="en-us"> </span>
+  Davidson Electra Glide FLH-1200 motorcycle,
+  Cornell Aero. Lab. Report no. ZN-5473-V-1</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Kunkel, D. T. <span lang="en-us">&amp;</span> Roland<span lang="en-us">,
+  </span>R. D. <span lang="en-us">&nbsp;1973</span> A comparative evaluation of
+  the Schwinn<span lang="en-us"> </span>Continental and Continental-based Sprint
+  bicycles,
+  Cornell Aero. Lab. Report no.<span lang="en-us"> </span>
+  &nbsp;ZN-5361-K,</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt"><span lang="en-us">L</span>obas, L. G. 1978
+  Controlled and programmed motion of a bicycle on a plane.
+  <i>Mechanics of solids</i> <b>13</b>(6), 18.
+  (Transl. by Allerton Press<span lang="en-us"> [authors name misspelled into
+  G[sic]obas]</span>,
+  Cited in translation as Izv. AN SSSR. "Mekhanika Tverdogo
+  Tela," Vol. 13, No. 6, pp. 22-28, 1978.<span lang="en-us">(<a href="Lob78a.pdf">Lob78a.pdf</a>)</span>)<span lang="en-us">(<a href="Lob78b.pdf">Lob78b.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Loicjanskii, L. G. &amp; Lu're, A. G. 1934
+  <i>Course of Theoretical Mechanics</i>, Vol. 3, ONTI, Moscow, 1934;
+   Vol. 2, 5th edn., GITTL, Moscow, 1955.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Lowell, J &amp; McKell, H. D. 1982
+  The stability of bicycles.
+  <i>American Journal of Physics</i>
+  <b>50</b>(12), 1106-1112.</font></dd>
+
+	<dd>
+ <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Maddox, J. 1990
+ Bicycling about to be explained?
+ <i>Nature</i> <b>346</b>, 2 Aug 1990, pp. 407.<span lang="en-us"> (<a href="Mad90.pdf">Mad90.pdf</a>)</span></font>
+ <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">McCaw, G. T. 1898 On the steering of the bicycle. <em>The Engineer</em>, Dec 9, pp. 557.<span lang="en-us">(<a href="McCaw1898.pdf">McCaw1898.pdf</a>)</span></font> <font face="Verdana" style="font-size: 9pt"></font>
+ <font face="Verdana" style="font-size: 9pt"><br>
+ <br>
+ Mears, B. C. 1988
+  Open loop aspects of two wheeled vehicle stability characteristics.
+  Ph.D. thesis, University of Illinois at Urbana-Champaign, IL.</font></dd>
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Meijaard, J. P. 1991
+  Direct determination of periodic solutions of the dynamical equations of
+  flexible mechanisms and manipulators.
+  <i>International Journal for Numerical Methods in Engineering</i>
+  <b>32</b>, 1691-1710.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Meijaard, J. P. 2004 Derivation of the
+  <span lang="en-us">l</span>inearized <span lang="en-us">e</span>quations for
+  an <span lang="en-us">u</span>ncontrolled <span lang="en-us">b</span>icycle.
+  <span lang="en-us">Internal report University of Nottingham, UK. (<a href="Mei04b.pdf">Mei04b.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Neimark, Ju. I. &amp; Fufaev, N. A. 1972
+  <i>Dynamics of Nonholonomic Systems</i>.
+  Providence, RI: A.M.S.
+  (Transl. from the Russian edition, Nauka, Moscow, 1967.)</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Papadopoulos, J. M. 1987
+  Bicycle steering dynamics and self-stability:
+  A summary report on work in progress.
+  Technical report, Cornell Bicycle Research Project, Cornell
+  University, pp.&nbsp;1-23.
+  <br />(availabe with other related reports at:
+  http://ruina.tam.cornell.edu/research/).</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Pearsall, R. H. 1922
+  The stability of a bicycle.
+  <i>The Institution of Automobile Engineers</i>, Proceeding
+  Session 1922-23 Part I, Vol. XVII, p 395-404.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Psiaki, M. L. 1979
+  Bicycle stability: A mathematical and numerical analysis.
+  Undergradute thesis, Physics Dept., Princeton
+  University, NJ.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Rankine, W. J. M. 1869
+  On the dynamical principles of the motion of velocipedes.
+  <i>The Engineer</i> <b>28</b>, pp.&nbsp;79, 129, 153, 175.<span lang="en-us">
+  (<a href="Ran1869pp79.pdf">Ran1869pp79.pdf</a>, <a href="Ran1869pp129.pdf">
+  Ran1869pp129.pdf</a><span style="color: #000000">, <a href="Ran1869pp153.pdf">
+  Ran1869pp153.pdf</a>, <a href="Ran1869pp175.pdf">Ran1869pp175.pdf</a>,
+  <a href="Ran1870pp2.pdf">Ran1870pp2.pdf</a></span>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Rice, R.<span lang="en-us"> </span>S.<span lang="en-us">
+  </span>1974&nbsp; Bicycle dynamics – simplified steady state response<span lang="en-us">
+  </span>characteristics and stability indices, Cornell Aero. Lab. Report no.<span lang="en-us">
+  </span>ZN-5431-V-1</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt"><span lang="en-us">Rice, R. S. 1975 Accident
+  avoidance capabilities of motorcycles. In <i>Proceedings International
+  Motorcycle Safety Conference, Dec 16 &amp; 17 , 1975</i> USDOT, National Highway
+  Traffic Safety Administration, Washington, DC, pp. 121-134</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Rice, R. S. <span lang="en-us">(</span>?) 1976
+  Bicycle dynamics – simplified dynamic stability<span lang="en-us"> </span>
+  analysis, Cornell Aero. Lab. Report no. ZN-5921-V-2</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Rice, R. S. 1978 <span lang="en-us">&nbsp;</span>Rider
+  skill influences on motorcycle maneuvering. SAE paper<span lang="en-us">
+  </span>780312, SAE-SP 428<span lang="en-us">.</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Rice, R.<span lang="en-us"> </span>S., Davis, J. A.
+  <span lang="en-us">&nbsp;&amp;</span> Kunkel<span lang="en-us">, </span>D. T.
+  <span lang="en-us">&nbsp;</span>1975 : Accident avoidance capabilities<span lang="en-us">
+  </span>of motorcycles,
+  Cornell Aero. Lab. Report no. ZN-5571-V-1 and ZN-5571<span lang="en-us">-</span>V-2</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Rice, R. S. <span lang="en-us">&amp;</span> Kunkel<span lang="en-us">,
+  </span>D. T. 1976&nbsp; Accident Avoidance Capabilities of Motorcycles - Lane
+  Change Maneuver Simulation and Full-Scale Tests,
+  Cornell Aero. Lab. Report no.&nbsp; ZN-5899-V-1</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt"><span lang="en-us">Rice, R. S. &amp; Roland, R. D. 1970
+  An evaluation of the performance and handling qualities of bicycles. </span>
+  Cornell Aero. Lab. Report no. <span lang="en-us">VJ-2888-K</span>.<span lang="en-us">(<a href="RicRol70.pdf">RicRol70.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt"><span lang="en-us">Rice, R. S. &amp; Roland, R. D. 1972
+  An evaluation of the safety performance of tricycles and minibikes, </span>
+  Cornell Aero. Lab. Report no.<span lang="en-us"> ZN-5144-K-1.</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Roland, R. D. 1973
+  Computer simulation of bicycle dynamics.
+  <i>Mechanics and Sport</i> <b>4</b>, ASME, pp. 35-83.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Roland, R. D. 1973 Simulation study of motorcycle
+  stability at high speed,<span lang="en-us"> </span>SAE paper 73020, Proc.
+  Second International Congress on Automotive Safety, July<span lang="en-us">
+  </span>16-18, San Francisco.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Roland, R. D. <span lang="en-us">1974 </span>
+  Performance Tests of Harley-Davidson Electra Glide FLH-1200<span lang="en-us">
+  </span>Motorcycle Tires,
+  Cornell Aero. Lab. Report no.<span lang="en-us"> </span>
+  &nbsp;ZN-5438-V-1 </font> </dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Roland, R. D. &amp;  Massing, D. E. 1971
+  A digital computer simulation of bicycle dynamics.
+  Cornell Aero. Lab. Report no. YA-3063-K-1.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Roland, R. D. &amp;  <span lang="en-us">Lynch, J. P.
+  </span>197<span lang="en-us">2</span> <span lang="en-us">Bicycle dynamics tire
+  characteristics and rider modeling</span>.
+  Cornell Aero. Lab. Report no. YA-3063-K-<span lang="en-us">2</span>.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Roland, R. D. &amp;  <span lang="en-us">Rice, R. S.
+  </span>197<span lang="en-us">3</span> Bicycle dynamics – rider guidance
+  modeling<span lang="en-us"> </span>and disturbance response. Cornell Aero.
+  Lab. Report no. ZS-5157-K-1</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Roland, R. D. &amp; <span lang="en-us">Kunkel, D. T.
+  </span>197<span lang="en-us">3</span> Motorcycle dynamics, the effects of<span lang="en-us">
+  </span>design on high speed weave, Cornell Aero. Lab. Report no. ZN-5259-K-1</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt"><strong style="font-weight: 400">G.R.R. Routh, 1899</strong>,
+  &quot;On the Motion of a Bicycle&quot;, The Messenger of Mathematics, Vol 28 (May
+  1898-April 1899), pp 151-169. (<a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/Routh On The Motion of a Bicycle by Routh.pdf"><span lang="en-us">pdf</span></a>)
+  (Note G.R.R. Routh is the son of the famous E.J. Routh and grandson of Airy.).</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Society of Automotive Engineers 2001
+  Vehicle dynamics Terminology-SAE J670e.
+  <i>2001 SAE Handbook</i>, SAE international, Warrendale, PA.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Sayers, M. W. 1991a
+  Symbolic computer language for multibody systems.
+  <i>Journal of Guidance, Control, and Dynamics</i>
+  <b>14</b>, 1153-1163.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Sayers, M. W. 1991b
+  Symbolic vector/dyadic multibody formalism for tree-topology systems.
+  <i>Journal of Guidance, Control, and Dynamics</i>
+  <b>14</b>, 1240-1250.</font></dd>
+	<dd>
+	  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Schoonwinkel, A. 1987
+	    Design and test of a computer stabilized unicycle. PhD
+	    thesis, Dept. of Aeronautics and Astronautics, Stanford University, CA. (<a href="Schoonwinkel1987.pdf">Schoonwinkel1987.pdf</a>)</font>       </dd>
+	<dd>
+      <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Schwab, A. L. 2002
+	    Dynamics of flexible multibody systems.
+  Ph.D. thesis, Delft University of Technology, Delft.</font>   </dd>
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Schwab, A. L. &amp; Meijaard, J. P. 1999a
+  The belt, gear, bearing and hinge as special finite elements
+  for kinematic and dynamic analysis of mechanisms and machines.
+  In <i>Proceedings of the Tenth World Congress on the Theory of
+   Machines and Mechanisms, IFToMM, June 20-24, 1999, Oulu, Finland</i>
+   (ed. T.&nbsp;Leinonen), Oulu University Press, Vol 4, pp. 1375-1386.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Schwab, A. L. &amp; Meijaard, J. P. 1999b
+  Dynamics of flexible multibody systems having rolling contact:
+  Application of the wheel element to the dynamics of road vehicles.
+  <i>Vehicle System Dynamics Supplement</i>
+  <b>33</b>, 338-349.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Schwab, A. L. &amp; Meijaard, J. P. 2003
+  Dynamics of flexible multibody systems with
+  non-holonomic constraints: A finite element approach.
+  <i>Multibody System Dynamics</i> <b>10</b>, 107-123.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Schwab, A. L., Meijaard, J. P. &amp; Papadopoulos, J. M. 2005
+  Benchmark results on the linearized equations of motion of
+  an uncontrolled bicycle.
+  <i>KSME International Journal of Mechanical Science and
+  Technology</i> <b>19</b>(1), 292-304.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Sharp, R. S. 1971
+  The stability and control of motorcycles.
+  <i>Journal of Mechanical Engineering Science</i>
+  <b>13</b>(5), 316-329.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Sharp, R. S. &amp; Jones, C. J. 1977
+  The straight-running stability of single track vehicles.
+  In <i>Proceedings of the 5th VSD, 2nd IUTAM Symposium,
+  Vienna, Austria, Sept. 19-23</i>, pp. 334-342.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Sharp, R. S. 1985 The lateral dynamics of motorcycles and bicycles. <i>Vehicle
+  System Dynamics</i><b> </b>14, 265-283.<span lang="en-us"><i> </i>(<a href="Sha85.pdf">Sha85.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Sharp, R. S. &amp; Limebeer, D. J. N. 2001 A motorcycle model for stability
+  and control analysis. <i>Multibody System Dynamics</i> <b>6</b>, 123-142.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Singh, D. V. 1964
+  Advanced concepts of the stability  of two-wheeled vehicle-application
+  of mathematical analysis to actual vehicles.
+  Ph.D. Thesis, Dept. of Mechanical Engineering, University of
+  Wisconsin.[Posted <em>without</em> permission]<span lang="en-us">(<a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/SinghDigvijai1964.pdf">SinghDigvijai1964.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Singh, D. V. &amp; Goel, V. K. 1971
+  Stability of Rajdoot Scooter.
+  <i>SAE Paper no. 710273</i>.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Singh, D. V. &amp; Goel, V. K. 1975
+  Stability of single track vehicles.
+  In <i>Proceedings of IUTAM Symposium,
+  Delft, the Netherlands, Aug 18-22</i>.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Steele Jr, G. L. 1990 <i>Common Lisp, The Language</i>, 2nd
+  edn., Digital Press, U.S.A.</font>      </dd>
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Timoshenko, S. &amp; Young, D. H. 1948
+  <i>Advanced Dynamics</i>.
+  New York: McGraw-Hill.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Van Zytveld, P. J. 1975
+  A method for the automatic stabilization of an unmannned bicycle. M.Sc.
+  thesis, Dept. of Aeronautics and Astronautics, Stanford University, CA.
+  [Posted with permission from vanzytveldp@earthlink.net, +1 650-793-7012,
+  +1-650-967-1163]<span lang="en-us">(<a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/vanZytveldPhD.pdf">vanZytveldPhD.pdf</a>)</span><br>
+  [Posted <em>without</em> permission from P.<span lang="en-us"> </span>J. Van
+  Zytveld. If you know his whereabouts please let us know.]</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Weir, D. H. 1972
+  Motorcycle handling dynamics and rider control
+  and the effect of design configuration on response and
+  performance.
+  Ph.D. thesis, University of California, LA.[Posted <em>without</em>
+  permission]<span lang="en-us">(<a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/WeirDavid1972.pdf">WeirDavid1972.pdf</a>)</span></font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Weir, D. H. &amp; Zellner, J. W. 1978
+  Lateral-directional motorcycle dynamics and rider control.
+  Technical report no. 780304, Society of Automotive Engineers,
+  Warrendale, PA.</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Whipple, F. J. W. 1899
+  The Stability of the Motion of a Bicycle.
+  <i>The Quarterly Journal of Pure and Applied Mathematics</i>
+  <b>30</b>, 312-348. (<span lang="en-us"><a href="http://ruina.tam.cornell.edu/research/topics/bicycle_mechanics/papers/Whipple.pdf">Whipple.pdf</a></span>).</font></dd>
+
+	<dd>
+  <p style="margin-top: 1"><font face="Verdana" style="font-size: 9pt">Wilson, D. G. 2004
+  <i>Bicycling science</i>, 3rd edn. with contributions by Jim
+  Papadopoulos. Cambridge, MA: MIT Press.</font></dd>
+</dl>
+
+<div class="p">
+  &nbsp;<hr />
+  <p style="margin-top: 1"><font face="Verdana"><span style="font-size: 9pt"><!---->
+  </span><span lang="en-us"><font style="font-size: 9pt">Updated
+  <!--webbot bot="Timestamp" S-Type="EDITED" S-Format="%A, %B %d, %Y" startspan -->
+  <!-- #BeginDate format:fcAm1m -->Thursday, September 10, 2009  11:13<!-- #EndDate -->
+  by Arend L. Schwab.</font></span></font>
+</div>
+
+  <hr />
+</body>
+</div>
+
+<!-- Mirrored from http://bicycle.tudelft.nl/schwab/Bicycle/BicycleHistoryReview/index.htm by HTTrack Website Copier/3.x [XR&CO], Sat, 17 Oct 2026 15:02:02 GMT -->
+</html>
